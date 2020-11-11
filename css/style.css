@@ -1,7 +1,7 @@
 .escala {
-	float: left;
-	padding: 0 1em;
-	text-align: center;
+	top: 20px;
+	position: relative;
+	left: -17px;
 }
 
 .box {

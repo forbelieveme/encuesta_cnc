@@ -1,12 +1,12 @@
-<div class="mt-5" id="pag2">
+<div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post">
             <!-- <h2 class="text-center black">P1</h2> -->
             <div class="form-group">
-                <label for="P1">A continuación, le voy a mostrar una tarjeta con un listado
+                <label for="P1">1) A continuación, le voy a mostrar una tarjeta con un listado
                     de frases de ese listado por favor me indica ¿Cuáles son las principales razones qué lo
                     motivaron a venir a la Feria del Hogar 2019?, ¿algún otro? </label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
+                <select multiple class="form-control .d-none .d-sm-block" id="exampleFormControlSelect2">
                     <option>Encontrar productos nuevos (lanzamientos)</option>
                     <option>Buscar promociones y descuentos</option>
                     <option>Por curiosidad</option>
