@@ -24,7 +24,11 @@
 
     <div class="container">
         <?php
+        include("views/p1.php");
+        include("views/p2.php");
+        include("views/p3.php");
         include("views/p4.php");
+        include("views/p5.php");
         // include("views/pagina2.php");
         ?>
 
