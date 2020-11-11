@@ -2,7 +2,7 @@
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post">
             <div class="form-group">
-                <label for="P4">¿Asististe a la Feria del Hogar 2019?
+                <label for="P4">¿Has realizado o realizaste compras en esta feria? 
                 </label>
                 <div class="container text-center">
                     <div class="custom-control custom-radio custom-control-inline form-check-inline">
