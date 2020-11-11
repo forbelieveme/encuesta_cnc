@@ -1,0 +1,26 @@
+<div class="mt-5" id="p3">
+    <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+        <form method="post">
+            <div class="form-group">
+                <label for="P1">Utilizando una escala de 0 a 10, donde 0 es “Definitivamente no la recomendaría” y 
+                    10 es “Definitivamente la recomendaría”, ¿qué tanto le recomendarías a un amigo, familiar o 
+                    colega el asistir a la Feria del Hogar 2020? 
+                </label>
+
+                <div class="container">
+                    <?php
+                    for ($counter = 0; $counter < 11; $counter++) {
+                        echo "<div class='form-check form-check-inline col-1'>";
+                        echo "<input class='form-check-input' type='radio' name='P3' id='P3_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio3'>" . $counter . "</label>";
+                        echo "</div";
+                    }
+                    ?>
+                </div>
+            </div>
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">
+                INGRESAR
+            </button>
+        </form>
+    </div>
+</div>
