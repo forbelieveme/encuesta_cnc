@@ -4,7 +4,6 @@
             <div class="form-group">
                 <label for="P4">¿Asististe a la Feria del Hogar 2019?
                 </label>
-
                 <div class="container text-center">
                     <div class="custom-control custom-radio custom-control-inline form-check-inline">
                         <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
