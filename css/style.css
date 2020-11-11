@@ -7,3 +7,13 @@
 .box {
 	border: 2px dotted red;
 }
+
+.radioboton {
+	display: flex;
+	margin-top: 10px;
+}
+
+.radioboton-label {
+	width: 50%;
+	padding: 0px 10px;
+}

@@ -1,4 +1,4 @@
-<!--muestra_comercial_p10.php-->
+<!---->
 <!DOCTYPE html>
 
 <html lang="es">
@@ -10,13 +10,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> 
+
     <title>FERIA DEL HOGAR</title>
 </head>
 
 <body>    
     <?php include("views/navbar.php")?>
-    <?php include("views/P30.php")?>
+    <?php include("views/P35.php")?>        
 
 </body>
