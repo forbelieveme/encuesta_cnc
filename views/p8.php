@@ -7,7 +7,6 @@
                 <div class="md-form">
                     <i class="fas fa-pencil-alt prefix"></i>
                     <textarea id="form10" class="md-textarea form-control" rows="3"></textarea>
-                    <label for="form10">Icon Prefix</label>
                 </div>
             </div>
         </form>
