@@ -32,27 +32,7 @@
 
     <div class="container">
         <?php
-
-        // <!-- Banner - Banner -->
-        //include("views/banner.php");
-        // <!-- Fin Banner - Fin Banner -->
-
-        // <!-- Formulario - Formulario -->
-        // if ($login->isUserLoggedIn() == true) {
-        //     require_once("classes/Registro.php");
-
-        //     $registro = new Registro();
-        //     // the user is logged in. you can do whatever you want here.
-        //     // for demonstration purposes, we simply show the "you are logged in" view.
-        //     include("views/registro-form.php");
-        // } else {
-        //     // the user is not logged in. you can do whatever you want here.
-        //     // for demonstration purposes, we simply show the "you are not logged in" view.
-        //     include("views/login-form.php");
-        // }
-        // <!-- Fin Formulario - Fin Formulario -->
-
-        // include("views/pagina1.php");
+        include("views/cumplimiento_objetivos.php");
         // include("views/pagina2.php");
         ?>
 
