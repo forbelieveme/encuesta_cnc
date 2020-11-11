@@ -3,7 +3,7 @@
         <form method="post">
             <!-- <h2 class="text-center black">P1</h2> -->
             <div class="form-group">
-                <label for="P1">1) A continuación, le voy a mostrar una tarjeta con un listado
+                <label for="P1">A continuación, le voy a mostrar una tarjeta con un listado
                     de frases de ese listado por favor me indica ¿Cuáles son las principales razones qué lo
                     motivaron a venir a la Feria del Hogar 2019?, ¿algún otro? </label>
                 <select multiple class="form-control .d-none .d-sm-block" id="exampleFormControlSelect2">

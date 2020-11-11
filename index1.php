@@ -1,6 +1,15 @@
-<!--muestra_comercial_p10.php-->
-<!DOCTYPE html>
+<!--index.php-->
+<?php
+// include the configs / constants for the database connection
+// require_once("config/db.php");
+// load the login class
+// require_once("classes/Login.php");
+// create a login object. when this object is created, it will do all login/logout stuff automatically
+// so this single line handles the entire login process. in consequence, you can simply ...
+// $login = new Login();
+?>
 
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -10,12 +19,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/style.css"> -->
     <title>FERIA DEL HOGAR</title>
 </head>
 
-<<<<<<< HEAD
 <body>
     <!-- Barra de Navegación - Barra de Navegación -->
     <?php
@@ -25,7 +33,7 @@
 
     <div class="container">
         <?php
-        include("views/p3.php");
+        include("views/cumplimiento_objetivos.php");
         // include("views/pagina2.php");
         ?>
 
@@ -58,10 +66,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
-=======
-<body>    
-    <?php include("views/navbar.php")?>
-    <?php include("views/P30.php")?>
->>>>>>> 8a31e244796369f3e1404a00172c5d00fa6c56bf
 
-</body>
+<!-- </html> -->
