@@ -18,6 +18,9 @@
                     ?>
                 </div>
             </div>
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block">
+                INGRESAR
+            </button>
         </form>
     </div>
 </div>

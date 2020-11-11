@@ -15,7 +15,6 @@
     <title>FERIA DEL HOGAR</title>
 </head>
 
-<<<<<<< HEAD
 <body>
     <!-- Barra de Navegación - Barra de Navegación -->
     <?php
@@ -25,7 +24,7 @@
 
     <div class="container">
         <?php
-        include("views/p3.php");
+        include("views/p4.php");
         // include("views/pagina2.php");
         ?>
 
@@ -58,10 +57,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
-=======
-<body>    
-    <?php include("views/navbar.php")?>
-    <?php include("views/P30.php")?>
->>>>>>> 8a31e244796369f3e1404a00172c5d00fa6c56bf
 
 </body>
