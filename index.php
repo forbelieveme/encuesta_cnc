@@ -32,7 +32,7 @@
 
     <div class="container">
         <?php
-        include("views/cumplimiento_objetivos.php");
+        include("views/p1.php");
         // include("views/pagina2.php");
         ?>
 
