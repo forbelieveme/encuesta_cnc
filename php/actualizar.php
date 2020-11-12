@@ -2,11 +2,11 @@
 //Headers
 header('Content-Type: application/json');
 
-// include_once "Database.php";
+include_once "connect.php";
 
-// $database = new Database();
-// $db = $database->connect();
-// mysqli_set_charset($db, "utf8");
+$database = new Database();
+$db = $database->connect();
+mysqli_set_charset($db, "utf8");
 
 if (!isset($resp)) {
     $resp = new stdClass();
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     switch ($query) {
 
         case "actualizar":
-            $valor = $_POST["cedula"];
+            $valor = $_POST["informacion"];
             
             // $sql = "INSERT INTO Partida (puntaje, cedula_fk) VALUES (?, ?)";
 
@@ -36,11 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // }
 
             // $resp->mensaje = 'Ingreso exitoso';
-            // $resp->cedula = $cedula;
+            $resp->valor = $valor;
+            $resp->tipo = gettype($valor);
             // $resp->puntaje = $puntaje;
 
-            // echo json_encode($resp, JSON_FORCE_OBJECT);
-            echo $valor;
+            echo json_encode($resp, JSON_FORCE_OBJECT);
+            // echo $valor;
             break;
     } 
     // mysqli_close($db);
