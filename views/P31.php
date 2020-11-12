@@ -52,12 +52,12 @@
                 </div>           
      
                     
-                </div >
-                <div class = "col-sm-12">
-                    <div>                            
-                        <button style="margin-top: 10px;" type='submit' class = "btn btn-primary btn-block"> Confirmar </button>
-                    </div>
+            </div >
+            <div class = "col-sm-12">
+                <div>                            
+                    <button style="margin-top: 10px;" type='submit' class = "btn btn-primary btn-block"> Confirmar </button>
                 </div>
+            </div>
 
             </form>
         </div>

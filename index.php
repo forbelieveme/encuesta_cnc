@@ -15,50 +15,8 @@
     <title>FERIA DEL HOGAR</title>
 </head>
 
-<<<<<<< HEAD
 <body>    
     <?php include("views/navbar.php")?>
-    <?php include("views/P19.php")?>        
-=======
-<body>
-    <!-- Barra de Navegación - Barra de Navegación -->
-    <?php
-    include("views/navbar.php")
-    ?>
-    <!-- Fin Barra de Navegación - Fin Barra de Navegación -->
-
-    <div class="container">
-        <?php
-
-        // include("views/pagina2.php");
-        ?>
-        <div id="pregunta">
-
-        </div>
-        <!-- <button id="btn" class="btn btn-primary btn-lg btn-block">
-            INGRESAR
-        </button> -->
-    </div>
-
-    <?php
-    // include("views/paginacion.php")
-    ?>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function() {
-            // $("#box").load("p1.html");
-            // $("#btn").click(function() {
-            $("#pregunta").load("views/p6.php");
-            //     $("#pregunta").load("views/p3.php");
-            // });
-        });
-    </script>
-</body>
->>>>>>> 7df7bcc034d3623c9d5f0eeb013fd4fb63d2836d
+    <?php include("views/P20.php")?>        
 
 </body>

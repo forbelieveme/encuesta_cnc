@@ -1,4 +1,4 @@
-<div class = "P35">
+<div class = "P18">
 
     <div class = "jumbotron">
         <div class = "container">
