@@ -5,7 +5,7 @@
                 <div class = "container">
                     <div class = "row row-header">                
                         <div class = "col-12 col-sm-12 ">
-                            <h4> ¿En qué ciudad resides actualmente?  </h4>
+                            <label> ¿En qué ciudad resides actualmente?  </label>
                         </div>                    
                     </div>
                 </div>
