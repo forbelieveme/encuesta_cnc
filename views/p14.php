@@ -2,11 +2,12 @@
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post" id="form_p14" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p14'),'P14'), 'views/p15.php'); return false;">
             <div class="form-group">
-                <label for="P1">Teniendo en cuenta una escala de 1 a 10, donde 1 es “Definitivamente no asistiré” y 
-                    10 es “Definitivamente si asistiré” ¿Cuál es tu intención de asistir a la próxima versión de la 
-                    Feria del Hogar? 
-                </label>
-
+                <div class="jumbotron">
+                    <label for="P1">Teniendo en cuenta una escala de 1 a 10, donde 1 es “Definitivamente no asistiré” y
+                        10 es “Definitivamente si asistiré” ¿Cuál es tu intención de asistir a la próxima versión de la
+                        Feria del Hogar?
+                    </label>
+                </div>
                 <div class="container">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {

@@ -2,11 +2,12 @@
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post" id="form_p13" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p13'),'P13'), 'views/p14.php'); return false;">
             <div class="form-group">
-                <label for="P1">13. Utilizando una escala de 0 a 10, donde 0 es “Definitivamente no la recomendaría” y
-                    10 es “Definitivamente la recomendaría”, ¿qué tanto le recomendarías a un amigo, familiar o
-                    colega el asistir a la Feria del Hogar 2020?
-                </label>
-
+                <div class="jumbotron">
+                    <label for="P1">13. Utilizando una escala de 0 a 10, donde 0 es “Definitivamente no la recomendaría” y
+                        10 es “Definitivamente la recomendaría”, ¿qué tanto le recomendarías a un amigo, familiar o
+                        colega el asistir a la Feria del Hogar 2020?
+                    </label>
+                </div>
                 <div class="container p13">
                     <?php
                     for ($counter = 0; $counter < 11; $counter++) {

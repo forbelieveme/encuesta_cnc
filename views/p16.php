@@ -12,8 +12,10 @@
         <form method="post" onsubmit="return false;">
             <!-- <h2 class="text-center black">P1</h2> -->
             <div class="form-group">
-                <label for="P1">¿Cuáles son las categorías de producto de la feria que más le interesan?
-                </label>
+                <div class="jumbotron">
+                    <label for="P1">¿Cuáles son las categorías de producto de la feria que más le interesan?
+                    </label>
+                </div>
                 <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
                     <option value="1">Mesa y cocina</option>
                     <option value="2">Decoración y acabados</option>

@@ -6,15 +6,18 @@
     $(function() {
         $(".js-example-basic-multiple").select2();
     });
-    var numero_pregunta=['P1'];
+    var numero_pregunta = ['p1'];
 </script>
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post" id="form_p1" onsubmit="return false;" class="">
             <div class="form-group">
-                <label for="P1">1. A continuación, le voy a mostrar una tarjeta con un listado
-                    de frases de ese listado por favor me indica ¿Cuáles son las principales razones qué lo
-                    motivaron a venir a la Feria del Hogar 2019?, ¿algún otro? </label>
+                <div class="jumbotron">
+                    <label for="P1">1. A continuación, le voy a mostrar una tarjeta con un listado
+                        de frases de ese listado por favor me indica ¿Cuáles son las principales razones qué lo
+                        motivaron a venir a la Feria del Hogar 2019?, ¿algún otro? </label>
+                </div>
+
                 <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
                     <option value="1">Encontrar productos nuevos (lanzamientos)</option>
                     <option value="2">Buscar promociones y descuentos</option>
