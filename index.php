@@ -7,19 +7,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 
     <title>FERIA DEL HOGAR</title>
 </head>
 
-<<<<<<< HEAD
-<body>    
-    <?php include("views/navbar.php")?>
-    <?php include("views/P19.php")?>        
-=======
 <body>
     <!-- Barra de Navegación - Barra de Navegación -->
     <?php
@@ -53,12 +51,11 @@
         $(document).ready(function() {
             // $("#box").load("p1.html");
             // $("#btn").click(function() {
-            $("#pregunta").load("views/p6.php");
+            $("#pregunta").load("views/p14.php");
             //     $("#pregunta").load("views/p3.php");
             // });
         });
     </script>
 </body>
->>>>>>> 7df7bcc034d3623c9d5f0eeb013fd4fb63d2836d
 
 </body>
