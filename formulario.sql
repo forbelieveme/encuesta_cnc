@@ -128,6 +128,9 @@ ALTER TABLE encuesta
 ALTER TABLE encuesta 
     ADD (p43 INT(3));
 
+ALTER TABLE encuesta 
+    ADD (cid VARCHAR(30));
+
 
 
 /*INSERT INTO encuesta (nombres, apellidos, cedula, telefono, celular, correo) VALUES ("daniel", "jimenez", 1233509301, 7816288, 3024615600, "daniel.jose.@hotmail.com");

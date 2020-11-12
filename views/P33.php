@@ -12,8 +12,7 @@
 
     <div class = "container">
         <form method = 'POST'>
-            <textarea id ="P33.1" name="razon_calificacion" style="width:100%" rows = "10">
-            </textarea>
+            <textarea id ="P33.1" name="razon_calificacion" style="width:100%" rows = "10"></textarea>
             <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
         </form>
     </div>

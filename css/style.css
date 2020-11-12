@@ -16,4 +16,9 @@
 .radioboton-label {
 	width: 50%;
 	padding: 0px 10px;
+
+}
+
+.radio-check {
+	margin-top: 5px;
 }

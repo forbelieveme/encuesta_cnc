@@ -112,97 +112,51 @@ UPDATE encuesta SET p32 = 10 where (cid = '45sad45sa4da5s');
 UPDATE encuesta SET p33 = "calidad" where (cid = '45sad45sa4da5s');
 
 /*Insercion de p34*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+UPDATE encuesta SET p34 = 1 where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de p35*/
+UPDATE encuesta SET p35 = "1,2" where (cid = '45sad45sa4da5s');
 
-/*Insercion de p18*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-
-/*Insercion de p*/
-UPDATE encuesta SET  where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de p36*/
+UPDATE encuesta SET p36_1 = 10, p36_2 = 10 where (cid = '45sad45sa4da5s');
 
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de p37*/
+UPDATE encuesta SET p37 = 10 where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de p38 */
+UPDATE encuesta SET p38 = "todo bien" where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de p39*/
+UPDATE encuesta SET p39 = "porque no" where (cid = '45sad45sa4da5s');
+
+/*Insercion de p40*/
+UPDATE encuesta SET p40 = "todo" where (cid = '45sad45sa4da5s');
 
 
+/*Insercion de p41*/
+UPDATE encuesta SET p41 = "nada" where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de p42*/
+UPDATE encuesta SET p42 = "todo" where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de p43*/
+UPDATE encuesta SET p43 = 1 where (cid = '45sad45sa4da5s');
 
 
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de d1*/
+UPDATE encuesta SET d1 = 1 where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de d2*/
+UPDATE encuesta SET d2 = 3 where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de d3*/
+UPDATE encuesta SET d3 = 3 where (cid = '45sad45sa4da5s');
 
 
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
+/*Insercion de d4*/
+UPDATE encuesta SET d4 = "otro" where (cid = '45sad45sa4da5s');
 
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
-
-/*Insercion de p*/
-UPDATE encuesta SET where (cid = '45sad45sa4da5s');
 
