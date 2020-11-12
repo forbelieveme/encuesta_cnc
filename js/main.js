@@ -32,6 +32,8 @@ function getSelectValues(select, siguiente) {
         }
     }
     console.log(`ENVIO AJAX POST`, result);
+    peticionUpdate(result.toString());
+
 
 
     $("#pregunta").load(siguiente);
@@ -92,7 +94,7 @@ function submit_multiple_escala(form, nameArray, siguiente) {
     $("#pregunta").load(siguiente);
 }
 
-function getRadioVal_text(id_textA,form, name) {
+function getRadioVal_text(id_textA, form, name) {
     var val;
     var x = document.getElementById(id_textA).value;
     // get list of radio buttons with specified name
@@ -106,7 +108,7 @@ function getRadioVal_text(id_textA,form, name) {
         }
     }
 
-    if (val==5){
+    if (val == 5) {
         return x;
     } else {
         return val;
@@ -136,4 +138,28 @@ function submit_decision_bin2(x, siguiente) {
     }
 
 
+}
+
+function peticionUpdate(cedula) {
+    $.ajax({
+        url: './php/opcion_multiple.php',
+        data: {
+            query: 'actualizar',
+            cedula,
+        },
+        type: 'POST',
+        success: function (datos) {
+            switch (datos['caso']) {
+                case 0:
+                    console.log(`Error : ${datos.mensaje}`);
+                    break;
+                default:
+                    console.log('Default', datos);
+                    break;
+            }
+        },
+        error: function (error) {
+            console.log(`error`, error);
+        }
+    });
 }
