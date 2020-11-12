@@ -13,12 +13,12 @@
     <div class = "container">
         <form method = 'POST'>
             <div  class = "radioboton">                         
-                <input type='radio' name='opcion' id='P35_1' value='1' checked>
+                <input type='checkbox' name='check' id='P35_1' value='1' checked>
                 <label class = "radioboton-label" for = 'P35_1' >Shows tarimas artistas invitados  </label>
             </div>                         
 
             <div  class = "radioboton">                         
-                <input  type='radio' name='opcion' id='P35_2' value='2'>
+                <input  type='checkbox' name='check' id='P35_2' value='2'>
                 <label  class = "radioboton-label" for = 'P35_2' >Charlas auditorio principal  </label>
             </div>  
             <div  class = "radioboton">                         
