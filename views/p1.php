@@ -27,7 +27,7 @@
                 </select>
                 <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
             </div>
-            <button type="submit" id="btn_p1" class="btn btn-primary btn-lg btn-block" onclick=" generarCodigo(); var el = document.getElementsByTagName('select')[0];
+            <button type="submit" id="btn_p1" class="btn btn-primary btn-lg btn-block" onclick="var el = document.getElementsByTagName('select')[0];
 getSelectValues(el, 'views/p3.php');">
                 SIGUIENTE
             </button>

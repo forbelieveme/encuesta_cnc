@@ -1,4 +1,6 @@
 var cid;
+var f1;
+var f3;
 
 function generarCodigo(){
     //generación de codigo aleatorio para almacenamiento del registro
@@ -7,25 +9,88 @@ function generarCodigo(){
     var charactersLength = characters.length;
     for ( var i = 0; i < 15; i++ ) {
       id += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
+   }   
+   console.log("Primer registro")
 
+   //Captura del codigo unico de registro
    cid = id;
 
-    console.log(cid);
-    $.ajax({
-        url: './php/actualizar.php',
-        data: {
-            query: 'crear',
-            cedula,
-        },
-        type: 'POST',
-        success: function (datos) {
-                    console.log('Default', datos);
-        },
-        error: function (error) {
-            console.log(`error`, error);
+   //Obtención del tiempo actual
+   var tiempo = new Date();
+
+   //Fecha Calendario
+   var dia = tiempo.getDate();
+   var mes = (tiempo.getMonth() + 1);
+
+
+   //Hora 
+   var hora = tiempo.getHours();
+
+//    console.log("El dia es "+dia+" del "+mes+ ". La hora es "+hora+".");
+
+   f1 = valorf1(mes, dia);
+   f3 = valorf3(hora);
+
+   console.log("Creando Registro con cid: "+cid+", f1 = "+f1+" y f3 = "+f3+".");
+
+   $("#pregunta").load("views/F4.php");
+
+
+
+    // console.log(cid);
+    // $.ajax({
+    //     url: './php/actualizar.php',
+    //     data: {
+    //         query: 'crear',
+    //         cedula,
+    //     },
+    //     type: 'POST',
+    //     success: function (datos) {
+    //                 console.log('Default', datos);
+    //     },
+    //     error: function (error) {
+    //         console.log(`error`, error);
+    //     }
+    // });
+}
+//Calculo del valor f1
+function valorf1(mes, dia){
+    if (mes == 11){
+        for(let i = 13; i < 31; i++){
+            if (dia == i)            
+                return i -11;
         }
-    });
+
+    }else if(mes == 12){
+        for(let i = 1; i < 7; i++){
+            if (dia == i)            
+                return i + 19;
+        }
+    }else {
+        return 0;
+    }
+
+}
+
+//Calculo del valor f3
+function valorf3(hora){
+    console.log("Hora: "+hora );
+    console.log("Tipo: "+typeof(hora));
+    if (10 <= hora &&  hora <12 ){
+        return 1;        
+    }else if((12 <= hora)  && (hora < 14)){
+        return 2;
+
+    }else if((14 <= hora) && (hora < 18)){
+        return 3;
+
+    }else if((18 <= hora) && (hora < 21)){
+        return 4;
+
+    }else if((21 <= hora) && (hora < 22)){
+        return 5;
+    }
+
 }
 
 function submit_escala(x, siguiente) {
