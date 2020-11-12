@@ -5,17 +5,17 @@
                 <div class = "container">
                     <div class = "row row-header">                
                         <div class = "col-sm-12">
-                            <h4>39. ¿Por qué no participó en ninguna de las actividades 
-                                de la Feria del Hogar 2020? </h4>
+                            <label>39. ¿Por qué no participó en ninguna de las actividades 
+                                de la Feria del Hogar 2020? </label>
                         </div>                    
                     </div>
                 </div>
             </div>
-
-            <div class = "container">
-                
-                    <textarea id ="P39" name="razon_calificacion" style="width:100%" rows = "10"></textarea>
-                    <button style="margin-top: 15px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>                                
+            <div class="form-group mt-5">
+                <div class = "container">                    
+                    <textarea class ="md-textarea form-control col-12 " id ="P39" name="razon_calificacion" style="width:100%" rows = "10"></textarea>
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                </div>
             </div>
         </form>
     </div>

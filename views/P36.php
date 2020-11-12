@@ -5,17 +5,16 @@
                 <div class = "container">
                     <div class = "row row-header">                
                         <div class = "col-sm-12">
-                            <h4>Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy Insatisfecho” y 10
+                            <label>36.Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy Insatisfecho” y 10
                             es “Muy satisfecho” ¿cuál es tu nivel de satisfacción con…? (PREGUNTAR A LOS
-                            QUE RESPONDIÓ EN P35)</h4>
+                            QUE RESPONDIÓ EN P35)</label>
                         </div>                    
                     </div>
                 </div>
             </div>
             <div class = "container">
-                
-                <div class = "row" id = "P36_1">
-
+                <div class="form-group">
+                    <div class = "row" id = "P36_1">
                         <div class = "col-12" ><h5>Shows tarimas artistas invitados</h5></div>
                             <?php 
                             for ($counter = 1; $counter < 11; $counter++){
@@ -27,9 +26,10 @@
                             ?>                                                                                           
                         </div>   
                         <br>   
-                        <div class = "row" id = "P36_2">
-
-                            <div class = "col-12" ><h5>Charlas auditorio principal</h5></div>
+                    </div>
+                <div class="form-group">
+                    <div class = "row" id = "P36_2">
+                        <div class = "col-12" ><h5>Charlas auditorio principal</h5></div>
                             <?php 
                             for ($counter = 1; $counter < 11; $counter++){
                                 echo "<div  class = 'radioboton col-5 col-sm-1'>";                        
@@ -38,10 +38,14 @@
                                 echo "</div>";
                             }
                             ?>                                                                                           
-                        </div>    
-                        <br>
-                    <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
-          
+                    </div>    
+                    <br>
+                </div>    
+                   
+                <div class="form-group">
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                </div >
+        
             </div>
         </form>
     </div>

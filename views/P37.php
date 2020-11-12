@@ -12,19 +12,21 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class = "container">                
-                        <div class = "row" id = "P37">
-                            <?php 
+            <div class="form-group mt-5">
+                <div class = "container">         
+                    <div class='form-check form-check-inline col-1'>                           
+                        <?php 
                             for ($counter = 1; $counter < 11; $counter++){
                                 echo "<div  class = 'radioboton col-5 col-sm-1'>";                        
                                 echo "<input class='form-check-input' type='radio' name='P37' id='P37_". $counter."' value='". $counter."'>";
-                                echo "<label class='form-check-label escala' for='inlineRadio37'>' >". $counter."</label>";
+                                echo "<label class='form-check-label escala' for='P37_'>".$counter."</label>";
                                 echo "</div>";
                             }
-                            ?>                                                                                           
-                        </div> 
-                        <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>            
+                        ?>    
+                    </div>                                                                                          
+                    
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                    
                 </div>
             </div>
         </form>

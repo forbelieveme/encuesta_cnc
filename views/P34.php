@@ -11,21 +11,30 @@
                     </div>
                 </div>
             </div>
-            <div class = "container">                
-                    <div >                         
-                        <input type='radio' name='opcion' id='P34_si' value='1' checked>
-                        <label  for = 'P34_si' >Sí  </label>
+            
+            <div class="form-group mt-5">
+                <div class = "container">                
+                    <div class='form-check form-check-inline col-12'>                     
+                        <input class='form-check-input' type='radio' name='opcion' id='P34_si' value='1' checked>
+                        <label class='form-check-label escala' for = 'P34_si' >Sí  </label>
                     </div>                         
-
-                    <div>                         
-                        <input  type='radio' name='opcion' id='P34_no' value='2'>
-                        <label  for = 'P34_no' >No  </label>
+                </div>
+            </div>
+            <div class="form-group mt-5">   
+                <div class = "container">                
+                    <div class='form-check form-check-inline col-12'>                                             
+                        <input  class='form-check-input' type='radio' name='opcion' id='P34_no' value='2'>
+                        <label  class='form-check-label escala' for = 'P34_no' >No  </label>
                     </div>    
 
-                    <div>
-                        <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
-                    </div>
-                
+                </div>
+            </div>
+            <div class="form-group mt-5">
+                <div class = "container">                
+                    <div class='form-check form-check-inline col-12'>                     
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                    </div>                
+                </div>
             </div>
         </form>
     </div>
