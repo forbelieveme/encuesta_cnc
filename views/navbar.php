@@ -1,7 +1,7 @@
 <!-- Barra de Navegación - Barra de Navegación -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" >
-        <img src="images/logoMecca.png" width="110" height="30" class="d-inline-block align-top mr-2" alt="" loading="lazy" />
+        <img src="" width="110" height="30" class="d-inline-block align-top mr-2" alt="" loading="lazy" />
         ENCUESTA
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
