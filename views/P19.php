@@ -101,8 +101,8 @@
                     <?php 
                     for ($counter = 1; $counter < 11; $counter++){
                         echo "<div  class = 'radioboton col-5 col-sm-1'>";                        
-                        echo "<input class = 'radio-check' type='radio' name='opcion' id='P19__". $counter."' value='". $counter."'>";
-                        echo "<label class = 'radioboton-label' for = 'P19__". $counter."' >". $counter."</label>";
+                        echo "<input class = 'radio-check' type='radio' name='opcion' id='P19_7_". $counter."' value='". $counter."'>";
+                        echo "<label class = 'radioboton-label' for = 'P19_7_". $counter."' >". $counter."</label>";
                         echo "</div>";
                     }
                     ?>                                                                                           
