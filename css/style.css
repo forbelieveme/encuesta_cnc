@@ -23,3 +23,17 @@
 .radio-check {
 	margin-top: 5px;
 }
+
+.container.p13 {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.escala.p13 {
+    top: 20px;
+    position: relative;
+    left: -19px;
+}
