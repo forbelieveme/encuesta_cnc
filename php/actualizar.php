@@ -20,8 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "actualizar":
             $valor = $_POST["informacion"];
             $num = $_POST["num_pregunta"];
-            
-            // $sql = "INSERT INTO Partida (puntaje, cedula_fk) VALUES (?, ?)";
+
+            // for($i=0;);
+            //caso1
+            // $sql = "UPDATE encuesta SET" . $num[i] . " =" . $valor . "WHERE (cid = '45sad45sa4da5s');";
+            //caso2
+            // $sql = "UPDATE encuesta SET" . $num[i] . " =" . $valor[i] . "WHERE (cid = '45sad45sa4da5s');";
 
             // try {
             //     $stmt = $db->prepare($sql);
@@ -46,6 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo json_encode($resp, JSON_FORCE_OBJECT);
             // echo $valor;
             break;
-    } 
+    }
     // mysqli_close($db);
 }
