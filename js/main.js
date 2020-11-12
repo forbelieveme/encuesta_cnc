@@ -91,3 +91,37 @@ function submit_multiple_escala(form, nameArray, siguiente) {
 
     $("#pregunta").load(siguiente);
 }
+
+function getRadioVal_text(id_textA,form, name) {
+    var val;
+    var x = document.getElementById(id_textA).value;
+    // get list of radio buttons with specified name
+    var radios = form.elements[name];
+
+    // loop through list of radio buttons
+    for (var i = 0, len = radios.length; i < len; i++) {
+        if (radios[i].checked) { // radio checked?
+            val = radios[i].value; // if so, hold its value in val
+            break; // and break out of for loop
+        }
+    }
+
+    if (val==5){
+        return x;
+    } else {
+        return val;
+    }
+}
+
+function submit_decision_binaria(x, siguiente) {
+
+    console.log(`ENVIO AJAX POST`, x);
+
+    if (x == '3' || x == '4') {
+        $("#pregunta").load(siguiente[0]);
+    } else {
+        $("#pregunta").load(siguiente[1]);
+    }
+
+
+}

@@ -14,9 +14,10 @@
 }
 
 .radioboton-label {
-	width: 50%;
+	width: 80%;
 	padding: 0px 10px;
-
+	top: 0.5vh;
+	position: relative;
 }
 
 .radio-check {
