@@ -142,21 +142,14 @@ function submit_decision_bin2(x, siguiente) {
 
 function peticionUpdate(cedula) {
     $.ajax({
-        url: './php/opcion_multiple.php',
+        url: './php/actualizar.php',
         data: {
             query: 'actualizar',
             cedula,
         },
         type: 'POST',
         success: function (datos) {
-            switch (datos['caso']) {
-                case 0:
-                    console.log(`Error : ${datos.mensaje}`);
-                    break;
-                default:
-                    console.log('Default', datos);
-                    break;
-            }
+            console.log('Default', datos);
         },
         error: function (error) {
             console.log(`error`, error);
