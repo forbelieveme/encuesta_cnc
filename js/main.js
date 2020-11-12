@@ -38,3 +38,12 @@ function getRadioVal(form, name) {
     }
     return val; // return value of checked radio or undefined if none checked
 }
+
+function getTextArea(id_textA, siguiente){
+    var x= document.getElementById(id_textA).value;
+
+    console.log(`x`, x);
+
+    $("#pregunta").load(siguiente);
+    
+}
