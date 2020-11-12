@@ -1,4 +1,4 @@
-<div class = "mt-5" class = "P42">
+<div class = "mt-5" id = "P42">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method = 'POST'>
             <div class = "jumbotron">
