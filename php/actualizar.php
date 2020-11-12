@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         case "actualizar":
             $valor = $_POST["informacion"];
+            $num = $_POST["num_pregunta"];
             
             // $sql = "INSERT INTO Partida (puntaje, cedula_fk) VALUES (?, ?)";
 
@@ -38,6 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // $resp->mensaje = 'Ingreso exitoso';
             $resp->valor = $valor;
             $resp->tipo = gettype($valor);
+            $resp->num = $num;
+            $resp->tipo2 = gettype($num);
             // $resp->puntaje = $puntaje;
 
             echo json_encode($resp, JSON_FORCE_OBJECT);

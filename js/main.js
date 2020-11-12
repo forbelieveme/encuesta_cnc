@@ -28,20 +28,20 @@ function generarCodigo() {
     // });
 }
 
-function submit_escala(x, siguiente) {
+function submit_escala(x, siguiente, num_pregunta) {
 
     console.log(`ENVIO AJAX POST`, x);
-    peticionUpdate(x);
+    peticionUpdate(x, num_pregunta);
 
 
 
     $("#pregunta").load(siguiente);
 
 }
-function submit_decision_binaria(x, siguiente) {
+function submit_decision_binaria(x, siguiente, num_pregunta) {
 
     console.log(`ENVIO AJAX POST`, x);
-    peticionUpdate(x);
+    peticionUpdate(x, num_pregunta);
 
     if (x == '1') {
         $("#pregunta").load(siguiente[0]);
@@ -52,7 +52,7 @@ function submit_decision_binaria(x, siguiente) {
 
 }
 
-function getSelectValues(select, siguiente) {
+function getSelectValues(select, siguiente, num_pregunta) {
     var result = [];
     var options = select && select.options;
     var opt;
@@ -65,7 +65,7 @@ function getSelectValues(select, siguiente) {
         }
     }
     console.log(`ENVIO AJAX POST`, result);
-    peticionUpdate(result.toString());
+    peticionUpdate(result.toString(), num_pregunta);
 
 
 
@@ -110,11 +110,11 @@ function getRadioVal_multiple(form, nameArray) {
     return val;
 }
 
-function getTextArea(id_textA, siguiente) {
+function getTextArea(id_textA, siguiente, num_pregunta, num_pregunta) {
     var x = document.getElementById(id_textA).value;
 
     console.log(`ENVIO AJAX POST`, x);
-    peticionUpdate(x);
+    peticionUpdate(x, num_pregunta);
 
     $("#pregunta").load(siguiente);
 }
@@ -124,7 +124,7 @@ function submit_multiple_escala(form, nameArray, siguiente) {
     var x = getRadioVal_multiple(form, nameArray);
 
     console.log(`ENVIO AJAX POST`, x);
-    peticionUpdate(x);
+    peticionUpdate(x, num_pregunta);
 
 
     $("#pregunta").load(siguiente);
@@ -154,7 +154,7 @@ function getRadioVal_text(id_textA, form, name) {
 function submit_decision_bin(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
-    peticionUpdate(x);
+    peticionUpdate(x, num_pregunta);
 
 
     if (x == '3' || x == '4') {
@@ -168,7 +168,7 @@ function submit_decision_bin(x, siguiente) {
 function submit_decision_bin2(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
-    peticionUpdate(x);
+    peticionUpdate(x, num_pregunta);
 
 
     if (x == '9' || x == '10') {
@@ -180,12 +180,13 @@ function submit_decision_bin2(x, siguiente) {
 
 }
 
-function peticionUpdate(informacion) {
+function peticionUpdate(informacion, num_pregunta) {
     $.ajax({
         url: './php/actualizar.php',
         data: {
             query: 'actualizar',
             informacion,
+            num_pregunta
         },
         type: 'POST',
         success: function (datos) {

@@ -1,7 +1,7 @@
 /*Creación de la encuesta*/
 INSERT INTO encuesta (cid) VALUES ('45sad45sa4da5s');
 /**/
-UPDATE encuesta SET (f1 = 2, f3 = 2,f4 = 0 ,f5 =2) WHERE (cid = '45sad45sa4da5s');
+UPDATE encuesta SET f1 = 2, f3 = 2,f4 = 0 ,f5 =2 WHERE (cid = '45sad45sa4da5s');
 
 /*Elimicación de registros a través de un id específico*/
 DELETE FROM encuesta WHERE id = 1;

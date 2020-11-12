@@ -6,6 +6,7 @@
     $(function() {
         $(".js-example-basic-multiple").select2();
     });
+    var numero_pregunta=['P1'];
 </script>
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
@@ -27,8 +28,8 @@
                 </select>
                 <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
             </div>
-            <button type="submit" id="btn_p1" class="btn btn-primary btn-lg btn-block" onclick=" generarCodigo(); var el = document.getElementsByTagName('select')[0];
-getSelectValues(el, 'views/p3.php');">
+            <button type="submit" id="btn_p1" class="btn btn-primary btn-lg btn-block" onclick="var el = document.getElementsByTagName('select')[0];
+getSelectValues(el, 'views/p3.php', numero_pregunta);">
                 SIGUIENTE
             </button>
         </form>
