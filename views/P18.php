@@ -11,8 +11,8 @@
         </div>
     </div>
     <div class = "container">
-        <form method = 'POST'>
-            <textarea id ="P18" name="razon_calificacion" style="width:100%" rows = "10"></textarea>
+        <form method = 'POST' onsubmit="getTextArea('P8_textArea', 'views/p9.php'); return false;">
+            <textarea id ="P8_textArea" name="razon_calificacion" style="width:100%" rows = "10"></textarea>
             <button style="margin-top: 10px;" type='submit'
             class = "btn btn-primary btn-block"> Confirmar </button>    
         </form>
