@@ -12,8 +12,8 @@
             </div>
             <div class='form-check form-check-inline col-12'>
                 <div class = "container">            
-                    <textarea class ="col-12"  id ="P41" name="razon_calificacion" style="width:100%" rows = "10"></textarea>
-                    <button style="margin-top: 15px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>            
+                    <textarea class ="md-textarea form-control col-12"  id ="P41" name="razon_calificacion" style="width:100%" rows = "10"></textarea>
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
                 </div>
             </div>
         </form>

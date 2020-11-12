@@ -5,31 +5,29 @@
                 <div class = "container">
                     <div class = "row row-header">                
                         <div class = "col-sm-12">
-                            <h4>30. ¿Recuerdas haber visto, leído o escuchado publicidad de la Feria del Hogar 2020?</h4>
+                            <label>30. ¿Recuerdas haber visto, leído o escuchado publicidad de la Feria del Hogar 2020?</label>
                         </div>                    
                     </div>
                 </div>
             </div>
             
+            <div class = "form-group mt-5">
                 <div class = "container">
-                    
-                        <div class = "col-sm-12 ">
-                            <div>                         
-                                <input type='radio' name='opcion' id='P30_si' value='1' checked>
-                                <label  for = 'P30_si' >Sí  </label>
-                            </div>                         
-                            <div>                         
-                                <input  type='radio' name='opcion' id='P30_no' value='2'>
-                                <label  for = 'P30_no' >No  </label>
-                            </div>                         
-                            
-                        </div>
-                        <div class = "col-sm-12">
-                            <div>                            
-                                <button type='submit' class = "btn btn-primary btn-block"> Confirmar </button>
-                            </div>
-                        </div>
-                </div>
+                    <div class = "form-check col-12">
+                        <div class = 'radioboton'>                         
+                            <input  class='form-check-input' type='radio' name='opcion' id='P30_si' value='1' checked>
+                            <label  class='form-check-label' for = 'P30_si' >Sí  </label>
+                        </div>                         
+                        <div class = 'radioboton'>                         
+                            <input  class='form-check-input'  type='radio' name='opcion' id='P30_no' value='2'>
+                            <label  class='form-check-label' for = 'P30_no' >No  </label>
+                        </div>        
+                    </div>    
+                </div>    
+            </div>    
+            <div class = "form-group mt-5">                                          
+                <button type="submit" name="login" class=" col-12 btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+            </div>
         </form>
     </div>      
 </div>
