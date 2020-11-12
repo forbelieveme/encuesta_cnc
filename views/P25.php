@@ -78,20 +78,6 @@
                     ?>                                                                                           
                 </div>    
                 <br>
-                <div class = "row" id = "P25_6">
-
-                    <div class = "col-12" ><h5>Disponibilidad del Personal de Seguridad 
-                        y vigilancia </h5></div>
-                    <?php 
-                    for ($counter = 1; $counter < 11; $counter++){
-                        echo "<div  class = 'radioboton col-5 col-sm-1'>";                        
-                        echo "<input class = 'radio-check' type='radio' name='opcion6' id='P25_6_". $counter."' value='". $counter."'>";
-                        echo "<label class = 'radioboton-label' for = 'P25_6_". $counter."' >". $counter."</label>";
-                        echo "</div>";
-                    }
-                    ?>                                                                                           
-                </div>   
-                <br>     
                 
                 
             <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
