@@ -1,18 +1,19 @@
-<div class = "P29">
-
-    <div class = "jumbotron">
-        <div class = "container">
-            <div class = "row row-header">                
-                <div class = "col-sm-12">
-                    <h4>29. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” y 10
-                        es “Muy satisfecho” ¿Cuál es Tu nivel de satisfacción con los siguientes aspectos
-                         de la plazoleta de comidas? (INDUCIDA, ÚNICA RESPUESTA POR FILA) </h4>
-                </div>                    
+<div class = "mt-5" id= "P29">
+    <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+        <form method = 'POST'>      
+            <div class = "jumbotron">
+                <div class = "container">
+                    <div class = "row row-header">                
+                        <div class = "col-sm-12">
+                            <h4>29. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” y 10
+                                es “Muy satisfecho” ¿Cuál es Tu nivel de satisfacción con los siguientes aspectos
+                                de la plazoleta de comidas? (INDUCIDA, ÚNICA RESPUESTA POR FILA) </h4>
+                        </div>                    
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class = "container">
-        <form method = 'POST'>        
+            <div class = "container">
+                  
                 <div class = "row" id = "P29_1">
 
                     <div class = "col-12" ><h5>Tiempo de atención en la plazoleta de comidas</h5></div>
@@ -54,6 +55,8 @@
                 
                 <br>
                 <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
+          
+            </div>
         </form>
     </div>
 </div>
