@@ -19,7 +19,7 @@
                 </div>
             </div>
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">
-                INGRESAR
+                SIGUIENTE
             </button>
         </form>
     </div>

@@ -16,7 +16,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block">
-                INGRESAR
+                SIGUIENTE
             </button>
         </form>
     </div>
