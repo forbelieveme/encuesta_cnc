@@ -1,6 +1,9 @@
+<script>
+    var numero_pregunta = ['p20'];
+</script>
 <div class="mt-5" id="P20">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_p20" onsubmit="submit_decision_bin(getRadioVal_text('P20_textArea',document.getElementById('form_p20'),'P20'),['views/P23.php','views/P21.php']); return false;">
+        <form method='POST' id="form_p20" onsubmit="submit_decision_bin(getRadioVal_text('P20_textArea',document.getElementById('form_p20'),'P20'),['views/P23.php','views/P21.php'], numero_pregunta); return false;">
             <div class="form-group">
                 <div class="jumbotron">
                     <div class="container">

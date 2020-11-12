@@ -6,6 +6,8 @@
     $(function() {
         $(".js-example-basic-multiple").select2();
     });
+
+    var numero_pregunta = ['p16'];
 </script>
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
@@ -13,7 +15,7 @@
             <!-- <h2 class="text-center black">P1</h2> -->
             <div class="form-group">
                 <div class="jumbotron">
-                    <label for="P1">¿Cuáles son las categorías de producto de la feria que más le interesan?
+                    <label for="P1">16. ¿Cuáles son las categorías de producto de la feria que más le interesan?
                     </label>
                 </div>
                 <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
@@ -34,7 +36,7 @@
             </div>
 
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block" onclick="var el = document.getElementsByTagName('select')[0];
-    getSelectValues(el, 'views/p17.php');">
+    getSelectValues(el, 'views/p17.php', numero_pregunta);">
                 INGRESAR
             </button>
         </form>

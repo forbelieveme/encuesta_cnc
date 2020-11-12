@@ -3,10 +3,10 @@
 </script>
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p9" onsubmit="submit_decision_binaria(getRadioVal(document.getElementById('form_p9'),'P9'), ['views/p11.php','views/p10.php'] ); return false;">
+        <form method="post" id="form_p9" onsubmit="submit_decision_binaria(getRadioVal(document.getElementById('form_p9'),'P9'), ['views/p11.php','views/p10.php'], numero_pregunta ); return false;">
             <div class="form-group">
                 <div class="jumbotron">
-                    <label for="P4">¿Encontraste todo lo que querías comprar?
+                    <label for="P4">9. ¿Encontraste todo lo que querías comprar?
                     </label>
                 </div>
                 <div class="container text-center">

@@ -1,9 +1,12 @@
+<script>
+    var numero_pregunta = ['p14'];
+</script>
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p14" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p14'),'P14'), 'views/p15.php'); return false;">
+        <form method="post" id="form_p14" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p14'),'P14'), 'views/p15.php',numero_pregunta); return false;">
             <div class="form-group">
                 <div class="jumbotron">
-                    <label for="P1">Teniendo en cuenta una escala de 1 a 10, donde 1 es “Definitivamente no asistiré” y
+                    <label for="P1">14. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Definitivamente no asistiré” y
                         10 es “Definitivamente si asistiré” ¿Cuál es tu intención de asistir a la próxima versión de la
                         Feria del Hogar?
                     </label>

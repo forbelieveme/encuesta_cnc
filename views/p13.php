@@ -1,6 +1,9 @@
+<script>
+    var numero_pregunta = ['p13'];
+</script>
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p13" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p13'),'P13'), 'views/p14.php'); return false;">
+        <form method="post" id="form_p13" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p13'),'P13'), 'views/p14.php', numero_pregunta); return false;">
             <div class="form-group">
                 <div class="jumbotron">
                     <label for="P1">13. Utilizando una escala de 0 a 10, donde 0 es “Definitivamente no la recomendaría” y

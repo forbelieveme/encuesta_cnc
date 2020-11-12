@@ -3,7 +3,7 @@
 </script>
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p3" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p3'),'P3'), 'views/p5.php'); return false;">
+        <form method="post" id="form_p3" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p3'),'P3'), 'views/p5.php', numero_pregunta); return false;">
             <div class="form-group">
                 <div class="jumbotron">
                     <label for="P3">3. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” y

@@ -175,7 +175,7 @@ function getRadioVal_multiple(form, nameArray) {
     return val;
 }
 
-function getTextArea(id_textA, siguiente, num_pregunta, num_pregunta) {
+function getTextArea(id_textA, siguiente, num_pregunta) {
     var x = document.getElementById(id_textA).value;
 
     console.log(`ENVIO AJAX POST`, x);
@@ -184,7 +184,7 @@ function getTextArea(id_textA, siguiente, num_pregunta, num_pregunta) {
     $("#pregunta").load(siguiente);
 }
 
-function submit_multiple_escala(form, nameArray, siguiente) {
+function submit_multiple_escala(form, nameArray, siguiente, num_pregunta) {
 
     var x = getRadioVal_multiple(form, nameArray);
 
@@ -216,7 +216,7 @@ function getRadioVal_text(id_textA, form, name) {
     }
 }
 
-function submit_decision_bin(x, siguiente) {
+function submit_decision_bin(x, siguiente, num_pregunta) {
 
     console.log(`ENVIO AJAX POST`, x);
     peticionUpdate(x, num_pregunta);
@@ -230,7 +230,7 @@ function submit_decision_bin(x, siguiente) {
 
 
 }
-function submit_decision_bin2(x, siguiente) {
+function submit_decision_bin2(x, siguiente, num_pregunta) {
 
     console.log(`ENVIO AJAX POST`, x);
     peticionUpdate(x, num_pregunta);
