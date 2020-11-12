@@ -32,7 +32,7 @@
             <div class = "form-group mt-5">                                                                    
                 <div class = "container" id = "P29_2">
                     <h5>Aseo en la plazoleta de comidas y comedores</h5>
-                    <div class = "form-check form-check-inline col-1">
+                    <div class = "form-check-inline col-1">
                     <?php 
                     for ($counter = 1; $counter < 11; $counter++){
                         echo "<div  class = 'radioboton col-5 col-sm-1'>";                        

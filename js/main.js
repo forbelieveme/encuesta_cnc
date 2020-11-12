@@ -1,3 +1,33 @@
+var cid;
+
+function generarCodigo(){
+    //generación de codigo aleatorio para almacenamiento del registro
+    var id = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < 15; i++ ) {
+      id += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+
+   cid = id;
+
+    console.log(cid);
+    $.ajax({
+        url: './php/actualizar.php',
+        data: {
+            query: 'crear',
+            cedula,
+        },
+        type: 'POST',
+        success: function (datos) {
+                    console.log('Default', datos);
+        },
+        error: function (error) {
+            console.log(`error`, error);
+        }
+    });
+}
+
 function submit_escala(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
@@ -142,21 +172,14 @@ function submit_decision_bin2(x, siguiente) {
 
 function peticionUpdate(cedula) {
     $.ajax({
-        url: './php/opcion_multiple.php',
+        url: './php/actualizar.php',
         data: {
             query: 'actualizar',
             cedula,
         },
         type: 'POST',
         success: function (datos) {
-            switch (datos['caso']) {
-                case 0:
-                    console.log(`Error : ${datos.mensaje}`);
-                    break;
-                default:
                     console.log('Default', datos);
-                    break;
-            }
         },
         error: function (error) {
             console.log(`error`, error);
