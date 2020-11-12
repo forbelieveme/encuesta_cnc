@@ -13,12 +13,12 @@
                         echo "<div class='form-check form-check-inline col-1'>";
                         echo "<input class='form-check-input' type='radio' name='P21' id='P21_" . $counter . "' value='" . $counter . "'>";
                         echo "<label class='form-check-label escala' for='inlineRadio21'>" . $counter . "</label>";
-                        echo "</div>";
+                        echo "</div";
                     }
                     ?>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block ">
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">
                 SIGUIENTE
             </button>
         </form>
