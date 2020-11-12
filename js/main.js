@@ -1,16 +1,40 @@
-function submit_by_id() {
-    var name = document.getElementById("form_p1").elements;
+function submit_escala(x, siguiente) {
 
-    console.log(`R: `, name);
+    console.log(`ENVIO AJAX POST`, x);
 
-    // $("#btn_p1").click(function() {
-        $("#pregunta").load("views/p3.php");
-        //     $("#pregunta").load("views/p3.php");
-    // });
+    $("#pregunta").load(siguiente);
 
-    // if (validation()) // Calling validation function
-    // {
-    //     // document.getElementById("form_id").submit(); //form submission
-    //     // alert(" Name : " + name + " n Email : " + email + " n Form Id : " + document.getElementById("form_id").getAttribute("id") + "nn Form Submitted Successfully......");
-    // }
+}
+
+function getSelectValues(select, siguiente) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            result.push(opt.value || opt.text);
+        }
+    }
+    console.log(`ENVIO AJAX POST`, result);
+
+    $("#pregunta").load(siguiente);
+
+}
+
+function getRadioVal(form, name) {
+    var val;
+    // get list of radio buttons with specified name
+    var radios = form.elements[name];
+    
+    // loop through list of radio buttons
+    for (var i=0, len=radios.length; i<len; i++) {
+        if ( radios[i].checked ) { // radio checked?
+            val = radios[i].value; // if so, hold its value in val
+            break; // and break out of for loop
+        }
+    }
+    return val; // return value of checked radio or undefined if none checked
 }
