@@ -1,6 +1,6 @@
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p6" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p6'),'P6'), 'views/p7.php'); return false;">
+        <form method="post" id="form_p6" onsubmit="submit_decision_binaria(getRadioVal(document.getElementById('form_p6'),'P6'), ['views/p8.php','views/p7.php'] ); return false;">
             <div class="form-group">
                 <label for="P4">¿Has realizado o realizaste compras en esta feria? 
                 </label>

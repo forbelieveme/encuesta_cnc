@@ -2,7 +2,20 @@ function submit_escala(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
 
+
     $("#pregunta").load(siguiente);
+
+}
+function submit_decision_binaria(x, siguiente) {
+
+    console.log(`ENVIO AJAX POST`, x);
+
+    if(x=='1'){
+        $("#pregunta").load(siguiente[0]);
+    } else{
+        $("#pregunta").load(siguiente[1]);
+    }
+
 
 }
 
@@ -20,6 +33,7 @@ function getSelectValues(select, siguiente) {
     }
     console.log(`ENVIO AJAX POST`, result);
 
+   
     $("#pregunta").load(siguiente);
 
 }
@@ -42,8 +56,7 @@ function getRadioVal(form, name) {
 function getTextArea(id_textA, siguiente){
     var x= document.getElementById(id_textA).value;
 
-    console.log(`x`, x);
+    console.log(`ENVIO AJAX POST`, x);
 
     $("#pregunta").load(siguiente);
-    
 }
