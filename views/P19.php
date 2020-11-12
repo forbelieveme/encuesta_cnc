@@ -1,6 +1,6 @@
 <div class="mt-5" id="p19">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST'>
+        <form method='POST' id="form_p19" onsubmit="return false;">
             <div class="jumbotron">
                 <div class="container">
                     <div class="row row-header">
@@ -20,8 +20,8 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P19' id='P19_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio19'>" . $counter . "</label>";
+                        echo "<input class='form-check-input' type='radio' name='P19_1' id='P19_1_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio19_1'>" . $counter . "</label>";
                         echo "</div";
                     }
                     ?>
@@ -34,8 +34,8 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P19' id='P19_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio19'>" . $counter . "</label>";
+                        echo "<input class='form-check-input' type='radio' name='P19_2' id='P19_2_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio19_2'>" . $counter . "</label>";
                         echo "</div";
                     }
                     ?>
@@ -48,8 +48,8 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P19' id='P19_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio19'>" . $counter . "</label>";
+                        echo "<input class='form-check-input' type='radio' name='P19_3' id='P19_3_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio19_3'>" . $counter . "</label>";
                         echo "</div";
                     }
                     ?>
@@ -62,8 +62,8 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P19' id='P19_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio19'>" . $counter . "</label>";
+                        echo "<input class='form-check-input' type='radio' name='P19_4' id='P19_4_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio19_4'>" . $counter . "</label>";
                         echo "</div";
                     }
                     ?>
@@ -76,8 +76,8 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P19' id='P19_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio19'>" . $counter . "</label>";
+                        echo "<input class='form-check-input' type='radio' name='P19_5' id='P19_5_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio19_5'>" . $counter . "</label>";
                         echo "</div";
                     }
                     ?>
@@ -90,8 +90,8 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P19' id='P19_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio19'>" . $counter . "</label>";
+                        echo "<input class='form-check-input' type='radio' name='P19_6' id='P19_6_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio19_6'>" . $counter . "</label>";
                         echo "</div";
                     }
                     ?>
@@ -104,14 +104,15 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P19' id='P19_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio19'>" . $counter . "</label>";
+                        echo "<input class='form-check-input' type='radio' name='P19_7' id='P19_7_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='form-check-label escala' for='inlineRadio19_7'>" . $counter . "</label>";
                         echo "</div";
                     }
                     ?>
                 </div>
             </div>
-            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5" 
+            onclick="submit_multiple_escala(document.getElementById('form_p19'),['P19_1', 'P19_2', 'P19_3', 'P19_4', 'P19_5', 'P19_6', 'P19_7'],'views/P20.php')">
                 SIGUIENTE
             </button>
         </form>
