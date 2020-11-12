@@ -113,11 +113,23 @@ function getRadioVal_text(id_textA,form, name) {
     }
 }
 
-function submit_decision_binaria(x, siguiente) {
+function submit_decision_bin(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
 
     if (x == '3' || x == '4') {
+        $("#pregunta").load(siguiente[0]);
+    } else {
+        $("#pregunta").load(siguiente[1]);
+    }
+
+
+}
+function submit_decision_bin2(x, siguiente) {
+
+    console.log(`ENVIO AJAX POST`, x);
+
+    if (x == '9' || x == '10') {
         $("#pregunta").load(siguiente[0]);
     } else {
         $("#pregunta").load(siguiente[1]);
