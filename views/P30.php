@@ -16,11 +16,11 @@
                     <div class = "form-check col-12">
                         <div class = 'radioboton'>                         
                             <input  class='form-check-input' type='radio' name='opcion' id='P30_si' value='1' checked>
-                            <label  class='form-check-label' for = 'P30_si' >Sí  </label>
+                            <label  class='form-check-label escala' for = 'P30_si' >Sí  </label>
                         </div>                         
                         <div class = 'radioboton'>                         
                             <input  class='form-check-input'  type='radio' name='opcion' id='P30_no' value='2'>
-                            <label  class='form-check-label' for = 'P30_no' >No  </label>
+                            <label  class='form-check-label escala' for = 'P30_no' >No  </label>
                         </div>        
                     </div>    
                 </div>    
