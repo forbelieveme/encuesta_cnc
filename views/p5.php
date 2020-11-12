@@ -2,7 +2,7 @@
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post" id="form_p5" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p5'),'P5'), 'views/p6.php'); return false;">
             <div class="form-group">
-                <label for="P5">¿Asististe a la Feria del Hogar 2019?
+                <label for="P5">5. ¿Asististe a la Feria del Hogar 2019?
                 </label>
                 <div class="container text-center">
                     <div class="custom-control custom-radio custom-control-inline form-check-inline">

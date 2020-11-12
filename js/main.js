@@ -1,36 +1,38 @@
 var cid;
 
-function generarCodigo(){
+function generarCodigo() {
     //generación de codigo aleatorio para almacenamiento del registro
     var id = '';
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
-    for ( var i = 0; i < 15; i++ ) {
-      id += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
+    for (var i = 0; i < 15; i++) {
+        id += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
 
-   cid = id;
+    cid = id;
 
-    console.log(cid);
-    $.ajax({
-        url: './php/actualizar.php',
-        data: {
-            query: 'crear',
-            cedula,
-        },
-        type: 'POST',
-        success: function (datos) {
-                    console.log('Default', datos);
-        },
-        error: function (error) {
-            console.log(`error`, error);
-        }
-    });
+    // console.log(cid);
+    // $.ajax({
+    //     url: './php/actualizar.php',
+    //     data: {
+    //         query: 'crear',
+    //         cedula,
+    //     },
+    //     type: 'POST',
+    //     success: function (datos) {
+    //                 console.log('Default', datos);
+    //     },
+    //     error: function (error) {
+    //         console.log(`error`, error);
+    //     }
+    // });
 }
 
 function submit_escala(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x);
+
 
 
     $("#pregunta").load(siguiente);
@@ -39,6 +41,7 @@ function submit_escala(x, siguiente) {
 function submit_decision_binaria(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x);
 
     if (x == '1') {
         $("#pregunta").load(siguiente[0]);
@@ -111,6 +114,7 @@ function getTextArea(id_textA, siguiente) {
     var x = document.getElementById(id_textA).value;
 
     console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x);
 
     $("#pregunta").load(siguiente);
 }
@@ -120,6 +124,8 @@ function submit_multiple_escala(form, nameArray, siguiente) {
     var x = getRadioVal_multiple(form, nameArray);
 
     console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x);
+
 
     $("#pregunta").load(siguiente);
 }
@@ -148,6 +154,8 @@ function getRadioVal_text(id_textA, form, name) {
 function submit_decision_bin(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x);
+
 
     if (x == '3' || x == '4') {
         $("#pregunta").load(siguiente[0]);
@@ -160,6 +168,8 @@ function submit_decision_bin(x, siguiente) {
 function submit_decision_bin2(x, siguiente) {
 
     console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x);
+
 
     if (x == '9' || x == '10') {
         $("#pregunta").load(siguiente[0]);
@@ -170,16 +180,16 @@ function submit_decision_bin2(x, siguiente) {
 
 }
 
-function peticionUpdate(cedula) {
+function peticionUpdate(informacion) {
     $.ajax({
         url: './php/actualizar.php',
         data: {
             query: 'actualizar',
-            cedula,
+            informacion,
         },
         type: 'POST',
         success: function (datos) {
-                    console.log('Default', datos);
+            console.log('Default', datos);
         },
         error: function (error) {
             console.log(`error`, error);
