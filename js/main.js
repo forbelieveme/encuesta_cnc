@@ -353,20 +353,20 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
         } else if (tipo_de_pregunta == "radio") {
             // console.log("soy radio unica y con elemento siguiente "+siguiente
             // + " y valor "+elemento);
-            
-            console.log(idPregunta, " "+elemento+" y voy para "+siguiente);
-            peticionUpdate(elemento,idPregunta);
-        }else if(tipo_de_pregunta == "otrocual"){
+
+            console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
+            peticionUpdate(elemento, idPregunta);
+        } else if (tipo_de_pregunta == "otrocual") {
             console.log("llegue a otrocual single con valor "
-            + elemento+" en la pregunta "+idPregunta+" y voy para "+siguiente)
-            peticionUpdate(elemento,idPregunta);
-            
-        }else if(tipo_de_pregunta == "textarea"){
+                + elemento + " en la pregunta " + idPregunta + " y voy para " + siguiente)
+            peticionUpdate(elemento, idPregunta);
+
+        } else if (tipo_de_pregunta == "textarea") {
             console.log("llegue a textarea single con valor "
-            + elemento+" en la pregunta "+idPregunta+" y voy para "+siguiente)
-            peticionUpdate(elemento,idPregunta);
+                + elemento + " en la pregunta " + idPregunta + " y voy para " + siguiente)
+            peticionUpdate(elemento, idPregunta);
         }
-        else{        
+        else {
             return console.log("No se encontro el tipo.");
         }
 
@@ -376,14 +376,10 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
     }
     $("#pregunta").load(siguiente);
     if (pasaInfo) {
-        // cambiarTexto(idPregunta, elemento);
-        // console.log(`x`,document.getElementById("p3").textContent = "This is some text");
-
-        preguntaDelMomento = cambiarTexto(idPregunta, elemento)[0];
-        // $('#p3').text('The replaced text.');
-        // $(`#${idPregunta}`).text(cambiarTexto(idPregunta, elemento)[0]);
-        // console.log(`informacion`, cambiarTexto(idPregunta, elemento));
-
+        let campo = cambiarTexto(idPregunta, elemento).filter(x =>
+             x != undefined
+        )
+        preguntaDelMomento = campo[0];
     }
 
 }
@@ -416,22 +412,22 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         }
     }
 
-    if (idPregunta == 'p6'){
+    if (idPregunta == 'p6') {
         //Caso sí
         if (x == '1') {
             return siguiente[0];
-        } 
+        }
         //Caso No
         else {
             return siguiente[1];
         }
     }
 
-    if (idPregunta == 'p9'){
+    if (idPregunta == 'p9') {
         //Caso sí
         if (x == '1') {
             return siguiente[0];
-        } 
+        }
         //Caso No
         else {
             return siguiente[1];
