@@ -4,7 +4,7 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 class Database
 {
     private $host = 'localhost';
-    private $db_name = 'encues2_corferias';
+    private $db_name = 'formulario';
     private $username = 'root';
     private $password = '';
     private $conn;

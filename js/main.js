@@ -90,6 +90,9 @@ function valorf3(hora){
     }else if((21 <= hora) && (hora < 22)){
         return 5;
     }
+    else{
+        return 0;
+    }
 
 }
 
@@ -278,6 +281,33 @@ function submit_escala_porId(elemento,  idPregunta) {
     peticionUpdate(elemento, idPregunta );    
 }
 
+function submit_inicial(){
+    generarCodigo();
+    console.log(`ENVIO AJAX POST`, "f1= "+f1+", f3 = "+f3+", cid"+cid);    
+    peticionInsert(f1, f3, cid);
+}
+
+
+function peticionInsert(f1, f3, cid) {
+    
+    $.ajax({
+        url: './php/actualizar.php',
+        data: {
+            query: 'insertar',
+            f1,
+            f3,            
+            cid
+        },
+        type: 'POST',
+        success: function (datos) {
+            console.log('Default', datos);
+        },
+        error: function (error) {
+            console.log(`error`, error);
+        }
+    });
+
+}
 
 function peticionUpdate(informacion, num_pregunta) {
     
