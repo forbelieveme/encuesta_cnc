@@ -6,12 +6,17 @@
     $(function() {
         $(".js-example-basic-multiple").select2();
     });
-    var numero_pregunta = ['p1'];
+    var numero_pregunta = 'p1';
     var siguiente = 'views/p3.php';
 </script>
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p1" onsubmit="return false;" class="">
+        <form method="post" id="form_p1" onsubmit="
+        var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]);        
+        elementos.push(document.getElementById('form10').value);
+        submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),
+        siguiente);
+        return false;" class="">
             <div class="form-group">
                 <div class="jumbotron">
                     <label for="P1">1. A continuación, le voy a mostrar una tarjeta con un listado
@@ -33,8 +38,7 @@
                 <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
             </div>
             <button type="submit" id="btn_p1" class="btn btn-primary btn-lg btn-block" 
-            onclick="var el = document.getElementsByTagName('select')[0];
-            getSelectValues(el, 'views/p3.php', numero_pregunta);">
+            onclick="">
                 SIGUIENTE
             </button>
         </form>

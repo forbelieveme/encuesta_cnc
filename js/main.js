@@ -141,6 +141,22 @@ function getSelectValues(select, siguiente, num_pregunta) {
 
 }
 
+function ObtenerChecked(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            result.push(opt.value || opt.text);
+        }
+    }
+    console.log(`Valor del select `, result);
+    return result;
+}
+
 function getRadioVal(form, name) {
     var val;
     // get list of radio buttons with specified name
@@ -337,7 +353,9 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             // + " y valor "+elemento);
             peticionUpdate(elemento,idPregunta);
             console.log(idPregunta, " "+elemento+" y voy para "+siguiente);
-        }else if(tipo_de_pregunta == "otra_cual"){
+        }else if(tipo_de_pregunta == "otrocual"){
+            console.log("llegue a otrocual single con valor "
+            + elemento+" en la pregunta "+idPregunta+" y voy para "+siguiente)
             
         }else{        
             return console.log("No se encontro el tipo.");

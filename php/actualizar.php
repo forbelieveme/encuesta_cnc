@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt = $db->prepare($sql);
                 if (gettype($num) == 'string') {
                     $stmt->bind_param("ss", $informacion, $cid);
-                    // printf( str_replace('?', '%s', $sql), $informacion, $cid);
+                     printf( str_replace('?', '%s', $sql), $informacion, $cid);
                 } else {
                     $stmt->bind_param("is", $informacion, $cid);
-                    // printf( str_replace('?', '%s', $sql), $informacion, $cid);
+                     printf( str_replace('?', '%s', $sql), $informacion, $cid);
                 }
                 $stmt->execute();
                 $stmt->store_result();
