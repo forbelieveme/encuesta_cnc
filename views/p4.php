@@ -1,5 +1,5 @@
 <script>
-    var numero_pregunta = 'p14';
+    var numero_pregunta = 'p4';
 </script>
 <div class="mt-5" id="p4">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">

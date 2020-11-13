@@ -7,7 +7,7 @@
         <form method="post" id="form_p11" 
         onsubmit="
         submit_decision(false, 1, 'escala', numero_pregunta,
-        getRadioVal(document.getElementById('form_p11'),'P11'), siguiente);
+        getRadioVal(document.getElementById('form_p11'),'P11'), siguiente, true);
         return false;">
             <div class="form-group">
                 <div class="jumbotron">
