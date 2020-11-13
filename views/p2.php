@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row row-header">
                     <div class="col-sm-12">
-                        <label>2. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” Y
+                        <label id="label_P2">2. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” Y
                             10 “Muy satisfecho”, ¿Cuál es tú nivel de satisfacción con respecto al
                             cumplimiento de cada uno de los motivos que te llevaron a venir a la Feria del Hogar 2020?
                         </label>
@@ -81,6 +81,7 @@
         "El diseño de stands",
         // "Opcion escrita"
     ];
+    
     $(document).ready(function() {
 
         var down = document.getElementById("GFG_DOWN");
