@@ -377,7 +377,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
     $("#pregunta").load(siguiente);
     if (pasaInfo) {
         let campo = cambiarTexto(idPregunta, elemento).filter(x =>
-             x != undefined
+            x != undefined
         )
         preguntaDelMomento = campo[0];
     }
@@ -613,14 +613,15 @@ function cargarSiguiente(siguiente) {
 
 function cambiarTexto(pregunta, elemento) {
     var arrPreg = {
-        "p3": `¿Por qué razón calificas con ${elemento} el cumplimiento de los motivos que te llevaron a venir a la Feria del Hogar 2020?`,
-        "p11": `¿Por qué razón calificas con ${elemento} tu satisfacción en general con la Feria del Hogar 2020?`,
-        "p17": `¿Por qué razón calificas con ${elemento} la satisfacción general con los expositores (muestra comercial) de la Feria del Hogar 2020?`,
-        "p21": `¿Por qué razón calificas con ${elemento} tu satisfacción con el proceso de compra de la boleta?`,
-        "p23": `Por qué razón calificas con ${elemento} tu satisfacción con los servicios generales prestados por Corferias?`,
-        "p32": `¿Por qué razón calificas con ${elemento} la publicidad de la Feria del Hogar 2020?`,
-        "p36": `¿Por qué razón calificas con ${elemento} la satisfacción con la agenda de actividades de la Feria del Hogar 2020?`
+        "p3": `4. ¿Por qué razón calificas con ${elemento} el cumplimiento de los motivos que te llevaron a venir a la Feria del Hogar 2020?`,
+        "p11": `12. ¿Por qué razón calificas con ${elemento} tu satisfacción en general con la Feria del Hogar 2020?`,
+        "p17": `18. ¿Por qué razón calificas con ${elemento} la satisfacción general con los expositores (muestra comercial) de la Feria del Hogar 2020?`,
+        "p21": `22. ¿Por qué razón calificas con ${elemento} tu satisfacción con el proceso de compra de la boleta?`,
+        "p23": `24. Por qué razón calificas con ${elemento} tu satisfacción con los servicios generales prestados por Corferias?`,
+        "p32": `33. ¿Por qué razón calificas con ${elemento} la publicidad de la Feria del Hogar 2020?`,
+        "p36": `37. ¿Por qué razón calificas con ${elemento} la satisfacción con la agenda de actividades de la Feria del Hogar 2020?`
     }
+    
     return Object.entries(arrPreg).map(x => {
         if (x.includes(pregunta)) {
             return x[1];

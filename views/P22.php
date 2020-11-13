@@ -5,9 +5,7 @@
                 <div class="container">
                     <div class="row row-header">
                         <div class="col-sm-12">
-                            <label>22. ¿Por qué razón calificas con (PONER REPSUESTA DE P21) tu
-                                satisfacción con el proceso de compra de la boleta?
-                            </label>
+                            <label id="preg_p22"></label>
                         </div>
                     </div>
                 </div>
@@ -53,3 +51,8 @@
         </form>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        cambia_texto_pregunta("preg_p22");
+    });
+</script>
