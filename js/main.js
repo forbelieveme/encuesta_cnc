@@ -345,7 +345,8 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
     //unica respuesta
     }else if (!multiples){
         if (tipo_de_pregunta == "escala"){
-            peticionUpdate
+            console.log(idPregunta, " "+elemento+" y voy para "+siguiente);
+            peticionUpdate(elemento,idPregunta);
             
 
         }else if(tipo_de_pregunta == "radio"){
