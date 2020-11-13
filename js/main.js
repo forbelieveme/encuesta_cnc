@@ -90,7 +90,7 @@ function valorf3(hora) {
     } else if ((21 <= hora) && (hora < 22)) {
         return 5;
     }
-    else{
+    else {
         return 0;
     }
 
@@ -315,10 +315,10 @@ function submit_decisiones(multiples, numero_de_respuestas, tipo_de_pregunta, id
             submit_escala_porId(seleccionados[i], realid + '_' + (i + 1));
             //console.log(seleccionados[i], realid+'_'+(i+1));
         }
-    }if (tipo_de_pregunta == "radio") {            
+    } if (tipo_de_pregunta == "radio") {
         //metodo
     }
-     else {
+    else {
         return alert('No se econtró el tipo seleccionado');
     }
     $("#pregunta").load(siguiente);
@@ -326,9 +326,9 @@ function submit_decisiones(multiples, numero_de_respuestas, tipo_de_pregunta, id
 //Metodo de prueba
 function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente) {
     //Multiples respuestas
-    if (multiples){
+    if (multiples) {
         x = elemento;
-        
+
         if (tipo_de_pregunta == "escala") {
             var seleccionados = who_is_checked(numero_de_respuestas, 10, chunk(x, 10));
             console.log(seleccionados);
@@ -336,44 +336,44 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
                 submit_escala_porId(seleccionados[i], idPregunta + '_' + (i + 1));
                 //console.log(seleccionados[i], realid+'_'+(i+1));
             }
-        }if (tipo_de_pregunta == "radio") {            
-            console.log("soy radio multiple y con elemento siguiente "+siguiente);
+        } if (tipo_de_pregunta == "radio") {
+            console.log("soy radio multiple y con elemento siguiente " + siguiente);
         }
         else {
             return alert('No se econtró el tipo seleccionado');
-        }        
-    //unica respuesta
-    }else if (!multiples){
-        if (tipo_de_pregunta == "escala"){
-            console.log(idPregunta, " "+elemento+" y voy para "+siguiente);
-            peticionUpdate(elemento,idPregunta);
-            
+        }
+        //unica respuesta
+    } else if (!multiples) {
+        if (tipo_de_pregunta == "escala") {
+            console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
+            peticionUpdate(elemento, idPregunta);
 
-        }else if(tipo_de_pregunta == "radio"){
+
+        } else if (tipo_de_pregunta == "radio") {
             // console.log("soy radio unica y con elemento siguiente "+siguiente
             // + " y valor "+elemento);
-            peticionUpdate(elemento,idPregunta);
-            console.log(idPregunta, " "+elemento+" y voy para "+siguiente);
-        }else if(tipo_de_pregunta == "otrocual"){
+            peticionUpdate(elemento, idPregunta);
+            console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
+        } else if (tipo_de_pregunta == "otrocual") {
             console.log("llegue a otrocual single con valor "
-            + elemento+" en la pregunta "+idPregunta+" y voy para "+siguiente)
-            
-        }else{        
+                + elemento + " en la pregunta " + idPregunta + " y voy para " + siguiente)
+
+        } else {
             return console.log("No se encontro el tipo.");
         }
 
     }
-    else{
+    else {
         return console.log("No se sabe si el multiple o unica respuesta.");
     }
     $("#pregunta").load(siguiente);
 }
 
-function Obtener_siguiente(idPregunta, x, siguiente){
-    if(typeof(siguiente) == "string"){
+function Obtener_siguiente(idPregunta, x, siguiente) {
+    if (typeof (siguiente) == "string") {
         return siguiente;
-    }    
-    if (idPregunta == 'f4'){
+    }
+    if (idPregunta == 'f4') {
         if (x == '2' || x == '3') {
             return siguiente[0];
         } else {
@@ -381,7 +381,7 @@ function Obtener_siguiente(idPregunta, x, siguiente){
         }
 
     }
-    if (idPregunta == 'f5'){
+    if (idPregunta == 'f5') {
         if (x == '0') {
             return siguiente[0];
         } else {
@@ -396,21 +396,21 @@ function submit_escala_porId(elemento, idPregunta) {
     peticionUpdate(elemento, idPregunta);
 }
 
-function submit_inicial(){
+function submit_inicial() {
     generarCodigo();
-    console.log(`ENVIO AJAX POST`, "f1= "+f1+", f3 = "+f3+", cid"+cid);    
+    console.log(`ENVIO AJAX POST`, "f1= " + f1 + ", f3 = " + f3 + ", cid" + cid);
     peticionInsert(f1, f3, cid);
 }
 
 
 function peticionInsert(f1, f3, cid) {
-    
+
     $.ajax({
         url: './php/actualizar.php',
         data: {
             query: 'insertar',
             f1,
-            f3,            
+            f3,
             cid
         },
         type: 'POST',
@@ -486,14 +486,77 @@ function who_is_checked(filas, columnas, arr) {
 
 
 //Metodo para ver cuales valores de un conjunto estan checked
-function who_is_checked (filas, columnas, arr){
+function who_is_checked(filas, columnas, arr) {
     var checkedones = [];
-    for (let i = 0; i < filas; i++){
-        for (let j = 0; j < columnas; j++){
-            if (arr[i][j].checked){
-            checkedones.push(j+1);
+    for (let i = 0; i < filas; i++) {
+        for (let j = 0; j < columnas; j++) {
+            if (arr[i][j].checked) {
+                checkedones.push(j + 1);
             }
         }
     }
     return checkedones;
+}
+
+// var preg = [
+//     "Atención del expositor (Nivel de preparación de los expositores si cuenta con tarjetas, maneja la información requerida, brinda un servicio completo)",
+//     "Cantidad de expositores (suficientes)",
+//     "Calidad de expositores - Tipo de productos ofrecidos",
+//     "Presencia de productos novedosos y/o nuevos productos",
+//     "Presencia de empresas y marcas conocidas del sector – representatividad de empresas",
+//     "Variedad de Productos y/o servicios",
+//     "El diseño de stands",
+//     // "Opcion escrita"
+// ];
+function crear_form_dinamico(preg) {
+
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("id", "form_p2");
+    form.setAttribute("onsubmit", "return false;");
+    var button = document.createElement("button");
+    button.setAttribute("type", "post");
+    button.setAttribute("class", "btn btn-primary btn-lg btn-block mt-5 mb-3");
+    button.setAttribute("onclick", "submit_multiple_escala(document.getElementById('form_p19'),['P19_1', 'P19_2', 'P19_3', 'P19_4', 'P19_5', 'P19_6', 'P19_7'],'views/p3crear_form_dinamico.php', numero_pregunta)");
+    button.textContent = "SIGUENTE";
+    for (let i = 0; i < preg.length; i++) {
+
+        // Create a form synamically 
+
+        var div1 = document.createElement("div");
+        div1.setAttribute("class", "form-group mt-5");
+
+        var labelP = document.createElement("label");
+        labelP.textContent = preg[i];
+
+        var div2 = document.createElement("div");
+        div2.setAttribute("class", "container");
+
+        var div3 = document.createElement("div");
+        div3.setAttribute("class", "form-check form-check-inline col-1");
+        for (let j = 1; j < 11; j++) {
+
+            var input = document.createElement("input");
+            input.setAttribute("class", "form-check-input");
+            input.setAttribute("type", "radio");
+            input.setAttribute("name", `P2_${i}`);
+            input.setAttribute("id", `P2_${i}_${j}`);
+            input.setAttribute("value", "100001");
+
+            var labelIn = document.createElement("label");
+            labelIn.setAttribute("class", "form-check-label escala");
+            labelIn.textContent = j;
+
+            div3.append(input);
+            div3.append(labelIn);
+        }
+        div2.append(div3);
+        div1.append(labelP);
+        div1.append(div2);
+        form.append(div1);
+    }
+    form.append(button);
+
+    document.getElementById("aqui")
+        .appendChild(form);
 }
