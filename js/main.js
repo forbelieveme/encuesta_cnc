@@ -359,6 +359,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
         }else if(tipo_de_pregunta == "otrocual"){
             console.log("llegue a otrocual single con valor "
             + elemento+" en la pregunta "+idPregunta+" y voy para "+siguiente)
+            peticionUpdate(elemento,idPregunta);
             
         }else if(tipo_de_pregunta == "textarea"){
             console.log("llegue a textarea single con valor "

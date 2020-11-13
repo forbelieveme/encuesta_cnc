@@ -6,12 +6,17 @@
     $(function() {
         $(".js-example-basic-multiple").select2();
     });
-
-    var numero_pregunta = ['p16'];
+    var numero_pregunta = 'p16';
+    var siguiente = 'views/p17.php';
 </script>
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" onsubmit="return false;">
+    <form method="post" id="form_p16" 
+    onsubmit="
+    var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]); 
+    elementos.push(document.getElementById('form10').value);
+    submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','), siguiente);
+    return false;">
             <!-- <h2 class="text-center black">P1</h2> -->
             <div class="form-group">
                 <div class="jumbotron">
@@ -30,13 +35,12 @@
                     <option value="9">Moda y confección</option>
                     <option value="10">Marroquinería y calzado</option>
                     <option value="11">Joyas</option>
-                    <option value="12">Bisutería y accesorios</option>
-                    <option>Otro, ¿Cuál?</option>
+                    <option value="12">Bisutería y accesorios</option>                    
                 </select>
+                <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
             </div>
 
-            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block" onclick="var el = document.getElementsByTagName('select')[0];
-    getSelectValues(el, 'views/p17.php', numero_pregunta);">
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block" onclick="">
                 INGRESAR
             </button>
         </form>

@@ -1,9 +1,13 @@
 <script>
-    var numero_pregunta = ['p17'];
+    var numero_pregunta = 'p17';
+    var siguiente = 'views/P18.php';
 </script>
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p17" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p17'),'P17'), 'views/P18.php', numero_pregunta); return false;">
+        <form method="post" id="form_p17" onsubmit="
+        submit_decision(false, 1, 'escala',  numero_pregunta, 
+        getRadioVal(document.getElementById('form_p17'),'P17'), siguiente);
+         return false;">
             <div class="form-group">
                 <div class="jumbotron">
                     <label for="P1">17. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” y
