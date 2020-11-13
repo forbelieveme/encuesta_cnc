@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     switch ($query) {
 
         case "actualizar":
-            $valor = $_POST["informacion"];
+            $informacion = $_POST["informacion"];
             $num = $_POST["num_pregunta"];
             //Debe tratarse como string
             $cid = $_POST["cid"];
@@ -29,8 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             try {
                 $stmt = $db->prepare($sql);
-                // if()
-                $stmt->bind_param("ii", $puntaje, $cedula);
+                if (gettype($num) == 'string') {
+                    $stmt->bind_param("ss", $num, $cid);
+                } else {
+                    $stmt->bind_param("is", $num, $cid);
+                }
                 $stmt->execute();
                 $stmt->store_result();
             } catch (Exception $e) {
@@ -42,11 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             // $resp->mensaje = 'Ingreso exitoso';
-            $resp->valor = $valor;
-            $resp->tipo = gettype($valor);
-            //$resp->cid = $cid;
+            
+            
             $resp->num = $num;
-            $resp->tipo2 = gettype($num);
+            $resp->informacion= $informacion;
+
+            
+            
             $resp->sqls = $sql;
             // $resp->puntaje = $puntaje;
 

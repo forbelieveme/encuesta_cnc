@@ -281,7 +281,7 @@ function submit_decision_bin2(x, siguiente, num_pregunta) {
 idPregunta = P# 
 *id sub pregunta lista para la inserciónPregunta = P#
 */
-function submit_decisiones(numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente) {
+function submit_decisiones(multiples, numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente) {
     x = elemento;
     realid = idPregunta.split('');
     realid.shift();
@@ -299,10 +299,77 @@ function submit_decisiones(numero_de_respuestas, tipo_de_pregunta, idPregunta, e
             submit_escala_porId(seleccionados[i], realid + '_' + (i + 1));
             //console.log(seleccionados[i], realid+'_'+(i+1));
         }
-    } else {
+    }if (tipo_de_pregunta == "radio") {            
+        //metodo
+    }
+     else {
         return alert('No se econtró el tipo seleccionado');
     }
     $("#pregunta").load(siguiente);
+}
+//Metodo de prueba
+function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente) {
+    //Multiples respuestas
+    if (multiples){
+        x = elemento;
+        
+        if (tipo_de_pregunta == "escala") {
+            var seleccionados = who_is_checked(numero_de_respuestas, 10, chunk(x, 10));
+            console.log(seleccionados);
+            for (let i = 0; i < numero_de_respuestas; i++) {
+                submit_escala_porId(seleccionados[i], idPregunta + '_' + (i + 1));
+                //console.log(seleccionados[i], realid+'_'+(i+1));
+            }
+        }if (tipo_de_pregunta == "radio") {            
+            console.log("soy radio multiple y con elemento siguiente "+siguiente);
+        }
+        else {
+            return alert('No se econtró el tipo seleccionado');
+        }        
+    //unica respuesta
+    }else if (!multiples){
+        if (tipo_de_pregunta == "escala"){
+            peticionUpdate
+            
+
+        }else if(tipo_de_pregunta == "radio"){
+            // console.log("soy radio unica y con elemento siguiente "+siguiente
+            // + " y valor "+elemento);
+            peticionUpdate(elemento,idPregunta);
+            console.log(idPregunta, " "+elemento+" y voy para "+siguiente);
+        }else if(tipo_de_pregunta == "otra_cual"){
+            
+        }else{        
+            return console.log("No se encontro el tipo.");
+        }
+
+    }
+    else{
+        return console.log("No se sabe si el multiple o unica respuesta.");
+    }
+    $("#pregunta").load(siguiente);
+}
+
+function Obtener_siguiente(idPregunta, x, siguiente){
+    if(typeof(siguiente) == "string"){
+        return siguiente;
+    }    
+    if (idPregunta == 'f4'){
+        if (x == '2' || x == '3') {
+            return siguiente[0];
+        } else {
+            return siguiente[1];
+        }
+
+    }
+    if (idPregunta == 'f5'){
+        if (x == '0') {
+            return siguiente[0];
+        } else {
+            return siguiente[1];
+        }
+    }
+
 }
 
 function submit_escala_porId(elemento, idPregunta) {
