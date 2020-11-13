@@ -18,10 +18,12 @@
             </div>
 
            
-        <form method = 'POST' id="form_f4" onsubmit = "submit_decision(false, 1, 'radio', numero_pregunta,
-         getRadioVal(document.getElementById('form_f4'),('F4')), 
-         Obtener_siguiente(numero_pregunta,getRadioVal(document.getElementById('form_f4'),('F4')),
-         siguiente)); return false;">
+        <form method = 'POST' id="form_f4" 
+        onsubmit = "submit_decision(false, 1, 'radio', numero_pregunta,
+        getRadioVal(document.getElementById('form_f4'),('F4')), 
+        Obtener_siguiente(numero_pregunta,getRadioVal
+        (document.getElementById('form_f4'),('F4')),
+        siguiente)); return false;">
             
             <div class="container">
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
