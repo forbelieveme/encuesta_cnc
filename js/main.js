@@ -337,10 +337,9 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
                 submit_escala_porId(seleccionados[i], idPregunta + '_' + (i + 1));
                 //console.log(seleccionados[i], realid+'_'+(i+1));
             }
-        } if (tipo_de_pregunta == "radio") {
+        }else if (tipo_de_pregunta == "radio") {
             console.log("soy radio multiple y con elemento siguiente " + siguiente);
-        }
-        else {
+        }else {
             return alert('No se econtró el tipo seleccionado');
         }
         //unica respuesta
@@ -350,7 +349,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
             peticionUpdate(elemento, idPregunta);
 
-        } else if (tipo_de_pregunta == "radio") {
+        }else if (tipo_de_pregunta == "radio") {
             // console.log("soy radio unica y con elemento siguiente "+siguiente
             // + " y valor "+elemento);
 
@@ -432,6 +431,17 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         else {
             return siguiente[1];
         }
+    }
+
+    if (idPregunta == 'p20'){
+        //
+        if (x == '3' || x == '4') {
+            return siguiente[0];
+        }       
+        else {
+            return siguiente[1];
+        }
+
     }
 
 }

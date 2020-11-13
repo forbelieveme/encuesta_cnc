@@ -1,10 +1,11 @@
 <script>
-    var numero_pregunta = ['p20'];
+    var numero_pregunta = 'p20';
+    var siguiente = ['views/P23.php','views/P21.php'];
 </script>
 <div class="mt-5" id="P20">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_p20" onsubmit="submit_decision_bin(getRadioVal_text('P20_textArea',document.getElementById('form_p20'),'P20'),['views/P23.php','views/P21.php'], numero_pregunta); return false;">
-            <div class="form-group">
+        
+            
                 <div class="jumbotron">
                     <div class="container">
                         <!-- <div class="row row-header"> -->
@@ -16,8 +17,14 @@
                         <!-- </div> -->
                     </div>
                 </div>
+            <form method='POST' id="form_p20" 
+            onsubmit="
+            submit_decision(false, 1, 'radio', 'p20', 
+            getRadioVal_text('P20_textArea',document.getElementById('form_p20'),'P20'), 
+            Obtener_siguiente('p20', getRadioVal_text('P20_textArea',document.getElementById('form_p20'),'P20'), siguiente)
+            );
+            return false;">
                 <div class="container">
-
                     <div class="col-12">
                         <div class="radioboton">
                             <input class='radio-check' type='radio' name='P20' id='P20_1' value='1' checked>
@@ -39,16 +46,13 @@
                         <div class="radioboton">
                             <input class='radio-check' type='radio' name='P20' id='P20_5' value='5'>
                             <label class="radioboton-label" for='P20_5'> Otro, ¿Cuál? </label>
-                        </div>
-                        <div class="">
                             <textarea id="P20_textArea" class="md-textarea form-control mb-5" rows="1"></textarea>
-                        </div>
+                        </div>                        
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block ">
                         SIGUIENTE
                     </button>
-                </div>
-            </div>
+                </div>            
         </form>
     </div>
 </div>
