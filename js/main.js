@@ -349,7 +349,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
             peticionUpdate(elemento, idPregunta);
 
-        } else if (tipo_de_pregunta == "radio") {
+        }else if (tipo_de_pregunta == "radio") {
             // console.log("soy radio unica y con elemento siguiente "+siguiente
             // + " y valor "+elemento);
             
