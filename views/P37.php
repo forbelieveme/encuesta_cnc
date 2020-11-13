@@ -5,9 +5,7 @@
                 <div class = "container">
                     <div class = "row row-header">                
                         <div class = "col-sm-12">
-                            <label>37. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” y 10
-                            es “Muy satisfecho” ¿Qué tan satisfecho te encuentras en general con la agenda de 
-                            actividades de la Feria del Hogar 2020?</label>
+                            <label id="preg_p18"></label>
                         </div>                    
                     </div>
                 </div>
@@ -32,3 +30,8 @@
         </form>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        cambia_texto_pregunta("preg_p37");
+    });
+</script>

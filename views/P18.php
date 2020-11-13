@@ -9,8 +9,7 @@
                     <div class="container">
                         <div class="row row-header">
                             <div class="col-sm-12">
-                                <label>18. ¿Por qué razón calificas con (PONER RESPUESTA DE P17) la satisfacción general
-                                    con los expositores de la Feria del Hogar 2020? </label>
+                                <label id="preg_p18"></label>
                             </div>
                         </div>
                     </div>
@@ -23,3 +22,8 @@
         </form>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        cambia_texto_pregunta("preg_p18");
+    });
+</script>
