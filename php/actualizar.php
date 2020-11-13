@@ -20,25 +20,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "actualizar":
             $valor = $_POST["informacion"];
             $num = $_POST["num_pregunta"];
+            //Debe tratarse como string
+            $cid = $_POST["cid"];
 
-            // for($i=0;);
             //caso1
-            // $sql = "UPDATE encuesta SET" . $num[i] . " =" . $valor . "WHERE (cid = '45sad45sa4da5s');";
-            //caso2
-            // $sql = "UPDATE encuesta SET" . $num[i] . " =" . $valor[i] . "WHERE (cid = '45sad45sa4da5s');";
+            $sql = "UPDATE encuesta SET " . $num . " = ? WHERE (cid = ?);";
+            //caso2            
 
-            // try {
-            //     $stmt = $db->prepare($sql);
-            //     $stmt->bind_param("ii", $puntaje, $cedula);
-            //     $stmt->execute();
-            //     $stmt->store_result();
-            // } catch (Exception $e) {
-            //     die(json_encode([
-            //         'error' => mysqli_connect_error(),
-            //         'code' => mysqli_connect_errno(),
-            //         'excepcion' => $e->getMessage()
-            //     ]));
-            // }
+            try {
+                $stmt = $db->prepare($sql);
+                // if()
+                $stmt->bind_param("ii", $puntaje, $cedula);
+                $stmt->execute();
+                $stmt->store_result();
+            } catch (Exception $e) {
+                die(json_encode([
+                    'error' => mysqli_connect_error(),
+                    'code' => mysqli_connect_errno(),
+                    'excepcion' => $e->getMessage()
+                ]));
+            }
 
             // $resp->mensaje = 'Ingreso exitoso';
             $resp->valor = $valor;
