@@ -1,6 +1,7 @@
 var cid;
 var f1;
 var f3;
+var preguntaDelMomento;
 
 function generarCodigo() {
     //generación de codigo aleatorio para almacenamiento del registro
@@ -324,7 +325,7 @@ function submit_decisiones(multiples, numero_de_respuestas, tipo_de_pregunta, id
     $("#pregunta").load(siguiente);
 }
 //Metodo de prueba
-function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente) {
+function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente, pasaInfo) {
     //Multiples respuestas
     if (multiples) {
         x = elemento;
@@ -344,10 +345,10 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
         }
         //unica respuesta
     } else if (!multiples) {
+
         if (tipo_de_pregunta == "escala") {
             console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
             peticionUpdate(elemento, idPregunta);
-
 
         } else if (tipo_de_pregunta == "radio") {
             // console.log("soy radio unica y con elemento siguiente "+siguiente
@@ -367,6 +368,25 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
         return console.log("No se sabe si el multiple o unica respuesta.");
     }
     $("#pregunta").load(siguiente);
+    if (pasaInfo) {
+        // cambiarTexto(idPregunta, elemento);
+        // console.log(`x`,document.getElementById("p3").textContent = "This is some text");
+
+        preguntaDelMomento = cambiarTexto(idPregunta, elemento)[0];
+        // $('#p3').text('The replaced text.');
+        // $(`#${idPregunta}`).text(cambiarTexto(idPregunta, elemento)[0]);
+        // console.log(`informacion`, cambiarTexto(idPregunta, elemento));
+
+    }
+
+}
+
+function cambia_texto_pregunta(id) {
+    var labelP = document.createElement("label");
+    labelP.textContent = preguntaDelMomento;
+
+    document.getElementById(id).appendChild(labelP);
+
 }
 
 function Obtener_siguiente(idPregunta, x, siguiente) {
@@ -559,4 +579,26 @@ function crear_form_dinamico(preg) {
 
     document.getElementById("aqui")
         .appendChild(form);
+}
+
+function cargarSiguiente(siguiente) {
+    $("#pregunta").load(siguiente);
+}
+
+
+function cambiarTexto(pregunta, elemento) {
+    var arrPreg = {
+        "p3": `¿Por qué razón calificas con ${elemento} el cumplimiento de los motivos que te llevaron a venir a la Feria del Hogar 2020?`,
+        "p11": `¿Por qué razón calificas con ${elemento} tu satisfacción en general con la Feria del Hogar 2020?`,
+        "p17": `¿Por qué razón calificas con ${elemento} la satisfacción general con los expositores (muestra comercial) de la Feria del Hogar 2020?`,
+        "p21": `¿Por qué razón calificas con ${elemento} tu satisfacción con el proceso de compra de la boleta?`,
+        "p23": `Por qué razón calificas con ${elemento} tu satisfacción con los servicios generales prestados por Corferias?`,
+        "p32": `¿Por qué razón calificas con ${elemento} la publicidad de la Feria del Hogar 2020?`,
+        "p36": `¿Por qué razón calificas con ${elemento} la satisfacción con la agenda de actividades de la Feria del Hogar 2020?`
+    }
+    return Object.entries(arrPreg).map(x => {
+        if (x.includes(pregunta)) {
+            return x[1];
+        }
+    })
 }
