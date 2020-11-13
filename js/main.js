@@ -437,6 +437,17 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         }
     }
 
+    if (idPregunta == 'p20'){
+        //
+        if (x == '3' || x == '4') {
+            return siguiente[0];
+        }       
+        else {
+            return siguiente[1];
+        }
+
+    }
+
 }
 
 function submit_escala_porId(elemento, idPregunta) {
