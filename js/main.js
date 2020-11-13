@@ -337,10 +337,9 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
                 submit_escala_porId(seleccionados[i], idPregunta + '_' + (i + 1));
                 //console.log(seleccionados[i], realid+'_'+(i+1));
             }
-        } if (tipo_de_pregunta == "radio") {
+        }else if (tipo_de_pregunta == "radio") {
             console.log("soy radio multiple y con elemento siguiente " + siguiente);
-        }
-        else {
+        }else {
             return alert('No se econtró el tipo seleccionado');
         }
         //unica respuesta
