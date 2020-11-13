@@ -18,12 +18,6 @@
         siguiente);
         return false;" class="">
             <div class="form-group">
-                <div class="jumbotron">
-                    <label for="P1">1. A continuación, le voy a mostrar una tarjeta con un listado
-                        de frases de ese listado por favor me indica ¿Cuáles son las principales razones qué lo
-                        motivaron a venir a la Feria del Hogar 2019?, ¿algún otro? </label>
-                </div>
-
                 <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
                     <option value="1">Encontrar productos nuevos (lanzamientos)</option>
                     <option value="2">Buscar promociones y descuentos</option>
