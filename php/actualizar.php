@@ -20,12 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "actualizar":
             $valor = $_POST["informacion"];
             $num = $_POST["num_pregunta"];
-
-            // for($i=0;);
+            //Debe tratarse como string
+            $cid = $_POST["cid"]
+            
             //caso1
-            // $sql = "UPDATE encuesta SET" . $num[i] . " =" . $valor . "WHERE (cid = '45sad45sa4da5s');";
-            //caso2
-            // $sql = "UPDATE encuesta SET" . $num[i] . " =" . $valor[i] . "WHERE (cid = '45sad45sa4da5s');";
+            $sql = "UPDATE encuesta SET ".$num." = ".$valor." WHERE (cid = ".$cid.");";
+            //caso2            
 
             // try {
             //     $stmt = $db->prepare($sql);
@@ -43,13 +43,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // $resp->mensaje = 'Ingreso exitoso';
             $resp->valor = $valor;
             $resp->tipo = gettype($valor);
+            $resp->cid = $cid;
             $resp->num = $num;
             $resp->tipo2 = gettype($num);
+            $resp->sqls = $sql;
             // $resp->puntaje = $puntaje;
 
             echo json_encode($resp, JSON_FORCE_OBJECT);
             // echo $valor;
-            break;
+        break;
     }
     // mysqli_close($db);
 }

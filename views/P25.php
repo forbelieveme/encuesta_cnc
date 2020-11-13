@@ -1,6 +1,6 @@
 <div class = "mt-5" id= "P25">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST'>        
+                
             <div class = "jumbotron">
                 <div class = "container">
                     <div class = "row row-header">                
@@ -10,8 +10,8 @@
                     </div>
                 </div>
             </div>
-            
-                
+
+        <form method = 'POST' id="form_P25" onsubmit="return false;">    
             <div class = "form-group mt-5" id = "P25_1">                    
                 <div class = "container" >
                     <h5>Facilidad en el ingreso a la feria</h5>
@@ -97,7 +97,9 @@
             
             
             <div class = "form-group mt-5">                                          
-                <button type="submit" name="login" class=" col-12 btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                <button type="submit" name="login" class=" col-12 btn btn-primary btn-lg btn-block  mt-5"
+                onclick = "submit_decisiones(5, 'escala', 'form_P25',document.getElementById('form_P25'),'views/P26.php' );"> 
+                SIGUIENTE </button>
             </div>
         </form>
     </div>

@@ -1,6 +1,6 @@
 <div class = "mt-5" id="P26">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST'>   
+         
             <div class = "jumbotron">
                 <div class = "container">
                     <div class = "row row-header">                
@@ -13,7 +13,7 @@
                 </div>
             </div>
             
-                    
+        <form method = 'POST' id="form_P26" onsubmit="return false;">              
                     <div class = "form-group mt-5" id = "P26_1">
                         <div class = "container" >
                             <h5>Señalización de la feria fuera de los pabellones 
@@ -104,10 +104,10 @@
                  
                     
             <div class = "form-group mt-5">    
-            <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
-            </div>
-               
-            
+            <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"
+            onclick = "submit_decisiones(5, 'escala', 'form_P26',document.getElementById('form_P26'),'views/P27.php' );"
+            > Confirmar </button>    
+            </div>            
         </form>
     </div>
 </div>

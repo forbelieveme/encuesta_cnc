@@ -245,13 +245,49 @@ function submit_decision_bin2(x, siguiente, num_pregunta) {
 
 }
 
+/*Método para insertar más de una pregunta (Update)
+idPregunta = P# 
+*id sub pregunta lista para la inserciónPregunta = P#
+*/
+function submit_decisiones(numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente){
+    x = elemento;    
+    realid = idPregunta.split('');
+    realid.shift();
+    realid.shift();
+    realid.shift();
+    realid.shift();
+    realid.shift();
+    realid = realid.join('');
+    
+    var seleccionados = who_is_checked(numero_de_respuestas, 10, chunk(x, 10));
+    
+    console.log(seleccionados);
+    if(tipo_de_pregunta == "escala"){
+        for (let i = 0; i < numero_de_respuestas; i++){
+            submit_escala_porId(seleccionados[i], realid+'_'+(i+1));
+            //console.log(seleccionados[i], realid+'_'+(i+1));
+        }
+    }else {
+        return alert('No se econtró el tipo seleccionado');
+    }
+    $("#pregunta").load(siguiente);
+}
+
+function submit_escala_porId(elemento,  idPregunta) {
+    console.log(`ENVIO AJAX POST`, elemento+" "+idPregunta);
+    peticionUpdate(elemento, idPregunta );    
+}
+
+
 function peticionUpdate(informacion, num_pregunta) {
+    
     $.ajax({
         url: './php/actualizar.php',
         data: {
             query: 'actualizar',
             informacion,
-            num_pregunta
+            num_pregunta,
+            cid
         },
         type: 'POST',
         success: function (datos) {
@@ -261,4 +297,45 @@ function peticionUpdate(informacion, num_pregunta) {
             console.log(`error`, error);
         }
     });
+
+}
+
+function verificar_datos(numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente){
+    console.log(numero_de_respuestas);
+    console.log(tipo_de_pregunta);
+    console.log(idPregunta);
+    x = elemento;    
+    for (let i = 0; i < chunk(x, 10).length - 1; i++){
+        console.log(who_is_checked(5, 10, chunk(x, 10))[i]);
+    }
+    console.log(siguiente);
+    $("#pregunta").load(siguiente);
+}
+
+//Metodo ppara divir arreglo en subpartes
+function chunk(array, size) {
+    const chunked_arr = [];
+    for (let i = 0; i < array.length; i++) {
+      const last = chunked_arr[chunked_arr.length - 1];
+      if (!last || last.length === size) {
+        chunked_arr.push([array[i]]);
+      } else {
+        last.push(array[i]);
+      }
+    }
+    return chunked_arr;
+}
+
+
+//Metodo para ver cuales valores de un conjunto estan checked
+function who_is_checked (filas, columnas, arr){
+    var checkedones = [];
+    for (let i = 0; i < filas; i++){
+        for (let j = 0; j < columnas; j++){
+            if (arr[i][j].checked){
+            checkedones.push(j+1);
+            }
+        }
+    }
+    return checkedones;
 }
