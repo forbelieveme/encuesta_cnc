@@ -1,9 +1,13 @@
 <script>
-    var numero_pregunta = ['p5'];
+    var numero_pregunta = 'p5';
+    var siguiente = 'views/p6.php'
 </script>
-<div class="mt-5" id="p3">
+<div class="mt-5" id="p¿5">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p5" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p5'),'P5'), 'views/p6.php', numero_pregunta); return false;">
+        <form method="post" id="form_p5" 
+        onsubmit="submit_decision(false, 1, 'radio', 
+        numero_pregunta,getRadioVal(document.getElementById('form_p5'),'P5'), siguiente);
+        return false;">
             <div class="form-group">
                 <div class="jumbotron">
                     <label for="P5">5. ¿Asististe a la Feria del Hogar 2019?

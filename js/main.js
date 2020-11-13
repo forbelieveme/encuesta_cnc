@@ -353,13 +353,19 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
         } else if (tipo_de_pregunta == "radio") {
             // console.log("soy radio unica y con elemento siguiente "+siguiente
             // + " y valor "+elemento);
-            peticionUpdate(elemento, idPregunta);
-            console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
-        } else if (tipo_de_pregunta == "otrocual") {
+            
+            console.log(idPregunta, " "+elemento+" y voy para "+siguiente);
+            peticionUpdate(elemento,idPregunta);
+        }else if(tipo_de_pregunta == "otrocual"){
             console.log("llegue a otrocual single con valor "
-                + elemento + " en la pregunta " + idPregunta + " y voy para " + siguiente)
-
-        } else {
+            + elemento+" en la pregunta "+idPregunta+" y voy para "+siguiente)
+            
+        }else if(tipo_de_pregunta == "textarea"){
+            console.log("llegue a textarea single con valor "
+            + elemento+" en la pregunta "+idPregunta+" y voy para "+siguiente)
+            peticionUpdate(elemento,idPregunta);
+        }
+        else{        
             return console.log("No se encontro el tipo.");
         }
 
@@ -405,6 +411,28 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         if (x == '0') {
             return siguiente[0];
         } else {
+            return siguiente[1];
+        }
+    }
+
+    if (idPregunta == 'p6'){
+        //Caso sí
+        if (x == '1') {
+            return siguiente[0];
+        } 
+        //Caso No
+        else {
+            return siguiente[1];
+        }
+    }
+
+    if (idPregunta == 'p9'){
+        //Caso sí
+        if (x == '1') {
+            return siguiente[0];
+        } 
+        //Caso No
+        else {
             return siguiente[1];
         }
     }
