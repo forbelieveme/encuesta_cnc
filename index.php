@@ -34,7 +34,11 @@
     $(document).ready(function() {
         // $("#box").load("p1.html");
         // $("#btn").click(function() {
+<<<<<<< HEAD
         $("#pregunta").load("views/P25.php");
+=======
+        $("#pregunta").load("views/p2.php");
+>>>>>>> alt
         //     $("#pregunta").load("views/p3.php");            // });       
     });
 </script>

@@ -1,6 +1,6 @@
 <div class = "mt-5" id = "F5">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST' onsubmit = "return false;" >
+        <form method = 'POST' id="form_f5" onsubmit = "submit_decision_F5(getRadioVal(document.getElementById('form_f5'),'F5'), ['views/finaliza.php','views/p1.php'], numero_pregunta ); return false;" >
 
             <div class = "jumbotron">
                 <div class = "container">

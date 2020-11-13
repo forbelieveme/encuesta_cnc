@@ -7,33 +7,33 @@ function generarCodigo() {
     var id = '';
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
-    for ( var i = 0; i < 15; i++ ) {
-      id += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }   
-   console.log("Primer registro")
+    for (var i = 0; i < 15; i++) {
+        id += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    console.log("Primer registro")
 
-   //Captura del codigo unico de registro
-   cid = id;
+    //Captura del codigo unico de registro
+    cid = id;
 
-   //Obtención del tiempo actual
-   var tiempo = new Date();
+    //Obtención del tiempo actual
+    var tiempo = new Date();
 
-   //Fecha Calendario
-   var dia = tiempo.getDate();
-   var mes = (tiempo.getMonth() + 1);
+    //Fecha Calendario
+    var dia = tiempo.getDate();
+    var mes = (tiempo.getMonth() + 1);
 
 
-   //Hora 
-   var hora = tiempo.getHours();
+    //Hora 
+    var hora = tiempo.getHours();
 
-//    console.log("El dia es "+dia+" del "+mes+ ". La hora es "+hora+".");
+    //    console.log("El dia es "+dia+" del "+mes+ ". La hora es "+hora+".");
 
-   f1 = valorf1(mes, dia);
-   f3 = valorf3(hora);
+    f1 = valorf1(mes, dia);
+    f3 = valorf3(hora);
 
-   console.log("Creando Registro con cid: "+cid+", f1 = "+f1+" y f3 = "+f3+".");
+    console.log("Creando Registro con cid: " + cid + ", f1 = " + f1 + " y f3 = " + f3 + ".");
 
-   $("#pregunta").load("views/F4.php");
+    $("#pregunta").load("views/F4.php");
 
 
 
@@ -54,40 +54,40 @@ function generarCodigo() {
     // });
 }
 //Calculo del valor f1
-function valorf1(mes, dia){
-    if (mes == 11){
-        for(let i = 13; i < 31; i++){
-            if (dia == i)            
-                return i -11;
+function valorf1(mes, dia) {
+    if (mes == 11) {
+        for (let i = 13; i < 31; i++) {
+            if (dia == i)
+                return i - 11;
         }
 
-    }else if(mes == 12){
-        for(let i = 1; i < 7; i++){
-            if (dia == i)            
+    } else if (mes == 12) {
+        for (let i = 1; i < 7; i++) {
+            if (dia == i)
                 return i + 19;
         }
-    }else {
+    } else {
         return 0;
     }
 
 }
 
 //Calculo del valor f3
-function valorf3(hora){
-    console.log("Hora: "+hora );
-    console.log("Tipo: "+typeof(hora));
-    if (10 <= hora &&  hora <12 ){
-        return 1;        
-    }else if((12 <= hora)  && (hora < 14)){
+function valorf3(hora) {
+    console.log("Hora: " + hora);
+    console.log("Tipo: " + typeof (hora));
+    if (10 <= hora && hora < 12) {
+        return 1;
+    } else if ((12 <= hora) && (hora < 14)) {
         return 2;
 
-    }else if((14 <= hora) && (hora < 18)){
+    } else if ((14 <= hora) && (hora < 18)) {
         return 3;
 
-    }else if((18 <= hora) && (hora < 21)){
+    } else if ((18 <= hora) && (hora < 21)) {
         return 4;
 
-    }else if((21 <= hora) && (hora < 22)){
+    } else if ((21 <= hora) && (hora < 22)) {
         return 5;
     }
 
@@ -230,6 +230,35 @@ function submit_decision_bin(x, siguiente, num_pregunta) {
 
 
 }
+
+function submit_decision_F4(x, siguiente, num_pregunta,) {
+
+    console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x, num_pregunta);
+
+
+    if (x == '2' || x == '3') {
+        $("#pregunta").load(siguiente[0]);
+    } else {
+        $("#pregunta").load(siguiente[1]);
+    }
+
+
+}
+function submit_decision_F5(x, siguiente, num_pregunta,) {
+
+    console.log(`ENVIO AJAX POST`, x);
+    peticionUpdate(x, num_pregunta);
+
+
+    if (x == '0') {
+        $("#pregunta").load(siguiente[0]);
+    } else {
+        $("#pregunta").load(siguiente[1]);
+    }
+
+
+}
 function submit_decision_bin2(x, siguiente, num_pregunta) {
 
     console.log(`ENVIO AJAX POST`, x);
@@ -249,8 +278,8 @@ function submit_decision_bin2(x, siguiente, num_pregunta) {
 idPregunta = P# 
 *id sub pregunta lista para la inserciónPregunta = P#
 */
-function submit_decisiones(numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente){
-    x = elemento;    
+function submit_decisiones(numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente) {
+    x = elemento;
     realid = idPregunta.split('');
     realid.shift();
     realid.shift();
@@ -258,29 +287,28 @@ function submit_decisiones(numero_de_respuestas, tipo_de_pregunta, idPregunta, e
     realid.shift();
     realid.shift();
     realid = realid.join('');
-    
+
     var seleccionados = who_is_checked(numero_de_respuestas, 10, chunk(x, 10));
-    
+
     console.log(seleccionados);
-    if(tipo_de_pregunta == "escala"){
-        for (let i = 0; i < numero_de_respuestas; i++){
-            submit_escala_porId(seleccionados[i], realid+'_'+(i+1));
+    if (tipo_de_pregunta == "escala") {
+        for (let i = 0; i < numero_de_respuestas; i++) {
+            submit_escala_porId(seleccionados[i], realid + '_' + (i + 1));
             //console.log(seleccionados[i], realid+'_'+(i+1));
         }
-    }else {
+    } else {
         return alert('No se econtró el tipo seleccionado');
     }
     $("#pregunta").load(siguiente);
 }
 
-function submit_escala_porId(elemento,  idPregunta) {
-    console.log(`ENVIO AJAX POST`, elemento+" "+idPregunta);
-    peticionUpdate(elemento, idPregunta );    
+function submit_escala_porId(elemento, idPregunta) {
+    console.log(`ENVIO AJAX POST`, elemento + " " + idPregunta);
+    peticionUpdate(elemento, idPregunta);
 }
 
 
 function peticionUpdate(informacion, num_pregunta) {
-    
     $.ajax({
         url: './php/actualizar.php',
         data: {
@@ -300,12 +328,12 @@ function peticionUpdate(informacion, num_pregunta) {
 
 }
 
-function verificar_datos(numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente){
+function verificar_datos(numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente) {
     console.log(numero_de_respuestas);
     console.log(tipo_de_pregunta);
     console.log(idPregunta);
-    x = elemento;    
-    for (let i = 0; i < chunk(x, 10).length - 1; i++){
+    x = elemento;
+    for (let i = 0; i < chunk(x, 10).length - 1; i++) {
         console.log(who_is_checked(5, 10, chunk(x, 10))[i]);
     }
     console.log(siguiente);
@@ -316,14 +344,28 @@ function verificar_datos(numero_de_respuestas, tipo_de_pregunta, idPregunta, ele
 function chunk(array, size) {
     const chunked_arr = [];
     for (let i = 0; i < array.length; i++) {
-      const last = chunked_arr[chunked_arr.length - 1];
-      if (!last || last.length === size) {
-        chunked_arr.push([array[i]]);
-      } else {
-        last.push(array[i]);
-      }
+        const last = chunked_arr[chunked_arr.length - 1];
+        if (!last || last.length === size) {
+            chunked_arr.push([array[i]]);
+        } else {
+            last.push(array[i]);
+        }
     }
     return chunked_arr;
+}
+
+
+//Metodo para ver cuales valores de un conjunto estan checked
+function who_is_checked(filas, columnas, arr) {
+    var checkedones = [];
+    for (let i = 0; i < filas; i++) {
+        for (let j = 0; j < columnas; j++) {
+            if (arr[i][j].checked) {
+                checkedones.push(j + 1);
+            }
+        }
+    }
+    return checkedones;
 }
 
 

@@ -21,24 +21,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $valor = $_POST["informacion"];
             $num = $_POST["num_pregunta"];
             //Debe tratarse como string
-            $cid = $_POST["cid"]
-            
+            $cid = $_POST["cid"];
+
             //caso1
-            $sql = "UPDATE encuesta SET ".$num." = ".$valor." WHERE (cid = ".$cid.");";
+            $sql = "UPDATE encuesta SET " . $num . " = ? WHERE (cid = ?);";
             //caso2            
 
-            // try {
-            //     $stmt = $db->prepare($sql);
-            //     $stmt->bind_param("ii", $puntaje, $cedula);
-            //     $stmt->execute();
-            //     $stmt->store_result();
-            // } catch (Exception $e) {
-            //     die(json_encode([
-            //         'error' => mysqli_connect_error(),
-            //         'code' => mysqli_connect_errno(),
-            //         'excepcion' => $e->getMessage()
-            //     ]));
-            // }
+            try {
+                $stmt = $db->prepare($sql);
+                // if()
+                $stmt->bind_param("ii", $puntaje, $cedula);
+                $stmt->execute();
+                $stmt->store_result();
+            } catch (Exception $e) {
+                die(json_encode([
+                    'error' => mysqli_connect_error(),
+                    'code' => mysqli_connect_errno(),
+                    'excepcion' => $e->getMessage()
+                ]));
+            }
 
             // $resp->mensaje = 'Ingreso exitoso';
             $resp->valor = $valor;
