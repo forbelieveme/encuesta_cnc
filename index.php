@@ -34,7 +34,12 @@
     $(document).ready(function() {
         // $("#box").load("p1.html");
         // $("#btn").click(function() {
+<<<<<<< HEAD
         $("#pregunta").load("views/F3.php");
+=======
+<<<<<<< HEAD
+>>>>>>> alt
+>>>>>>> refs/remotes/origin/master
         //     $("#pregunta").load("views/p3.php");            // });       
     });
 </script>
