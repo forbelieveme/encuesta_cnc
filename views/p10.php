@@ -1,12 +1,16 @@
 <script>
-    var numero_pregunta = ['p10'];
+    var numero_pregunta = 'p10';
+    var siguiente = 'views/p11.php'
 </script>
-<div class="mt-5" id="p3">
+<div class="mt-5" id="p10">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" onsubmit="getTextArea('P10_textArea', 'views/p11.php', numero_pregunta); return false;">
+        <form method="post" onsubmit="
+        submit_decision(false, 1, 'textarea', numero_pregunta, 
+        document.getElementById('P10_textArea').value,siguiente);
+         return false;">
             <div class="form-group">
                 <div class="jumbotron">
-                    <label for="P4">10. ¿Qué querías comprar que no encontraste?
+                    <label for="P10">10. ¿Qué querías comprar que no encontraste?
                     </label>
                 </div>
                 <div class="md-form">
