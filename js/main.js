@@ -465,6 +465,15 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         }
     }
 
+    if(idPregunta == 'p34'){
+        if (x == '1') {
+            return siguiente[0];
+        }       
+        else {
+            return siguiente[1];
+        }
+    }
+
 
 }
 

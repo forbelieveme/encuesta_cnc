@@ -1,39 +1,32 @@
-<div class = "mt-5" id="P34">
+<script>
+    var numero_pregunta = 'p34';
+    var siguiente = ['views/P35.php', 'views/P40.php'];
+</script>
+<div class="mt-5" id="P34">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST'>            
-            <div class = "jumbotron">
-                <div class = "container">
-                    <div class = "row row-header">                
-                        <div class = "col-sm-12">
-                            <h4>34. ¿Conociste o te enteraste sobre la agenda
-                                de actividades de la Feria del Hogar 2020?</h4>
-                        </div>                    
+        <form method='POST' id="form_p34" onsubmit="submit_decision(false, 1, 'radio', numero_pregunta, 
+         getRadioVal(document.getElementById('form_p34'),'P34'), 
+         Obtener_siguiente(numero_pregunta, getRadioVal(document.getElementById('form_p34'),'P34'),siguiente) );
+          return false;">
+            <div class="form-group">
+                <div class="jumbotron">
+                    <label for="P34">34. ¿Conociste o te enteraste sobre las actividades “Un Café con expertos” en Feria del Hogar 2020?
+                    </label>
+                </div>
+                <div class="container text-center">
+                    <div class="custom-control custom-radio custom-control-inline form-check-inline">
+                        <input type="radio" id="P34_1" value='1' name="P34" class="custom-control-input">
+                        <label class="custom-control-label" for="P34_1">Sí</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline form-check-inline">
+                        <input type="radio" id="P34_2" value='2' name="P34" class="custom-control-input">
+                        <label class="custom-control-label" for="P34_2">No</label>
                     </div>
                 </div>
             </div>
-            
-            <div class="form-group mt-5">
-                <div class = "container">                
-                    <div class='form-check form-check-inline col-12'>                     
-                        <input class='form-check-input' type='radio' name='opcion' id='P34_si' value='1' checked>
-                        <label class='form-check-label escala' for = 'P34_si' >Sí  </label>
-                    </div>                         
-                </div>
-            </div>
-            <div class="form-group mt-5">   
-                <div class = "container">                
-                    <div class='form-check form-check-inline col-12'>                                             
-                        <input  class='form-check-input' type='radio' name='opcion' id='P34_no' value='2'>
-                        <label  class='form-check-label escala' for = 'P34_no' >No  </label>
-                    </div>    
-
-                </div>
-            </div>
-            <div class="form-group mt-5">
-                <div class = "container">                
-                    <div class='form-check form-check-inline col-12'>                     
+            <div class="container">
+                <div class='form-check form-check-inline col-12'>
                     <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
-                    </div>                
                 </div>
             </div>
         </form>
