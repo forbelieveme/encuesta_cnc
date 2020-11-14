@@ -404,6 +404,24 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
 
 }
 
+function submit_parametro(activo, elemento, idPregunta){
+    if(activo){
+        //Enviar valor 0
+        x = 0;
+        console.log("Enviando valor : "+x);
+        peticionUpdate(x, idPregunta);
+
+    }else if(!activo){
+        //Enviar valores activos separados por comas
+        x = ObtenerChecked(elemento).join(",");
+        peticionUpdate(x, idPregunta);
+        console.log("Enviando valor : "+x);
+    }else{
+        alert("no se encontro opcion linea 401 main.js")
+    }
+
+}
+
 function cambia_texto_pregunta(id) {
     var labelP = document.createElement("label");
     labelP.textContent = preguntaDelMomento;
@@ -691,4 +709,17 @@ function cambiarTexto(pregunta, elemento) {
             return x[1];
         }
     })
+}
+
+function activar_desactivar(activado, elemento){
+    //Caso Activado
+    if(activado){
+        elemento.setAttribute("disabled", true);
+    }
+    //Caso Desactivado
+    if(!activado){                
+        elemento.removeAttribute('disabled');
+    }
+
+
 }
