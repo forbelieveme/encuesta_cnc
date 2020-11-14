@@ -1,3 +1,7 @@
+<script>
+    var numero_pregunta = 'p27';
+    var siguiente = 'views/P28.php';
+</script>
 <div class = "mt-5" id="P27">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method = 'POST'>

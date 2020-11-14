@@ -1,3 +1,7 @@
+<script>
+    var numero_pregunta = 'p26';
+    var siguiente = 'views/P27.php';
+</script>
 <div class = "mt-5" id="P26">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
          
@@ -105,7 +109,8 @@
                     
             <div class = "form-group mt-5">    
             <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"
-            onclick = "submit_decisiones(5, 'escala', 'form_P26',document.getElementById('form_P26'),'views/P27.php' );"
+            onclick = "submit_decision(true, 5, 'escala', 'p26',
+            document.getElementById('form_P26'),siguiente );"
             > Confirmar </button>    
             </div>            
         </form>
