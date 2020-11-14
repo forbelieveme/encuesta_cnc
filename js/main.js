@@ -373,12 +373,13 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
     else {
         return console.log("No se sabe si el multiple o unica respuesta.");
     }
-    
+
     $("#pregunta").load(siguiente);
     if (pasaInfo) {
         let campo = cambiarTexto(idPregunta, elemento).filter(x =>
             x != undefined
         )
+
         preguntaDelMomento = campo[0];
         console.log(`pregMOmento`, preguntaDelMomento);
 
@@ -447,28 +448,28 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
 
     }
 
-    if(idPregunta == 'p21'){
+    if (idPregunta == 'p21') {
         if (x == '9' || x == '10') {
             return siguiente[0];
-        }       
+        }
         else {
             return siguiente[1];
         }
     }
 
-    if(idPregunta == 'p30'){
+    if (idPregunta == 'p30') {
         if (x == '1') {
             return siguiente[0];
-        }       
+        }
         else {
             return siguiente[1];
         }
     }
 
-    if(idPregunta == 'p34'){
+    if (idPregunta == 'p34') {
         if (x == '1') {
             return siguiente[0];
-        }       
+        }
         else {
             return siguiente[1];
         }
@@ -660,7 +661,7 @@ function cambiarTexto(pregunta, elemento) {
         "p21": `22. ¿Por qué razón calificas con ${elemento} tu satisfacción con el proceso de compra de la boleta?`,
         "p23": `24. Por qué razón calificas con ${elemento} tu satisfacción con los servicios generales prestados por Corferias?`,
         "p32": `33. ¿Por qué razón calificas con ${elemento} la publicidad de la Feria del Hogar 2020?`,
-        "p36": `37. ¿Por qué razón calificas con ${elemento} la satisfacción con la agenda de actividades de la Feria del Hogar 2020?`
+        "p37": `38. ¿Por qué razón calificas con ${elemento} la satisfacción con la agenda de actividades de la Feria del Hogar 2020?`
     }
 
     return Object.entries(arrPreg).map(x => {
