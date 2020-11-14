@@ -1,11 +1,22 @@
+<script>
+    var numero_pregunta = 'p22';
+    var siguiente = 'views/P23.php';
+</script>
 <div class="mt-5" id="P22">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_p22" onsubmit="submit_escala(getRadioVal_text('P22_textArea',document.getElementById('form_p22'),'P22'),'views/P23.php'); return false;">
+        <form method='POST' id="form_p22" 
+        onsubmit="
+        submit_decision(false, 1, 'otrocual', numero_pregunta, 
+        getRadioVal_text('P22_textArea',document.getElementById('form_p22'),'P22'),
+        siguiente);
+        return false;">
             <div class="jumbotron">
                 <div class="container">
                     <div class="row row-header">
                         <div class="col-sm-12">
-                            <label id="preg_p22"></label>
+                            <label id="preg_p22">
+                            ¿Por qué razón calificas con (PONER REPSUESTA DE P21) tu satisfacción con el
+                            proceso de compra de la boleta?</label>
                         </div>
                     </div>
                 </div>

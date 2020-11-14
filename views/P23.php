@@ -1,6 +1,10 @@
+<script>
+    var numero_pregunta = 'p23';
+    var siguiente = 'views/P24.php';
+</script>
 <div class="mt-5" id="P23">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_p23" onsubmit="submit_escala(getRadioVal(document.getElementById('form_p23'),'P23'), 'views/P24.php'); return false;">
+        
             <div class="jumbotron">
                 <div class="container">
                     <div class="row row-header">
@@ -14,7 +18,11 @@
                     </div>
                 </div>
             </div>
-
+        <form method='POST' id="form_p23" 
+        onsubmit="
+        submit_decision(false, 1, 'escala', numero_pregunta,
+        getRadioVal(document.getElementById('form_p23'),'P23'), siguiente);
+        return false;">
             <div class="container">
                 <?php
                 for ($counter = 1; $counter < 11; $counter++) {
