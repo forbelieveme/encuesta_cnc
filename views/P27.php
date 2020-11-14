@@ -22,7 +22,7 @@
                 <div class = "container">
                     <div class = "row row-header">                
                         <div class = "col-sm-12">
-                            <h4>27. ¿Hiciste uso de alguno de los siguientes servicios? </h4>
+                            <label>27. ¿Hiciste uso de alguno de los siguientes servicios? </label>
                         </div>                    
                     </div>
                 </div>
