@@ -16,7 +16,7 @@
             <div class="form-group mt-5">
                 <div class="container">
                     <textarea id="taP24" name="razon_calificacion" style="width:100%" rows="10"></textarea>
-                    <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block"> Confirmar </button>
+                    <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block"> SIGUIENTE </button>
                 </div>
             </div>
         </form>

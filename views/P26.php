@@ -111,7 +111,7 @@
             <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"
             onclick = "submit_decision(true, 5, 'escala', 'p26',
             document.getElementById('form_P26'),siguiente );"
-            > Confirmar </button>    
+            > SIGUIENTE </button>    
             </div>            
         </form>
     </div>

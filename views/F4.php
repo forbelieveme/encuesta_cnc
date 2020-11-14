@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="container">
-                <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5" onclick="">Continuar </button>
+                <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5" onclick="">SIGUIENTE </button>
             </div>
         </form>
     </div>

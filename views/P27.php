@@ -48,7 +48,7 @@
             
             
             <div class = "form-group mt-5"> 
-                <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
+                <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> SIGUIENTE </button>    
             </div>  
                 
             
