@@ -1,64 +1,43 @@
-<div class = "mt-5" id= "P31">
+<script>
+    $(".js-example-placeholder-multiple").select2({
+        theme: "classic",
+        placeholder: "Seleccione...",
+    });
+    $(function() {
+        $(".js-example-basic-multiple").select2();
+    });
+    var numero_pregunta = 'p1';
+    var siguiente = 'views/p2.php';
+</script>
+<div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST'>
-            <div class = "jumbotron">
-                <div class = "container">
-                    <div class = "row row-header">                
-                        <div class = "col-12 col-sm-12 ">
-                            <label>31. ¿En qué medio recuerdas haber visto, 
-                                leído o escuchado publicidad de la Feria 
-                                del Hogar 2020?</label>
-                        </div>                    
-                    </div>
-                </div>
+        <div class="jumbotron">
+            <label>
+                1. Del listado que te vamos a mostrar por favor selecciona: ¿Cuáles son las principales razones qué te motivaron a venir a la Feria del Hogar 2020?
+            </label>
+        </div>
+        <form method="post" id="form_p1" onsubmit="
+        var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]);        
+        elementos.push(document.getElementById('form10').value);
+        submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),
+        siguiente);
+        return false;" class="">
+            <div class="form-group">
+                <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
+                    <option value="1">Invitación de un expositor</option>
+                    <option value="2">Página web de la feria [https://feriadelhogar.com/es/]</option>
+                    <option value="3">Pauta en internet (cortinillas, banner) diferente a la página web</option>
+                    <option value="4">Pauta en televisión</option>
+                    <option value="5">Pauta en radio</option>
+                    <option value="6">Redes sociales (Facebook, Twitter, Linkedin, etc.)</option>
+                    <option value="7">Amigo / conocido o referido (Enc. Ésta opción incluye WhatsApp)</option>
+                    <option value="8">Revistas y Prensa</option>
+                </select>
+                <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
             </div>
-            <div class = "form-check ">
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_1' value='1' checked>
-                    <label  class = "radioboton-label" for = 'P31_1' > Invitación de un expositor. </label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_2' value='2' >
-                    <label class = "radioboton-label"  for = 'P31_2' > Página web de la feria [https://feriadelhogar.com/es/]</label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_3' value='3' >
-                    <label class = "radioboton-label"  for = 'P31_3' > Pauta en internet (cortinillas, banner) diferente a la p+agina web.</label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_4' value='4' >
-                    <label class = "radioboton-label"  for = 'P31_4' > Pauta en televisión </label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_5' value='5' >
-                    <label class = "radioboton-label"  for = 'P31_5' > Pauta en radio </label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_6' value='6' >
-                    <label class = "radioboton-label"  for = 'P31_6' > Redes sociales (Facebook, Twitter, Linkedin, etc.) </label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_7' value='7' >
-                    <label class = "radioboton-label"  for = 'P31_7' > Amigo / Conocido o referido (WhatsApp) </label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_8' value='8' >
-                    <label class = "radioboton-label"  for = 'P31_8' > Revistas y Prensa </label>
-                </div>           
-                <div class = 'radioboton col-12'>                         
-                    <input class='form-check-input' type='radio' name='opcion' id='P31_9' value='9' >
-                    <label class='form-check-label ' for = 'P31_9' > Otro, ¿Cuál? </label>
-                    <input class ="md-textarea form-control " style = "margin-left: 10px;" type ="text" name = otro id='P31_9.1'>
-                </div>                                                   
-            </div >
-
-            <div class = "col-sm-12">
-                <div>                            
-                    <button style="margin-top: 10px;" type='submit' class = "btn btn-primary btn-block"> Confirmar </button>
-                </div>
-            </div>                
-            
-        </form>            
+            <button type="submit" id="btn_p1" class="btn btn-primary btn-lg btn-block" onclick="">
+                SIGUIENTE
+            </button>
+        </form>
     </div>
 </div>
-
