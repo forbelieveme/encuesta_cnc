@@ -24,7 +24,7 @@
                         echo "<div  class = 'form-check form-check-inline col-1'>";
                         echo "<input class = 'form-check-input' type='radio' name='opcion1' id='P25_1_" . $counter . "' value='" . $counter . "'>";
                         echo "<label class = 'form-check-label escala' for = 'P25_1_" . $counter . "' >" . $counter . "</label>";
-                        echo "</div>";
+                        echo "</div";
                     }
                     ?>
                 </div>
@@ -38,7 +38,7 @@
                         echo "<div  class = 'form-check form-check-inline col-1'>";
                         echo "<input class = 'form-check-input' type='radio' name='opcion2' id='P25_2_" . $counter . "' value='" . $counter . "'>";
                         echo "<label class = 'form-check-label escala' for = 'P25_2_" . $counter . "' >" . $counter . "</label>";
-                        echo "</div>";
+                        echo "</div";
                     }
                     ?>
                 </div>
@@ -53,7 +53,7 @@
                         echo "<div  class = 'form-check form-check-inline col-1'>";
                         echo "<input class = 'form-check-input' type='radio' name='opcion3' id='P25_3_" . $counter . "' value='" . $counter . "'>";
                         echo "<label class = 'form-check-label escala' for = 'P25_3_" . $counter . "' >" . $counter . "</label>";
-                        echo "</div>";
+                        echo "</div";
                     }
                     ?>
                 </div>
@@ -68,7 +68,7 @@
                         echo "<div  class = 'form-check form-check-inline col-1'>";
                         echo "<input class = 'form-check-input' type='radio' name='opcion4' id='P25_4_" . $counter . "' value='" . $counter . "'>";
                         echo "<label class = 'form-check-label escala' for = 'P25_4_" . $counter . "' >" . $counter . "</label>";
-                        echo "</div>";
+                        echo "</div";
                     }
                     ?>
                 </div>
@@ -76,39 +76,39 @@
 
             <div class="form-group mt-5" id="P25_5">
                 <label>Atención y amabilidad del Personal de Seguridad
-                    <div class="container">
-                        y vigilancia </label>
-                <?php
-                for ($counter = 1; $counter < 11; $counter++) {
-                    echo "<div  class = 'form-check form-check-inline col-1'>";
-                    echo "<input class = 'form-check-input' type='radio' name='opcion5' id='P25_5_" . $counter . "' value='" . $counter . "'>";
-                    echo "<label class = 'form-check-label escala' for = 'P25_5_" . $counter . "' >" . $counter . "</label>";
-                    echo "</div>";
-                }
-                ?>
+                    y vigilancia </label>
+                <div class="container">
+                    <?php
+                    for ($counter = 1; $counter < 11; $counter++) {
+                        echo "<div  class = 'form-check form-check-inline col-1'>";
+                        echo "<input class = 'form-check-input' type='radio' name='opcion5' id='P25_5_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class = 'form-check-label escala' for = 'P25_5_" . $counter . "' >" . $counter . "</label>";
+                        echo "</div";
+                    }
+                    ?>
+                </div>
             </div>
-    </div>
-    <div class="form-group mt-5" id="P25_6">
-        <label>Disponibilidad del Personal de Seguridad y vigilancia</label>
-        <div class="container">
-            <?php
-            for ($counter = 1; $counter < 11; $counter++) {
-                echo "<div  class = 'form-check form-check-inline col-1'>";
-                echo "<input class = 'form-check-input' type='radio' name='opcion5' id='P25_6_" . $counter . "' value='" . $counter . "'>";
-                echo "<label class = 'form-check-label escala' for = 'P25_6_" . $counter . "' >" . $counter . "</label>";
-                echo "</div>";
-            }
-            ?>
-        </div>
-    </div>
+            <div class="form-group mt-5" id="P25_6">
+                <label>Disponibilidad del Personal de Seguridad y vigilancia</label>
+                <div class="container">
+                    <?php
+                    for ($counter = 1; $counter < 11; $counter++) {
+                        echo "<div  class = 'form-check form-check-inline col-1'>";
+                        echo "<input class = 'form-check-input' type='radio' name='opcion5' id='P25_6_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class = 'form-check-label escala' for = 'P25_6_" . $counter . "' >" . $counter . "</label>";
+                        echo "</div";
+                    }
+                    ?>
+                </div>
+            </div>
 
 
-    <div class="form-group mt-5">
-        <button type="submit" name="login" class=" col-12 btn btn-primary btn-lg btn-block  mt-5" onclick="
+            <div class="form-group mt-5">
+                <button type="submit" name="login" class=" col-12 btn btn-primary btn-lg btn-block  mt-5" onclick="
                 submit_decision(true, 6, 'escala', 'p25',
                 document.getElementById('form_P25'),siguiente);">
-            SIGUIENTE </button>
+                    SIGUIENTE </button>
+            </div>
+        </form>
     </div>
-    </form>
-</div>
 </div>
