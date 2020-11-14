@@ -1,6 +1,11 @@
+<script>
+    var numero_pregunta = 'p28';
+    var siguiente = 'views/P29.php';
+</script>
 <div class = "mt-5" id= "P28">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST'> 
+
+        
             <div class = "jumbotron">
                 <div class = "container">
                     <div class = "row row-header">                
@@ -13,7 +18,7 @@
                 </div>
             </div>
 
-
+        <form method = 'POST' id="form_P28" onsubmit="return false;"> 
             <div class = "form-group mt-5">                       
                 <div class = "container" id = "P28_1">
                     <h5>Parqueadero Verde</h5>
@@ -100,7 +105,10 @@
                     
             </div>              
             <div class = "form-group mt-5">                                  
-                <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"> Confirmar </button>    
+                <button style="margin-top: 10px;" type='submit'  class = "btn btn-primary btn-block"
+                onclick = "submit_decision(true, 5, 'escala', 'p28',
+                document.getElementById('form_P28'),siguiente );"
+                > Confirmar </button>    
             </div>    
           
             
