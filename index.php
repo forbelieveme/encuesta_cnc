@@ -34,7 +34,7 @@
     $(document).ready(function() {
         // $("#box").load("p1.html");
         // $("#btn").click(function() {
-        $("#pregunta").load("views/P27.php");
+        $("#pregunta").load("views/P35.php");
 
         //     $("#pregunta").load("views/p3.php");            // });       
     });
