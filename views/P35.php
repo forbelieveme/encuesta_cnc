@@ -6,8 +6,8 @@
     $(function() {
         $(".js-example-basic-multiple").select2();
     });
-    var numero_pregunta = 'p1';
-    var siguiente = 'views/p2.php';
+    var numero_pregunta = 'p35';
+    var siguiente = 'views/p36.php';
 </script>
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
