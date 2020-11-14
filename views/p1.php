@@ -7,13 +7,14 @@
         $(".js-example-basic-multiple").select2();
     });
     var numero_pregunta = 'p1';
-    var siguiente = 'views/p2.php';
+    var siguiente = 'views/p3.php';
 </script>
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <div class="jumbotron">
             <label>
-                1. Del listado que te vamos a mostrar por favor selecciona: ¿Cuáles son las principales razones qué te motivaron a venir a la Feria del Hogar 2020?
+                1. Del listado que te vamos a mostrar por favor selecciona: 
+                ¿Cuáles son las principales razones qué te motivaron a venir a la Feria del Hogar 2020?
             </label>
         </div>
         <form method="post" id="form_p1" onsubmit="

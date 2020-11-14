@@ -336,7 +336,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             console.log(seleccionados);
             for (let i = 0; i < numero_de_respuestas; i++) {
                 submit_escala_porId(seleccionados[i], idPregunta + '_' + (i + 1));
-                console.log(seleccionados[i], realid + '_' + (i + 1));
+                console.log(seleccionados[i], idPregunta + '_' + (i + 1));
             }
         } else if (tipo_de_pregunta == "radio") {
             console.log("soy radio multiple y con elemento siguiente " + siguiente);
@@ -429,8 +429,8 @@ function cambia_texto_pregunta(id) {
     document.getElementById(id).appendChild(labelP);
 
 }
-function formulario_dim() {
-    var form = crear_form_dinamico(arregloDelMomento);
+function formulario_dim(id) {
+    var form = crear_form_dinamico(arregloDelMomento,id);
 
     document.getElementById('formulario').appendChild(form);
 
@@ -637,7 +637,7 @@ var preg = [
     // "Opcion escrita"
 ];
 function crear_form_dinamico(preg, id) {
-
+    console.log(' id: ',id);
     var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("id", `form_${id}`);
@@ -645,7 +645,8 @@ function crear_form_dinamico(preg, id) {
     var button = document.createElement("button");
     button.setAttribute("type", "post");
     button.setAttribute("class", "btn btn-primary btn-lg btn-block mt-5 mb-3");
-    button.setAttribute("onclick", `submit_decision(true, ${preg.lengh}, 'escala', ${id},document.getElementById('form_${id}'), siguiente)`);
+     button.setAttribute("onclick", `submit_decision(true, ${preg.length}, 'escala', '${id}',document.getElementById('form_${id}'), siguiente)`);
+    //button.setAttribute("onclick", `submit_decision(true, ${preg.length}, 'escala', 'p2',document.getElementById('form_${id}'), siguiente)`);
     button.textContent = "SIGUENTE";
     for (let i = 0; i < preg.length; i++) {
 
