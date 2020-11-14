@@ -4,9 +4,9 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 class Database
 {
     private $host = 'localhost';
-    private $db_name = 'formulario';
-    private $username = 'root';
-    private $password = '';
+    private $db_name = 'encues2_corferias';
+    private $username = 'encues2_ebastian';
+    private $password = 'Tbz7=q6wOK4]';
     private $conn;
 
     public function connect()
