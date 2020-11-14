@@ -7,7 +7,7 @@
         $(".js-example-basic-multiple").select2();
     });
     var numero_pregunta = 'p31';
-    var siguiente = 'views/p32.php';
+    var siguiente = 'views/P32.php';
 </script>
 <div class="mt-5" id="p31">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
