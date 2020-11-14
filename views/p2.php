@@ -34,8 +34,6 @@
     ];
 
     $(document).ready(function() {
-
-
-        formulario_dim();
+        formulario_dim('p2');
     });
 </script>
