@@ -3,6 +3,34 @@ var f1;
 var f3;
 var preguntaDelMomento;
 var arregloDelMomento;
+var arregloPreguntas = {};
+
+var pregunta2 = {
+    1: "Encontrar productos nuevos (lanzamientos)",
+    2: "Buscar promociones y descuentos",
+    3: "Por curiosidad",
+    4: "Por tradición / costumbre",
+    5: "Realizar compras durante la feria",
+    6: "Conocer las novedades y tendencias del mercado",
+    7: "Buscar productos que no se encuentran en otros almacenes de la ciudad (novedades)",
+    8: "Asistir a la agenda de actividades programadas por la feria",
+    9: "Es un plan diferente a ir a un Centro Comercial"
+}
+
+var pregunta28 = {
+    1: "Parqueadero Verde",
+    2: "Parqueadero Torre",
+    3: "Maletero / Paquetero",
+    4: "Plazoleta de comidas",
+    7: "Punto de información",
+}
+
+var pregunta36 = {
+    1: "Charlas “Un café con expertos”",
+    2: "Asesorías “Hazlo tú mismo” en el pabellón 6 y 17",
+    3: "Actividades y compras del Blackfriday",
+    4: "Actividades Y compras en el trasnochón",
+}
 
 function generarCodigo() {
     //generación de codigo aleatorio para almacenamiento del registro
@@ -364,6 +392,24 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             var array = elemento.split(',');
             if (array[array.length - 1] == "") {
                 array.pop();
+                if (idPregunta == 'p1') {
+                    arregloPreguntas = pregunta2
+                } else if (idPregunta == 'p27') {
+                    arregloPreguntas = pregunta28
+                } else if (idPregunta == 'p35') {
+                    arregloPreguntas = pregunta36
+                }
+            } else {
+                if (idPregunta == 'p1') {
+                    pregunta2[array[array.length - 1]] = array[array.length - 1];
+                    arregloPreguntas = pregunta2
+                } else if (idPregunta == 'p27') {
+                    pregunta28[array[array.length - 1]] = array[array.length - 1];
+                    arregloPreguntas = pregunta28
+                } else if (idPregunta == 'p35') {
+                    pregunta36[array[array.length - 1]] = array[array.length - 1];
+                    arregloPreguntas = pregunta36
+                }
             }
             arregloDelMomento = array;
 
@@ -688,7 +734,7 @@ function crear_form_dinamico(preg, id) {
         div1.setAttribute("class", "form-group mt-5");
 
         var labelP = document.createElement("label");
-        labelP.textContent = preg[i];
+        labelP.textContent = arregloPreguntas[preg[i]];
 
         var div2 = document.createElement("div");
         div2.setAttribute("class", "container");
@@ -702,7 +748,7 @@ function crear_form_dinamico(preg, id) {
             input.setAttribute("type", "radio");
             input.setAttribute("name", `${id}_${i}`);
             input.setAttribute("id", `${id}_${i}_${j}`);
-            input.setAttribute("value", "100001");
+            input.setAttribute("value", j);
 
             var labelIn = document.createElement("label");
             labelIn.setAttribute("class", "form-check-label escala");
