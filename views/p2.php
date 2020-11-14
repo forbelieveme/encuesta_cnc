@@ -22,17 +22,6 @@
     </div>
 </div>
 <script>
-    var preg = [
-        "Atención del expositor (Nivel de preparación de los expositores si cuenta con tarjetas, maneja la información requerida, brinda un servicio completo)",
-        "Cantidad de expositores (suficientes)",
-        // "Calidad de expositores - Tipo de productos ofrecidos",
-        "Presencia de productos novedosos y/o nuevos productos",
-        "Presencia de empresas y marcas conocidas del sector – representatividad de empresas",
-        // "Variedad de Productos y/o servicios",
-        "El diseño de stands",
-        // "Opcion escrita"
-    ];
-
     $(document).ready(function() {
         formulario_dim('p2');
     });

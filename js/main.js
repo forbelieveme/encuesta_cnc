@@ -357,6 +357,8 @@ function submit_decisiones(multiples, numero_de_respuestas, tipo_de_pregunta, id
 function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPregunta, elemento, siguiente, pasaInfo) {
     //Multiples respuestas
     if (multiples) {
+        // console.log(`tipo`, tipo_de_pregunta);
+
         x = elemento;
 
         if (tipo_de_pregunta == "escala") {
@@ -373,6 +375,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
         }
         //unica respuesta
     } else if (!multiples) {
+        console.log(`tipo`, tipo_de_pregunta);
 
         if (tipo_de_pregunta == "escala") {
             // console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
@@ -399,6 +402,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
                 } else if (idPregunta == 'p35') {
                     arregloPreguntas = pregunta36
                 }
+
             } else {
                 if (idPregunta == 'p1') {
                     pregunta2[array[array.length - 1]] = array[array.length - 1];
@@ -411,6 +415,8 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
                     arregloPreguntas = pregunta36
                 }
             }
+            // console.log(`arreglaPrg`, array);
+
             arregloDelMomento = array;
 
 
@@ -465,15 +471,22 @@ function submit_parametro(activo, elemento, idPregunta, siguiente) {
     } else if (!activo) {
         //Enviar valores activos separados por comas
         x = ObtenerChecked(elemento).join(",");
-        var arr = x.split(',');
-        arregloDelMomento = arr;
+        var array = x.split(',');
+        if (idPregunta == 'p1') {
+            arregloPreguntas = pregunta2
+        } else if (idPregunta == 'p27') {
+            arregloPreguntas = pregunta28
+        } else if (idPregunta == 'p35') {
+            arregloPreguntas = pregunta36
+        }
+
+        arregloDelMomento = array;
 
         peticionUpdate(x, idPregunta);
 
         // console.log("Enviando valor : " + x);
         $("#pregunta").load(Obtener_siguiente(idPregunta, x, siguiente));
     } else {
-        alert("no se encontro opcion linea 401 main.js")
     }
 
 

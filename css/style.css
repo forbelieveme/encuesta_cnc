@@ -64,3 +64,8 @@
 	content: '';
 	background: no-repeat 50%/50% 50%;
 }
+
+.custom-control-inline.escala.p29 {
+	display: inline-flex;
+	margin-right: 0.55rem;
+}
