@@ -13,8 +13,9 @@
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <div class="jumbotron">
             <label>
-                1. Del listado que te vamos a mostrar por favor selecciona: ¿Cuáles son las principales 
-                razones qué te motivaron a venir a la Feria del Hogar 2020? Selecciona todas las opciones que correspondan
+                1. Del listado que te vamos a mostrar por favor selecciona: ¿Cuáles son las principales
+                razones qué te motivaron a asistir a la Feria del Hogar 2020?
+                Selecciona todas las opciones que correspondan
             </label>
         </div>
         <form method="post" id="form_p1" onsubmit="

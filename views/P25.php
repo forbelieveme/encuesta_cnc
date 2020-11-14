@@ -17,7 +17,7 @@
 
         <form method='POST' id="form_P25" onsubmit="return false;">
             <div class="form-group mt-5">
-                <label>Facilidad en el ingreso a la feria</label>
+                <label class="mb-4">Facilidad en el ingreso a la feria</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -31,7 +31,7 @@
             </div>
 
             <div class="form-group mt-5">
-                <label>Atención del personal en el ingreso a la feria </label>
+                <label class="mb-4">Atención del personal en el ingreso a la feria </label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -45,7 +45,7 @@
             </div>
 
             <div class="form-group mt-5">
-                <label>Aseo en baños y exteriores </label>
+                <label class="mb-4">Aseo en baños y exteriores </label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -60,7 +60,7 @@
 
 
             <div class="form-group mt-5">
-                <label>Aseo al interior de los pabellones </label>
+                <label class="mb-4">Aseo al interior de los pabellones </label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -74,7 +74,7 @@
             </div>
 
             <div class="form-group mt-5">
-                <label>Atención y amabilidad del Personal de Seguridad
+                <label class="mb-4">Atención y amabilidad del Personal de Seguridad
                     y vigilancia </label>
                 <div class="container text-center">
                     <?php
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="form-group mt-5">
-                <label>Disponibilidad del Personal de Seguridad y vigilancia</label>
+                <label class="mb-4">Disponibilidad del Personal de Seguridad y vigilancia</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {

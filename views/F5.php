@@ -47,10 +47,10 @@
                     <input type="radio" id="F5_7" value='6' name="F5" class="custom-control-input">
                     <label class="custom-control-label" for="F5_7">65-74 años </label>
                 </div>
-                <div class="custom-control custom-radio custom-control-inline form-check-inline">
+                <!-- <div class="custom-control custom-radio custom-control-inline form-check-inline">
                     <input type="radio" id="F5_8" value='7' name="F5" class="custom-control-input">
                     <label class="custom-control-label" for="F5_8">NR</label>
-                </div>
+                </div> -->
             </div>
             <div class="container">
                 <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">SIGUIENTE </button>

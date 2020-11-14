@@ -10,7 +10,7 @@
                     <div class="col-sm-12">
                         <label id="label_P2">2. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” Y
                             10 “Muy satisfecho”, ¿Cuál es tú nivel de satisfacción con respecto al
-                            cumplimiento de cada uno de los motivos que te llevaron a venir a la Feria del Hogar 2020?
+                            cumplimiento de cada uno de los motivos que te llevaron a asistir a la Feria del Hogar 2020? 
                         </label>
                     </div>
                 </div>

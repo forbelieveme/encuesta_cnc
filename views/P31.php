@@ -31,6 +31,7 @@
                     <option value="4">Pauta en televisión</option>
                     <option value="5">Pauta en radio</option>
                     <option value="6">Redes sociales (Facebook, Twitter, Linkedin, etc.)</option>
+                    <option value="7">Vallas/paraderos</option>
                     <option value="9">Amigo / conocido o referido (Enc. Ésta opción incluye WhatsApp)</option>
                     <option value="11">Revistas y Prensa</option>
                 </select>

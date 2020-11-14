@@ -17,7 +17,7 @@
                 </div>
                 <div class="container text-center">
                     <?php
-                    for ($counter = 1; $counter < 11; $counter++) {
+                    for ($counter = 0; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
                         echo "<input class='custom-control-input' type='radio' name='P13' id='P13_" . $counter . "' value='" . $counter . "'>";
                         echo "<label class='custom-control-label escala' for='P13_" . $counter . "'>" . $counter . "</label>";

@@ -776,7 +776,7 @@ function cargarSiguiente(siguiente) {
 
 function cambiarTexto(pregunta, elemento) {
     var arrPreg = {
-        "p3": `4. ¿Por qué razón calificas con ${elemento} el cumplimiento de los motivos que te llevaron a venir a la Feria del Hogar 2020?`,
+        "p3": `4. ¿Por qué razón calificas con ${elemento}?`,
         "p11": `12. ¿Por qué razón calificas con ${elemento} tu satisfacción en general con la Feria del Hogar 2020?`,
         "p17": `18. ¿Por qué razón calificas con ${elemento} la satisfacción general con los expositores (muestra comercial) de la Feria del Hogar 2020?`,
         "p21": `22. ¿Por qué razón calificas con ${elemento} tu satisfacción con el proceso de compra de la boleta?`,

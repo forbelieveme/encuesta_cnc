@@ -8,7 +8,7 @@
 
         <div class="jumbotron">
             <div class="container">
-                <label>¿Tú o alguien de tu familia cercana trabaja en alguno de las siguientes empresas?</label>
+                <label>¿Tú o alguien de tu familia cercana trabaja en alguna de las siguientes empresas?</label>
             </div>
         </div>
 

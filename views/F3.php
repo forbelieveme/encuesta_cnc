@@ -4,14 +4,14 @@
         <form method='POST' onsubmit="return false;">
             <div class="jumbotron">
                 <div class="container">
-                    <label class="text-justify">Para Corferias los visitantes son muy importantes, es por esto que el Centro Nacional
-                        de Consultoría, una empresa privada que realiza estudios sobre la percepción de los colombianos,
-                        actualmente nos encontramos desarrollando un estudio que nos permite conocer tu percepción acerca
-                        de la Feria del Hogar 2020 con el fin de realizar planes de acción enfocados a mejorar tu experiencia.
-                        La información que nos suministres es confidencial a menos que nos permitas compartir en el momento del
-                        análisis de la información.
-                        Para cualquier inquietud puedes comunicarse con nosotros al Tel: (1) 3394888 o al celular 3222799484.
-                        Agradecemos tu tiempo, tus opiniones y el haber aceptado esta invitación del Centro Nacional de Consultoría.</label>
+                    <label class="text-justify">Para Corferias los visitantes son muy importantes, es por esto
+                        que ha contratado al Centro Nacional de Consultoría, una empresa privada que realiza
+                        estudios sobre la percepción de los colombianos, para realizar un estudio que nos permita
+                        conocer tu percepción acerca de la Feria del Hogar 2020 con el fin de generar planes de
+                        acción enfocados a mejorar tu experiencia. La información que nos suministres es confidencial
+                        a menos que nos permitas compartir en el momento del análisis de la información. Para cualquier
+                        inquietud puedes comunicarse con nosotros al Tel: (1) 3394888 o al celular 3222799484. Agradecemos
+                        tu tiempo, tus opiniones y el haber aceptado esta invitación del Centro Nacional de Consultoría.</label>
                 </div>
             </div>
 

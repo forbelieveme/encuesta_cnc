@@ -19,7 +19,7 @@
 
         <form method='POST' id="form_P26" onsubmit="return false;">
             <div class="form-group mt-5" id="P26_1">
-                <label>Señalización de la feria fuera de los pabellones - taquillas y áreas exteriores dentro de Corferias.</label>
+                <label class="mb-4">Señalización de la feria fuera de los pabellones - taquillas y áreas exteriores dentro de Corferias.</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -33,7 +33,7 @@
             </div>
 
             <div class="form-group mt-5" id="P26_2">
-                <label>Señalización dentro de los pabellones - Ubicación, mapas o guías de los expositores, nombre y numeración de los stands</label>
+                <label class="mb-4">Señalización dentro de los pabellones - Ubicación, mapas o guías de los expositores, nombre y numeración de los stands</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -47,8 +47,7 @@
             </div>
 
             <div class="form-group mt-5" id="P26_3">
-                <label>Infraestructura de Corferias (parqueaderos, baños,
-                    zonas de comidas, áreas de descanso al aire libre en buen estado) </label>
+                <label class="mb-4">Infraestructura de Corferias (parqueaderos, baños y áreas de descanso en buen estado) </label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -61,7 +60,7 @@
                 </div>
             </div>
             <div class="form-group mt-5" id="P26_4">
-                <label>Señalización de los servicios de Corferias como baños, puntos de información, plazoleta de comidas, etc.</label>
+                <label class="mb-4">Señalización de los servicios de Corferias como baños, puntos de información, plazoleta de comidas, etc.</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -75,7 +74,7 @@
             </div>
 
             <div class="form-group mt-5" id="P26_5">
-                <label>Señalización e información sobre los protocolos de bioseguridad</label>
+                <label class="mb-4">Señalización e información sobre los protocolos de bioseguridad</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {

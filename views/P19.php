@@ -19,7 +19,7 @@
         </div>
         <form method='POST' id="form_p19" onsubmit="return false;">
             <div class="form-group mt-5" >
-                <label>Atención del expositor (Nivel de preparación de los expositores
+                <label class="mb-4">Atención del expositor (Nivel de preparación de los expositores
                     si cuenta con tarjetas, maneja la información requerida, brinda un servicio completo)
                 </label>
                 <div class="container text-center">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="form-group mt-5" >
-                <label>Cantidad de expositores (suficientes)
+                <label class="mb-4">Cantidad de expositores (suficientes)
                 </label>
                 <div class="container text-center">
                     <?php
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="form-group mt-5" >
-                <label>Calidad de expositores - Tipo de productos ofrecidos
+                <label class="mb-4">Calidad de expositores - Tipo de productos ofrecidos
                 </label>
                 <div class="container text-center">
                     <?php
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="form-group mt-5">
-                <label>Presencia de productos novedosos y/o nuevos productos
+                <label class="mb-4">Presencia de productos novedosos y/o nuevos productos
                 </label>
                 <div class="container text-center">
                     <?php
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="form-group mt-5">
-                <label>Presencia de empresas y marcas conocidas del sector – representatividad de empresas
+                <label class="mb-4">Presencia de empresas y marcas conocidas del sector – representatividad de empresas
                 </label>
                 <div class="container text-center">
                     <?php
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div class="form-group mt-5" >
-                <label>Variedad de Productos y/o servicios
+                <label class="mb-4">Variedad de Productos y/o servicios
                 </label>
                 <div class="container text-center">
                     <?php
@@ -105,7 +105,7 @@
             </div>
 
             <div class="form-group mt-5" >
-                <label>El diseño de stands
+                <label class="mb-4">El diseño de stands
                 </label>
                 <div class="container text-center">
                     <?php

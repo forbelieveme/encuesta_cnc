@@ -15,7 +15,7 @@
 
         <form method='POST' id="form_P29" onsubmit="return false;">
             <div class="form-group mt-5">
-                <label>Tiempo de atención en la plazoleta de comidas</label>
+                <label class="mb-4">Tiempo de atención en la plazoleta de comidas</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -24,11 +24,16 @@
                         echo "<label class='custom-control-label escala' for='P29_1_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
+                    echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
+                    echo "<input class='custom-control-input' type='radio' name='P29_1' id='P29_1_NA" . $counter . "' value='99'>";
+                    echo "<label class='custom-control-label escala' for='P29_1_NA'>NA</label>";
+                    echo "</div>";
                     ?>
+
                 </div>
             </div>
             <div class="form-group mt-5">
-                <label>Aseo en la plazoleta de comidas y comedores</label>
+                <label class="mb-4">Aseo en la plazoleta de comidas y comedores</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -37,11 +42,16 @@
                         echo "<label class='custom-control-label escala' for='P29_2_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
+                    echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
+                    echo "<input class='custom-control-input' type='radio' name='P29_2' id='P29_2_NA" . $counter . "' value='99'>";
+                    echo "<label class='custom-control-label escala' for='P29_2_NA'>NA</label>";
+                    echo "</div>";
                     ?>
+
                 </div>
             </div>
             <div class="form-group mt-5">
-                <label>Disponibilidad de sillas y mesas para comer</label>
+                <label class="mb-4">Disponibilidad de sillas y mesas para comer en plazoleta y comedores</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
@@ -50,7 +60,12 @@
                         echo "<label class='custom-control-label escala' for='P29_3_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
+                    echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
+                    echo "<input class='custom-control-input' type='radio' name='P29_3' id='P29_3_NA" . $counter . "' value='99'>";
+                    echo "<label class='custom-control-label escala' for='P29_3_NA'>NA</label>";
+                    echo "</div>";
                     ?>
+
                 </div>
 
             </div>

@@ -15,7 +15,7 @@
             </div>
             <div class="form-group mt-5">
                 <div class="container">
-                    <textarea class="md-textarea form-control col-12 " id="taP34" name="razon_calificacion" rows="10"></textarea>
+                    <textarea class="md-textarea form-control col-12 " id="taP34" name="razon_calificacion" rows="5"></textarea>
                 </div>
             </div>
             <button type='submit' class="btn btn-primary btn-block"> SIGUIENTE </button>

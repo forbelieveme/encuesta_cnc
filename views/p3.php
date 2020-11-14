@@ -11,7 +11,7 @@
                 <div class="jumbotron mb-5">
                     <label for="P3">3. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” y
                         10 es “Muy satisfecho” ¿Cuál es tu nivel de satisfacción general con respecto al
-                        cumplimiento de todos los motivos que lo llevaron a venir a la Feria del Hogar 2020?
+                        cumplimiento de todos los motivos que lo llevaron a asistir a la Feria del Hogar 2020?
                     </label>
                 </div>
                 <div class="container text-center">

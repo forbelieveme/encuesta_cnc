@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <div class="container">
-                    <textarea id="taP38" name="razon_calificacion" class="md-textarea form-control" rows="10"></textarea>
+                    <textarea id="taP38" name="razon_calificacion" class="md-textarea form-control" rows="5"></textarea>
                 </div>
             </div>
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>

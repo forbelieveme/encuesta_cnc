@@ -28,8 +28,8 @@
             <select multiple id="select_p35" class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
                 <option value="1">Charlas “Un café con expertos</option>
                 <option value="2">Asesorías “Hazlo tú mismo” en el pabellón 6 y 17</option>
-                <option value="3">Actividades y compras del Blackfriday (SÓLO APARECE EL 27 DE NOVIEMBRE)</option>
-                <option value="4">Actividades Y compras en el trasnochón (SÓLO APARECE EL 4 DE DICIEMBRE)</option>
+                <!-- <option value="3">Actividades y compras del Blackfriday (SÓLO APARECE EL 27 DE NOVIEMBRE)</option> -->
+                <!-- <option value="4">Actividades Y compras en el trasnochón (SÓLO APARECE EL 4 DE DICIEMBRE)</option> -->
             </select>
             <div class="radioboton form-check">
                 <input class='form-check-input' type='checkbox' name='opcion' id='ninguno' onclick="
