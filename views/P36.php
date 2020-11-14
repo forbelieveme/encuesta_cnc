@@ -1,52 +1,28 @@
-<div class = "mt-5" id= "P36">
+<script>
+    var numero_pregunta = 'p36';
+    var siguiente = 'views/P37.php';
+</script>
+<div class="mt-5" id="p36">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST'>
-            <div class = "jumbotron">
-                <div class = "container">
-                    <div class = "row row-header">                
-                        <div class = "col-sm-12">
-                            <label>36.Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy Insatisfecho” y 10
-                            es “Muy satisfecho” ¿cuál es tu nivel de satisfacción con…? (PREGUNTAR A LOS
-                            QUE RESPONDIÓ EN P35)</label>
-                        </div>                    
+
+
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row row-header">
+                    <div class="col-sm-12">
+                        <label>36. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy Insatisfecho” y 10 es “Muy satisfecho” ¿cuál es tu nivel de satisfacción con. . .?</label>
                     </div>
                 </div>
             </div>
-            <div class = "container">
-                <div class="form-group">
-                    <div class = "row" id = "P36_1">
-                        <div class = "col-12" ><h5>Shows tarimas artistas invitados</h5></div>
-                            <?php 
-                            for ($counter = 1; $counter < 11; $counter++){
-                                echo "<div  class = 'radioboton col-5 col-sm-1'>";                        
-                                echo "<input class = 'radio-check' type='radio' name='opcion1' id='P36_1_". $counter."' value='". $counter."'>";
-                                echo "<label class = 'radioboton-label' for = 'P36_1_". $counter."' >". $counter."</label>";
-                                echo "</div>";
-                            }
-                            ?>                                                                                           
-                        </div>   
-                        <br>   
-                    </div>
-                <div class="form-group">
-                    <div class = "row" id = "P36_2">
-                        <div class = "col-12" ><h5>Charlas auditorio principal</h5></div>
-                            <?php 
-                            for ($counter = 1; $counter < 11; $counter++){
-                                echo "<div  class = 'radioboton col-5 col-sm-1'>";                        
-                                echo "<input class = 'radio-check' type='radio' name='opcion2' id='P36_2_". $counter."' value='". $counter."'>";
-                                echo "<label class = 'radioboton-label' for = '36_2_". $counter."' >". $counter."</label>";
-                                echo "</div>";
-                            }
-                            ?>                                                                                           
-                    </div>    
-                    <br>
-                </div>    
-                   
-                <div class="form-group">
-                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
-                </div >
-        
-            </div>
-        </form>
+        </div>
+
+        <div id="formulario">
+        </div>
+
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        formulario_dim('p36');
+    });
+</script>
