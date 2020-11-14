@@ -362,7 +362,9 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
 
 
             var array = elemento.split(',');
-            // console.log(`arreglo`, array);
+            if (array[array.length - 1] == "") {
+                array.pop();
+            }
             arregloDelMomento = array;
 
 
@@ -410,7 +412,7 @@ function submit_parametro(activo, elemento, idPregunta, siguiente) {
 
         //Enviar valor 0
         x = 99;
-        console.log("Enviando valor : "+x);
+        console.log("Enviando valor : " + x);
         peticionUpdate(x, idPregunta);
         $("#pregunta").load(Obtener_siguiente(idPregunta, x, siguiente));
 
@@ -525,7 +527,7 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         }
     }
 
-    if (idPregunta == 'p27'){
+    if (idPregunta == 'p27') {
         if (x == '99') {
             return siguiente[0];
         }
@@ -535,7 +537,7 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
 
     }
 
-    if (idPregunta == 'p35'){
+    if (idPregunta == 'p35') {
         if (x == '99') {
             return siguiente[0];
         }
@@ -755,7 +757,7 @@ function activar_desactivar(activado, elemento) {
 
 }
 
-function submit_personales(nombre, correo, numero){
+function submit_personales(nombre, correo, numero) {
     console.log(nombre, '-> nombres');
     console.log(correo, '-> correo');
     console.log(numero, '-> telefono');
