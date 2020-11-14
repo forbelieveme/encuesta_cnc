@@ -803,7 +803,7 @@ function activar_desactivar(activado, elemento) {
 
 }
 
-function submit_personales(nombre, correo, numero) {
+function submit_personales(nombre, correo, numero, siguiente) {
     console.log(nombre, '-> nombres');
     console.log(correo, '-> correo');
     console.log(numero, '-> telefono');
@@ -811,4 +811,6 @@ function submit_personales(nombre, correo, numero) {
     peticionUpdate(nombre, 'nombres');
     peticionUpdate(correo, 'correo');
     peticionUpdate(numero, 'telefono');
+
+    $("#pregunta").load(siguiente);
 }
