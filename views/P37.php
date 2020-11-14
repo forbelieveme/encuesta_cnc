@@ -1,37 +1,33 @@
-<div class = "mt-5" id= "P37">
+<script>
+    var numero_pregunta = "p37";
+    siguiente = "views/P38.php"
+</script>
+<div class="mt-5" id="P37">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST'>
-            <div class = "jumbotron">
-                <div class = "container">
-                    <div class = "row row-header">                
-                        <div class = "col-sm-12">
-                            <label id="preg_p18"></label>
-                        </div>                    
-                    </div>
+        <form method='POST' id="form_p37" onsubmit="submit_decision(false, 1, 'escala', numero_pregunta,
+        getRadioVal(document.getElementById('form_p37'),'P37'), siguiente, true);
+        return false;">
+            <div class="jumbotron">
+                <div class="container">
+                    <label>37. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho” y
+                        10 es “Muy satisfecho” ¿Qué tan satisfecho te encuentras en general con la agenda de
+                        actividades de la Feria del Hogar 2020?
+                    </label>
                 </div>
             </div>
-            <div class="form-group mt-5">
-                <div class = "container">         
-                    <div class='form-check form-check-inline col-1'>                           
-                        <?php 
-                            for ($counter = 1; $counter < 11; $counter++){
-                                echo "<div  class = 'radioboton col-5 col-sm-1'>";                        
-                                echo "<input class='form-check-input' type='radio' name='P37' id='P37_". $counter."' value='". $counter."'>";
-                                echo "<label class='form-check-label escala' for='P37_'>".$counter."</label>";
-                                echo "</div>";
-                            }
-                        ?>    
-                    </div>                                                                                          
-                    
-                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
-                    
-                </div>
+            <div class="container">
+                <?php
+                for ($counter = 1; $counter < 11; $counter++) {
+                    echo "<div class='form-check form-check-inline col-1'>";
+                    echo "<input class='form-check-input' type='radio' name='P37' id='P37_" . $counter . "' value='" . $counter . "'>";
+                    echo "<label class='form-check-label escala' for='inlineRadio37'>" . $counter . "</label>";
+                    echo "</div";
+                }
+                ?>
             </div>
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">
+                SIGUIENTE
+            </button>
         </form>
     </div>
 </div>
-<script>
-    $(document).ready(function() {
-        cambia_texto_pregunta("preg_p37");
-    });
-</script>
