@@ -1,6 +1,10 @@
+<script>
+    var numero_pregunta = 'p29';
+    var siguiente = 'views/P30.php';
+</script>
 <div class = "mt-5" id= "P29">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST'>      
+        
             <div class = "jumbotron">
                 <div class = "container">
                     <div class = "row row-header">                
@@ -13,7 +17,7 @@
                 </div>
             </div>        
 
-
+        <form method = 'POST' id="form_P29" onsubmit="return false;">      
             <div class = "form-group mt-5">                                                                              
                 <div class = "container " id = "P29_1">
                     <h5>Tiempo de atención en la plazoleta de comidas</h5>
@@ -61,7 +65,9 @@
                 
             </div>            
             <div class = "form-group mt-5">                                          
-                <button type="submit" name="login" class=" col-12 btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                <button type="submit" name="login" class=" col-12 btn btn-primary btn-lg btn-block  mt-5"
+                onclick = "submit_decision(true, 3, 'escala', 'p29',
+                document.getElementById('form_P29'),siguiente );"> SIGUIENTE </button>
             </div>
         </form>
     </div>
