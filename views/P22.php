@@ -1,15 +1,16 @@
 <script>
+    $(".js-example-placeholder-multiple").select2({
+        theme: "classic",
+        placeholder: "Seleccione...",
+    });
+    $(function() {
+        $(".js-example-basic-multiple").select2();
+    });
     var numero_pregunta = 'p22';
     var siguiente = 'views/P23.php';
 </script>
 <div class="mt-5" id="P22">
-    <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_p22" 
-        onsubmit="
-        submit_decision(false, 1, 'otrocual', numero_pregunta, 
-        getRadioVal_text('P22_textArea',document.getElementById('form_p22'),'P22'),
-        siguiente);
-        return false;">
+    <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">        
             <div class="jumbotron">
                 <div class="container">
                     <div class="row row-header">
@@ -19,44 +20,28 @@
                     </div>
                 </div>
             </div>
+        <form method='POST' id="form_p22"         
+        onsubmit="
+        var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]);                  
+        elementos.push(document.getElementById('form22').value);
+        submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),
+        siguiente);
+        return false;">
 
-            <div class="container">
-
-                <div class="col-sm-12">
-                    <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_1' value='1' checked>
-                        <label class="radioboton-label" for='P22_1'> No me llegó el código QR </label>
-                    </div>
-                    <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_2' value='2'>
-                        <label class="radioboton-label" for='P22_2'> El proceso de compra fue lento</label>
-                    </div>
-                    <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_3' value='3'>
-                        <label class="radioboton-label" for='P22_3'> Inconvenientes con
-                            la plataforma de pago</label>
-                    </div>
-                    <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_4' value='4'>
-                        <label class="radioboton-label" for='P22_4'> Problemas con la lectura del
-                            código al ingresar </label>
-                    </div>
-                    <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_5' value='5'>
-                        <label class="radioboton-label" for='P22_5'> Filas muy largas </label>
-                    </div>
-                    <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_6' value='6'>
-                        <label class="radioboton-label" for='P22_6'> Otro, ¿Cuál? </label>
-                    </div>
-                    <div class="">
-                        <textarea id="P22_textArea" class="md-textarea form-control mb-5" rows="1"></textarea>
-                    </div>
-                </div>
+            <div class="form-group">
+                <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
+                    <option value="1">No me llegó el código QR</option>
+                    <option value="2">El proceso de compra fue lento</option>
+                    <option value="3">Inconvenientes con la plataforma de pago</option>
+                    <option value="4">Problemas con la lectura del código al ingresar </option>
+                    <option value="5">Filas muy largas </option>             
+                </select>
+                <textarea id="form22" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
+            </div>            
                 <button type="submit" class="btn btn-primary btn-lg btn-block ">
                     SIGUIENTE
                 </button>
-            </div>
+            
         </form>
     </div>
 </div>
