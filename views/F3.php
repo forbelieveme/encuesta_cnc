@@ -4,7 +4,7 @@
         <form method='POST' onsubmit="return false;">
             <div class="jumbotron">
                 <div class="container">
-                    <label>Para Corferias los visitantes son muy importantes, es por esto que el Centro Nacional
+                    <label class="text-justify">Para Corferias los visitantes son muy importantes, es por esto que el Centro Nacional
                         de Consultoría, una empresa privada que realiza estudios sobre la percepción de los colombianos,
                         actualmente nos encontramos desarrollando un estudio que nos permite conocer tu percepción acerca
                         de la Feria del Hogar 2020 con el fin de realizar planes de acción enfocados a mejorar tu experiencia.
@@ -16,8 +16,10 @@
             </div>
 
             <div class='form-check form-check-inline col-12'>
-                <div clasAs="container">
-                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5" onclick="submit_inicial();">Click Aquí para Realizar la Encuesta </button>
+                <div class="container">
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block" onclick="submit_inicial();">
+                        COMIENZA AQUÍ
+                    </button>
                 </div>
             </div>
         </form>
