@@ -447,6 +447,34 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
 
     }
 
+    if(idPregunta == 'p21'){
+        if (x == '9' || x == '10') {
+            return siguiente[0];
+        }       
+        else {
+            return siguiente[1];
+        }
+    }
+
+    if(idPregunta == 'p30'){
+        if (x == '1') {
+            return siguiente[0];
+        }       
+        else {
+            return siguiente[1];
+        }
+    }
+
+    if(idPregunta == 'p34'){
+        if (x == '1') {
+            return siguiente[0];
+        }       
+        else {
+            return siguiente[1];
+        }
+    }
+
+
 }
 
 function submit_escala_porId(elemento, idPregunta) {
