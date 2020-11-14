@@ -15,10 +15,10 @@
             </div>
             <div class="form-group mt-5">
                 <div class="container">
-                    <textarea id="taP24" name="razon_calificacion" style="width:100%" rows="10"></textarea>
-                    <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block"> SIGUIENTE </button>
+                    <textarea id="taP24" name="razon_calificacion" rows="5" class="md-textarea form-control"></textarea>
                 </div>
             </div>
+            <button type='submit' class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
         </form>
     </div>
 </div>

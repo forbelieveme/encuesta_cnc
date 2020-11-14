@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-sm-12">
                     <div>
-                        <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block mt-5"> SIGUIENTE </button>
+                        <button  type='submit' class="btn btn-primary btn-block mt-3"> SIGUIENTE </button>
                     </div>
                 </div>
             </div>

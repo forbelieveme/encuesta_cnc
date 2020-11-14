@@ -39,6 +39,8 @@
                     <div class="radioboton">
                         <input class='radio-check' type='radio' name='P20' id='P20_5' value='5'>
                         <label class="radioboton-label" for='P20_5'> Otro, ¿Cuál? </label>
+                    </div>
+                    <div class="">
                         <textarea id="P20_textArea" class="md-textarea form-control mb-5" rows="1"></textarea>
                     </div>
                 </div>

@@ -24,7 +24,7 @@
                     <label class="custom-control-label" for="P9_2">No</label>
                 </div>
             </div>
-            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block mt-5">
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block mt-3">
                 SIGUIENTE
             </button>
         </form>

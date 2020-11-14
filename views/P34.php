@@ -26,7 +26,7 @@
             </div>
             <div class="container">
                 <div class='form-check form-check-inline col-12'>
-                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block"> SIGUIENTE </button>
                 </div>
             </div>
         </form>

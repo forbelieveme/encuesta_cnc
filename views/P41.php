@@ -19,10 +19,10 @@
             </div>
             <div class='form-check form-check-inline col-12'>
                 <div class="container">
-                    <textarea class="md-textarea form-control col-12" id="taP41" name="razon_calificacion" style="width:100%" rows="10"></textarea>
-                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
+                    <textarea class="md-textarea form-control col-12" id="taP41" name="razon_calificacion" rows="5"></textarea>
                 </div>
             </div>
+            <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>
         </form>
     </div>
 </div>

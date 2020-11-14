@@ -8,7 +8,8 @@
         submit_personales(
         document.getElementById('nombre').value, 
         document.getElementById('correo').value, 
-        document.getElementById('numero').value);
+        document.getElementById('numero').value,
+        siguiente);
         return false;
         ">
             <div class = "jumbotron">

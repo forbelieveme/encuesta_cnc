@@ -35,14 +35,16 @@
                     <div class="radioboton">
                         <input class='radio-check' type='radio' name='d4' id='D4_4' value='4'>
                         <label style="margin-left: 10px;" for='D4_4'> Otro, ¿Cuál? </label>
-                        <input id="d4_textArea" style="margin-left: 10px;" type="text" name=otro id='D4.1'>
+                    </div>
+                    <div>
+                        <input id="d4_textArea" class="md-textarea form-control" type="text" name=otro id='D4.1'>
                     </div>
 
 
                 </div>
                 <div class="col-sm-12">
                     <div>
-                        <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block"> SIGUIENTE </button>
+                        <button type='submit' class="btn btn-primary btn-block mt-3"> SIGUIENTE </button>
                     </div>
                 </div>
 

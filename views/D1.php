@@ -31,7 +31,7 @@
                     <input class='radio-check' type='radio' name='d1' id='D1_4' value='4'>
                     <label class="radioboton-label" for='D1_4'>Prefiero no responder </label>
                 </div>
-                <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block"> SIGUIENTE </button>
+                <button  type='submit' class="btn btn-primary btn-block mt-3"> SIGUIENTE </button>
 
             </div>
         </form>
