@@ -404,21 +404,26 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
 
 }
 
-function submit_parametro(activo, elemento, idPregunta){
+function submit_parametro(activo, elemento, idPregunta, siguiente){
+    
     if(activo){
+        
         //Enviar valor 0
-        x = 0;
+        x = 99;
         console.log("Enviando valor : "+x);
         peticionUpdate(x, idPregunta);
+        $("#pregunta").load(Obtener_siguiente(idPregunta, x,siguiente));
 
-    }else if(!activo){
+    }else if(!activo){        
         //Enviar valores activos separados por comas
         x = ObtenerChecked(elemento).join(",");
         peticionUpdate(x, idPregunta);
         console.log("Enviando valor : "+x);
+        $("#pregunta").load(Obtener_siguiente(idPregunta, x,siguiente));
     }else{
         alert("no se encontro opcion linea 401 main.js")
     }
+    
 
 }
 
@@ -514,6 +519,16 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         else {
             return siguiente[1];
         }
+    }
+
+    if (idPregunta == 'p27'){
+        if (x == '99') {
+            return siguiente[0];
+        }
+        else {
+            return siguiente[1];
+        }
+
     }
 
 
