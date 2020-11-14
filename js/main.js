@@ -409,7 +409,7 @@ function submit_parametro(activo, elemento, idPregunta, siguiente){
     if(activo){
         
         //Enviar valor 0
-        x = 99;
+        x = 9;
         console.log("Enviando valor : "+x);
         peticionUpdate(x, idPregunta);
         $("#pregunta").load(Obtener_siguiente(idPregunta, x,siguiente));
@@ -522,7 +522,7 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
     }
 
     if (idPregunta == 'p27'){
-        if (x == '99') {
+        if (x == '9') {
             return siguiente[0];
         }
         else {
@@ -530,6 +530,17 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         }
 
     }
+
+    if (idPregunta == 'p35'){
+        if (x == '9') {
+            return siguiente[0];
+        }
+        else {
+            return siguiente[1];
+        }
+
+    }
+
 
 
 }
