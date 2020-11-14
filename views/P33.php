@@ -10,11 +10,7 @@
          return false;">
             <div class="jumbotron">
                 <div class="container">
-                    <div class="row row-header">
-                        <div class="col-sm-12">
-                            <label id="preg_p33"></label>
-                        </div>
-                    </div>
+                    <label id="preg_p33"></label>
                 </div>
             </div>
             <div class="form-group mt-5">
