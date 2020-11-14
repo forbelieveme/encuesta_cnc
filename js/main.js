@@ -337,9 +337,9 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
                 submit_escala_porId(seleccionados[i], idPregunta + '_' + (i + 1));
                 //console.log(seleccionados[i], realid+'_'+(i+1));
             }
-        }else if (tipo_de_pregunta == "radio") {
+        } else if (tipo_de_pregunta == "radio") {
             console.log("soy radio multiple y con elemento siguiente " + siguiente);
-        }else {
+        } else {
             return alert('No se econtró el tipo seleccionado');
         }
         //unica respuesta
@@ -349,7 +349,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
             peticionUpdate(elemento, idPregunta);
 
-        }else if (tipo_de_pregunta == "radio") {
+        } else if (tipo_de_pregunta == "radio") {
             // console.log("soy radio unica y con elemento siguiente "+siguiente
             // + " y valor "+elemento);
 
@@ -373,12 +373,15 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
     else {
         return console.log("No se sabe si el multiple o unica respuesta.");
     }
+    
     $("#pregunta").load(siguiente);
     if (pasaInfo) {
         let campo = cambiarTexto(idPregunta, elemento).filter(x =>
             x != undefined
         )
         preguntaDelMomento = campo[0];
+        console.log(`pregMOmento`, preguntaDelMomento);
+
     }
 
 }
@@ -433,11 +436,11 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         }
     }
 
-    if (idPregunta == 'p20'){
+    if (idPregunta == 'p20') {
         //
         if (x == '3' || x == '4') {
             return siguiente[0];
-        }       
+        }
         else {
             return siguiente[1];
         }
@@ -631,7 +634,7 @@ function cambiarTexto(pregunta, elemento) {
         "p32": `33. ¿Por qué razón calificas con ${elemento} la publicidad de la Feria del Hogar 2020?`,
         "p36": `37. ¿Por qué razón calificas con ${elemento} la satisfacción con la agenda de actividades de la Feria del Hogar 2020?`
     }
-    
+
     return Object.entries(arrPreg).map(x => {
         if (x.includes(pregunta)) {
             return x[1];

@@ -1,6 +1,6 @@
 <script>
     var numero_pregunta = 'p18';
-    var siguiente = 'views/p19.php'
+    var siguiente = 'views/P19.php'
 </script>
 <div class="mt-5" id="p18">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
