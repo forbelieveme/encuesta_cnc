@@ -1,21 +1,17 @@
 <script>
     var numero_pregunta = 'f5';
-    var siguiente =['views/finaliza.php','views/p1.php']
+    var siguiente = ['views/finaliza.php', 'views/p1.php']
 </script>
-<div class = "mt-5" id = "F5">
+<div class="mt-5" id="F5">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
 
 
-            <div class = "jumbotron">
-                <div class = "container">
-                    <div class = "row row-header">                
-                        <div class = "col-sm-12">
-                            <label>¿En qué rango de edad te encuentras? (ÚNICA RESPUESTA) (SI RESPONDE MENOS DE 18 AÑOS TERMINA). </label>
-                        </div>                    
-                    </div>
-                </div>
+        <div class="jumbotron">
+            <div class="container">
+                <label>¿En qué rango de edad te encuentras? (ÚNICA RESPUESTA) (SI RESPONDE MENOS DE 18 AÑOS TERMINA). </label>
             </div>
-             <form method = 'POST' id="form_f5" onsubmit = "
+        </div>
+        <form method='POST' id="form_f5" onsubmit="
                 submit_decision(false, 1, 'radio', numero_pregunta,
                 getRadioVal(document.getElementById('form_f5'),('F5')), 
                 Obtener_siguiente(numero_pregunta,
@@ -56,7 +52,7 @@
                     <label class="custom-control-label" for="F5_8">NR</label>
                 </div>
             </div>
-            <div class = "container">                                
+            <div class="container">
                 <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">Continuar </button>
             </div>
         </form>
