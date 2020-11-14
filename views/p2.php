@@ -1,16 +1,7 @@
-<?php
-// $p2 = [
-//     "Atención del expositor (Nivel de preparación de los expositores si cuenta con tarjetas, maneja la información requerida, brinda un servicio completo)",
-//     "Cantidad de expositores (suficientes)",
-//     "Calidad de expositores - Tipo de productos ofrecidos",
-//     "Presencia de productos novedosos y/o nuevos productos",
-//     "Presencia de empresas y marcas conocidas del sector – representatividad de empresas",
-//     "Variedad de Productos y/o servicios",
-//     "El diseño de stands",
-//     "Opcion escrita"
-// ]
-?>
-
+<script>
+    var numero_pregunta = 'p2';
+    var siguiente = 'views/p3.php'
+</script>
 <div class="mt-5" id="p19">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <div class="jumbotron">
@@ -26,10 +17,7 @@
             </div>
         </div>
 
-        <div id="contenedor">
-            <div id="formulario">
-
-            </div>
+        <div id="formulario">
         </div>
     </div>
 </div>
@@ -47,8 +35,7 @@
 
     $(document).ready(function() {
 
-        var down = document.getElementById("formulario");
 
-        crear_form_dinamico(preg);
+        formulario_dim();
     });
 </script>
