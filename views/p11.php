@@ -15,13 +15,13 @@
                         10 es “Muy satisfecho”, en general ¿Qué tan satisfecho estás con la Feria del Hogar 2020?
                     </label>
                 </div>
-                <div class="container">
+                <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
-                        echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P11' id='P11_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio11'>" . $counter . "</label>";
-                        echo "</div";
+                        echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
+                        echo "<input class='custom-control-input' type='radio' name='P11' id='P11_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='custom-control-label escala' for='P11_" . $counter . "'>" . $counter . "</label>";
+                        echo "</div>";
                     }
                     ?>
                 </div>

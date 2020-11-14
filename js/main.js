@@ -731,33 +731,35 @@ function crear_form_dinamico(preg, id) {
         // Create a form synamically 
 
         var div1 = document.createElement("div");
-        div1.setAttribute("class", "form-group mt-5");
+        // div1.setAttribute("class", "form-group mt-5");
 
         var labelP = document.createElement("label");
         labelP.textContent = arregloPreguntas[preg[i]];
+        labelP.setAttribute("class", "mb-4");
 
         var div2 = document.createElement("div");
-        div2.setAttribute("class", "container");
+        div2.setAttribute("class", "container text-center");
 
-        var div3 = document.createElement("div");
-        div3.setAttribute("class", "form-check form-check-inline col-1");
         for (let j = 1; j < 11; j++) {
+            var div3 = document.createElement("div");
+            div3.setAttribute("class", "custom-control custom-radio custom-control-inline form-check-inline escala");
 
             var input = document.createElement("input");
-            input.setAttribute("class", "form-check-input");
+            input.setAttribute("class", "custom-control-input");
             input.setAttribute("type", "radio");
             input.setAttribute("name", `${id}_${i}`);
             input.setAttribute("id", `${id}_${i}_${j}`);
             input.setAttribute("value", j);
 
             var labelIn = document.createElement("label");
-            labelIn.setAttribute("class", "form-check-label escala");
+            labelIn.setAttribute("class", "custom-control-label escala");
+            labelIn.setAttribute("for", `${id}_${i}_${j}`);
             labelIn.textContent = j;
 
             div3.append(input);
             div3.append(labelIn);
+            div2.append(div3);
         }
-        div2.append(div3);
         div1.append(labelP);
         div1.append(div2);
         form.append(div1);

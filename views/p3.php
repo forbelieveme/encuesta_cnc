@@ -14,7 +14,7 @@
                         cumplimiento de todos los motivos que lo llevaron a venir a la Feria del Hogar 2020?
                     </label>
                 </div>
-                <div class="container">
+                <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";

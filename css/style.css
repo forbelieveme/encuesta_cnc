@@ -35,7 +35,7 @@
 .custom-control.escala {
 	position: relative;
 	min-height: 1.5rem;
-	padding-left: 0.5rem;
+	padding-left: 0rem;
 }
 .custom-control-inline.escala {
 	display: inline-flex;

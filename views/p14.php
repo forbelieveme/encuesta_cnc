@@ -4,8 +4,7 @@
 </script>
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p14" 
-        onsubmit="        
+        <form method="post" id="form_p14" onsubmit="        
         submit_decision(false, 1, 'escala', numero_pregunta,
         getRadioVal(document.getElementById('form_p14'),'P14'),siguiente);
         return false;">
@@ -16,19 +15,19 @@
                         Feria del Hogar?
                     </label>
                 </div>
-                <div class="container">
+                <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
-                        echo "<div class='form-check form-check-inline col-1'>";
-                        echo "<input class='form-check-input' type='radio' name='P14' id='P14_" . $counter . "' value='" . $counter . "'>";
-                        echo "<label class='form-check-label escala' for='inlineRadio14'>" . $counter . "</label>";
-                        echo "</div";
+                        echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
+                        echo "<input class='custom-control-input' type='radio' name='P14' id='P14_" . $counter . "' value='" . $counter . "'>";
+                        echo "<label class='custom-control-label escala' for='P14_" . $counter . "'>" . $counter . "</label>";
+                        echo "</div>";
                     }
                     ?>
                 </div>
             </div>
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">
-                INGRESAR
+                SIGUIENTE
             </button>
         </form>
     </div>

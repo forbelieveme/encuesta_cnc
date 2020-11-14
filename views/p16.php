@@ -41,7 +41,7 @@
             </div>
 
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block" onclick="">
-                INGRESAR
+                SIGUIENTE
             </button>
         </form>
     </div>
