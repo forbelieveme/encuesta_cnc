@@ -6,7 +6,7 @@
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post" id="form_p30" onsubmit="submit_decision(false, 1, 'radio', numero_pregunta, 
          getRadioVal(document.getElementById('form_p30'),'P30'), 
-         Obtener_siguiente(numero_pregunta, getRadioVal(document.getElementById('form_p30'),'P30'),siguiente) );
+         Obtener_siguiente('p30', getRadioVal(document.getElementById('form_p30'),'P30'),siguiente) );
           return false;">
             <div class="form-group">
                 <div class="jumbotron">
