@@ -14,9 +14,7 @@
                 <div class="container">
                     <div class="row row-header">
                         <div class="col-sm-12">
-                            <label id="preg_p22">
-                            ¿Por qué razón calificas con (PONER REPSUESTA DE P21) tu satisfacción con el
-                            proceso de compra de la boleta?</label>
+                            <label id="preg_p22"></label>
                         </div>
                     </div>
                 </div>

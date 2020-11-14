@@ -9,7 +9,7 @@
         getRadioVal(document.getElementById('form_p21'),'P21'),
         Obtener_siguiente('p21', 
         getRadioVal(document.getElementById('form_p21'),'P21'),
-        siguiente));
+        siguiente), true);
         return false;">
             <div class="form-group">
                 <div class="jumbotron">
