@@ -404,26 +404,30 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
 
 }
 
-function submit_parametro(activo, elemento, idPregunta, siguiente){
-    
-    if(activo){
-        
+function submit_parametro(activo, elemento, idPregunta, siguiente) {
+
+    if (activo) {
+
         //Enviar valor 0
         x = 99;
-        console.log("Enviando valor : "+x);
+        console.log("Enviando valor : " + x);
         peticionUpdate(x, idPregunta);
-        $("#pregunta").load(Obtener_siguiente(idPregunta, x,siguiente));
+        $("#pregunta").load(Obtener_siguiente(idPregunta, x, siguiente));
 
-    }else if(!activo){        
+    } else if (!activo) {
         //Enviar valores activos separados por comas
         x = ObtenerChecked(elemento).join(",");
+        var arr = x.split(',');
+        arregloDelMomento = arr;
+
         peticionUpdate(x, idPregunta);
-        console.log("Enviando valor : "+x);
-        $("#pregunta").load(Obtener_siguiente(idPregunta, x,siguiente));
-    }else{
+
+        console.log("Enviando valor : " + x);
+        $("#pregunta").load(Obtener_siguiente(idPregunta, x, siguiente));
+    } else {
         alert("no se encontro opcion linea 401 main.js")
     }
-    
+
 
 }
 
@@ -435,7 +439,7 @@ function cambia_texto_pregunta(id) {
 
 }
 function formulario_dim(id) {
-    var form = crear_form_dinamico(arregloDelMomento,id);
+    var form = crear_form_dinamico(arregloDelMomento, id);
 
     document.getElementById('formulario').appendChild(form);
 
@@ -521,7 +525,7 @@ function Obtener_siguiente(idPregunta, x, siguiente) {
         }
     }
 
-    if (idPregunta == 'p27'){
+    if (idPregunta == 'p27') {
         if (x == '99') {
             return siguiente[0];
         }
@@ -652,7 +656,7 @@ var preg = [
     // "Opcion escrita"
 ];
 function crear_form_dinamico(preg, id) {
-    console.log(' id: ',id);
+    console.log(' id: ', id);
     var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("id", `form_${id}`);
@@ -660,7 +664,7 @@ function crear_form_dinamico(preg, id) {
     var button = document.createElement("button");
     button.setAttribute("type", "post");
     button.setAttribute("class", "btn btn-primary btn-lg btn-block mt-5 mb-3");
-     button.setAttribute("onclick", `submit_decision(true, ${preg.length}, 'escala', '${id}',document.getElementById('form_${id}'), siguiente)`);
+    button.setAttribute("onclick", `submit_decision(true, ${preg.length}, 'escala', '${id}',document.getElementById('form_${id}'), siguiente)`);
     //button.setAttribute("onclick", `submit_decision(true, ${preg.length}, 'escala', 'p2',document.getElementById('form_${id}'), siguiente)`);
     button.textContent = "SIGUENTE";
     for (let i = 0; i < preg.length; i++) {
@@ -727,13 +731,13 @@ function cambiarTexto(pregunta, elemento) {
     })
 }
 
-function activar_desactivar(activado, elemento){
+function activar_desactivar(activado, elemento) {
     //Caso Activado
-    if(activado){
+    if (activado) {
         elemento.setAttribute("disabled", true);
     }
     //Caso Desactivado
-    if(!activado){                
+    if (!activado) {
         elemento.removeAttribute('disabled');
     }
 
