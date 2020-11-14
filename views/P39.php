@@ -12,8 +12,8 @@
                 <div class="container">
                     <div class="row row-header">
                         <div class="col-sm-12">
-                            <label>39. ¿Por qué no participó en ninguna de las actividades
-                                de la Feria del Hogar 2020? </label>
+                            <label>39. ¿Por qué no participaste en ninguna de las actividades de la Feria del Hogar 2020?
+                            </label>
                         </div>
                     </div>
                 </div>

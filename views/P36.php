@@ -10,7 +10,8 @@
             <div class="container">
                 <div class="row row-header">
                     <div class="col-sm-12">
-                        <label>36. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy Insatisfecho” y 10 es “Muy satisfecho” ¿cuál es tu nivel de satisfacción con. . .?</label>
+                        <label>36. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy Insatisfecho” y 
+                            10 es “Muy satisfecho” ¿cuál es tu nivel de satisfacción con. . . ?</label>
                     </div>
                 </div>
             </div>

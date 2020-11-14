@@ -4,12 +4,12 @@
 </script>
 <div class="mt-5" id="P20">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+        <label>Ahora vamos a hablar de los servicios básicos de Corferias
+        </label>
         <div class="jumbotron">
-            <div class="container">
-                <label>
-                    20. ¿Por qué medio adquiriste tu boleta de ingreso a la Feria del Hogar 2020?
-                </label>
-            </div>
+            <label>
+                20. ¿Por qué medio adquiriste tu boleta de ingreso a la Feria del Hogar 2020?
+            </label>
         </div>
         <form method='POST' id="form_p20" onsubmit="
             submit_decision(false, 1, 'radio', 'p20', 

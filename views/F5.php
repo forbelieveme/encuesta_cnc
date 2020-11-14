@@ -8,7 +8,7 @@
 
         <div class="jumbotron">
             <div class="container">
-                <label>¿En qué rango de edad te encuentras? (ÚNICA RESPUESTA) (SI RESPONDE MENOS DE 18 AÑOS TERMINA). </label>
+                <label>¿En qué rango de edad te encuentras?</label>
             </div>
         </div>
         <form method='POST' id="form_f5" onsubmit="

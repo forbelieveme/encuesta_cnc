@@ -10,7 +10,7 @@
           return false;">
             <div class="form-group">
                 <div class="jumbotron">
-                    <label for="P34">34. ¿Conociste o te enteraste sobre las actividades “Un Café con expertos” en Feria del Hogar 2020?
+                    <label for="P34">34. ¿Conociste o te enteraste sobre la agenda de actividades de la Feria del Hogar 2020?
                     </label>
                 </div>
                 <div class="container text-center">
