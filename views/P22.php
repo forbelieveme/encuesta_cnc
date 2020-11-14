@@ -46,7 +46,7 @@
                         <label class="radioboton-label" for='P22_5'> Filas muy largas </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_6' value='5'>
+                        <input class='radio-check' type='radio' name='P22' id='P22_6' value='6'>
                         <label class="radioboton-label" for='P22_6'> Otro, ¿Cuál? </label>
                     </div>
                     <div class="">

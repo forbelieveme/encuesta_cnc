@@ -31,8 +31,8 @@
                     <option value="4">Pauta en televisión</option>
                     <option value="5">Pauta en radio</option>
                     <option value="6">Redes sociales (Facebook, Twitter, Linkedin, etc.)</option>
-                    <option value="7">Amigo / conocido o referido (Enc. Ésta opción incluye WhatsApp)</option>
-                    <option value="8">Revistas y Prensa</option>
+                    <option value="9">Amigo / conocido o referido (Enc. Ésta opción incluye WhatsApp)</option>
+                    <option value="11">Revistas y Prensa</option>
                 </select>
                 <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
             </div>
