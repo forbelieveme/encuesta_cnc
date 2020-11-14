@@ -2,6 +2,7 @@ var cid;
 var f1;
 var f3;
 var preguntaDelMomento;
+var arregloDelMomento;
 
 function generarCodigo() {
     //generación de codigo aleatorio para almacenamiento del registro
@@ -335,7 +336,7 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             console.log(seleccionados);
             for (let i = 0; i < numero_de_respuestas; i++) {
                 submit_escala_porId(seleccionados[i], idPregunta + '_' + (i + 1));
-                //console.log(seleccionados[i], realid+'_'+(i+1));
+                console.log(seleccionados[i], realid + '_' + (i + 1));
             }
         } else if (tipo_de_pregunta == "radio") {
             console.log("soy radio multiple y con elemento siguiente " + siguiente);
@@ -356,8 +357,15 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
             console.log(idPregunta, " " + elemento + " y voy para " + siguiente);
             peticionUpdate(elemento, idPregunta);
         } else if (tipo_de_pregunta == "otrocual") {
-            console.log("llegue a otrocual single con valor "
-                + elemento + " en la pregunta " + idPregunta + " y voy para " + siguiente)
+            // console.log("llegue a otrocual single con valor "
+            //     + elemento + " en la pregunta " + idPregunta + " y voy para " + siguiente)
+
+
+            var array = elemento.split(',');
+            // console.log(`arreglo`, array);
+            arregloDelMomento = array;
+
+
             peticionUpdate(elemento, idPregunta);
 
         } else if (tipo_de_pregunta == "textarea") {
@@ -383,6 +391,15 @@ function submit_decision(multiples, numero_de_respuestas, tipo_de_pregunta, idPr
         preguntaDelMomento = campo[0];
         console.log(`pregMOmento`, preguntaDelMomento);
 
+    }
+    if (true) {
+
+        // crear_form_dinamico(arregloDelMomento);
+
+        // var labelP = document.createElement("label");
+        // labelP.textContent = preguntaDelMomento;
+
+        // document.getElementById(id).appendChild(labelP);
     }
 
 }
@@ -410,6 +427,12 @@ function cambia_texto_pregunta(id) {
     labelP.textContent = preguntaDelMomento;
 
     document.getElementById(id).appendChild(labelP);
+
+}
+function formulario_dim() {
+    var form = crear_form_dinamico(arregloDelMomento);
+
+    document.getElementById('formulario').appendChild(form);
 
 }
 
@@ -603,26 +626,26 @@ function who_is_checked(filas, columnas, arr) {
     return checkedones;
 }
 
-// var preg = [
-//     "Atención del expositor (Nivel de preparación de los expositores si cuenta con tarjetas, maneja la información requerida, brinda un servicio completo)",
-//     "Cantidad de expositores (suficientes)",
-//     "Calidad de expositores - Tipo de productos ofrecidos",
-//     "Presencia de productos novedosos y/o nuevos productos",
-//     "Presencia de empresas y marcas conocidas del sector – representatividad de empresas",
-//     "Variedad de Productos y/o servicios",
-//     "El diseño de stands",
-//     // "Opcion escrita"
-// ];
-function crear_form_dinamico(preg) {
+var preg = [
+    "Atención del expositor (Nivel de preparación de los expositores si cuenta con tarjetas, maneja la información requerida, brinda un servicio completo)",
+    "Cantidad de expositores (suficientes)",
+    "Calidad de expositores - Tipo de productos ofrecidos",
+    // "Presencia de productos novedosos y/o nuevos productos",
+    "Presencia de empresas y marcas conocidas del sector – representatividad de empresas",
+    // "Variedad de Productos y/o servicios",
+    "El diseño de stands",
+    // "Opcion escrita"
+];
+function crear_form_dinamico(preg, id) {
 
     var form = document.createElement("form");
     form.setAttribute("method", "post");
-    form.setAttribute("id", "form_p2");
+    form.setAttribute("id", `form_${id}`);
     form.setAttribute("onsubmit", "return false;");
     var button = document.createElement("button");
     button.setAttribute("type", "post");
     button.setAttribute("class", "btn btn-primary btn-lg btn-block mt-5 mb-3");
-    button.setAttribute("onclick", "submit_multiple_escala(document.getElementById('form_p19'),['P19_1', 'P19_2', 'P19_3', 'P19_4', 'P19_5', 'P19_6', 'P19_7'],'views/p3crear_form_dinamico.php', numero_pregunta)");
+    button.setAttribute("onclick", `submit_decision(true, ${preg.lengh}, 'escala', ${id},document.getElementById('form_${id}'), siguiente)`);
     button.textContent = "SIGUENTE";
     for (let i = 0; i < preg.length; i++) {
 
@@ -644,8 +667,8 @@ function crear_form_dinamico(preg) {
             var input = document.createElement("input");
             input.setAttribute("class", "form-check-input");
             input.setAttribute("type", "radio");
-            input.setAttribute("name", `P2_${i}`);
-            input.setAttribute("id", `P2_${i}_${j}`);
+            input.setAttribute("name", `${id}_${i}`);
+            input.setAttribute("id", `${id}_${i}_${j}`);
             input.setAttribute("value", "100001");
 
             var labelIn = document.createElement("label");
@@ -662,8 +685,7 @@ function crear_form_dinamico(preg) {
     }
     form.append(button);
 
-    document.getElementById("aqui")
-        .appendChild(form);
+    return form;
 }
 
 function cargarSiguiente(siguiente) {
