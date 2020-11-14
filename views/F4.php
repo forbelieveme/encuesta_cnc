@@ -35,7 +35,7 @@
                     <label class="custom-control-label" for="F4_2">Trabaja en una empresa expositora de la feria</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F4_3" value='1' name="F4" class="custom-control-input">
+                    <input type="radio" id="F4_3" value='4' name="F4" class="custom-control-input">
                     <label class="custom-control-label" for="F4_3">Ninguna</label>
                 </div>
             </div>
