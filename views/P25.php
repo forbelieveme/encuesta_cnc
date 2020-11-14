@@ -9,7 +9,7 @@
                 <div class = "container">
                     <div class = "row row-header">                
                         <div class = "col-sm-12">
-                            <h4>25. Ahora cuál es tu satisfacción específicamente con la… </h4>
+                            <label>25. Ahora cuál es tu satisfacción específicamente con la… </label>
                         </div>                    
                     </div>
                 </div>
