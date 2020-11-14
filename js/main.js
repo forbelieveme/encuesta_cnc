@@ -754,3 +754,13 @@ function activar_desactivar(activado, elemento) {
 
 
 }
+
+function submit_personales(nombre, correo, numero){
+    console.log(nombre, '-> nombres');
+    console.log(correo, '-> correo');
+    console.log(numero, '-> telefono');
+
+    peticionUpdate(nombre, 'nombres');
+    peticionUpdate(correo, 'correo');
+    peticionUpdate(numero, 'telefono');
+}

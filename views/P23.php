@@ -11,7 +11,7 @@
                     <div class="col-sm-12">
                         <label>23. Teniendo en cuenta una escala de 1 a 10, donde 1 es “Muy insatisfecho”
                             y 10 es “Muy satisfecho” ¿Cuál es tu nivel de satisfacción general con
-                            respecto a todos los servicios generales prestados por Corferias a los
+                            respecto a todos los servicios prestados por Corferias a los
                             visitantes?
                         </label>
                     </div>
