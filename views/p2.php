@@ -26,48 +26,11 @@
             </div>
         </div>
 
-        <div id="aqui">
-            <div id="GFG_DOWN">
+        <div id="contenedor">
+            <div id="formulario">
 
             </div>
         </div>
-        <!-- <form method='POST' id="form_p2" onsubmit="return false;"> -->
-        <?php
-        // for ($i = 0; $i < 3; $i++) {
-        //     echo "<div class='form-group mt-5'>";
-        //     echo "<label>".$p2[$i];
-        //     echo "</label>";
-        //     echo "<div class='container'>";
-        //     for ($counter = 1; $counter < 11; $counter++) {
-        //         echo "<div class='form-check form-check-inline col-1'>";
-        //         echo "<input class='form-check-input' type='radio' name='P2_2' id='P2_2_" . $counter . "' value='" . $counter . "'>";
-        //         echo "<label class='form-check-label escala' for='inlineRadio2_" . $counter . "'>" . $counter . "</label>";
-        //         echo "</div";
-        //     }
-        //     echo "</div>";
-        //     echo "</div>";
-        //     echo "</div>";
-        // }
-        ?>
-        <!-- <div class="form-group mt-5"> -->
-        <!-- <label>Cantidad de expositores (suficientes) -->
-        <!-- </label> -->
-        <!-- <div class="container"> -->
-        <?php
-        // for ($counter = 1; $counter < 11; $counter++) {
-        //     echo "<div class='form-check form-check-inline col-1'>";
-        //     echo "<input class='form-check-input' type='radio' name='P19_2' id='P19_2_" . $counter . "' value='" . $counter . "'>";
-        //     echo "<label class='form-check-label escala' for='inlineRadio19_2'>" . $counter . "</label>";
-        //     echo "</div";
-        // }
-        ?>
-        <!-- </div> -->
-        <!-- </div> -->
-
-        <!-- <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5" onclick="submit_multiple_escala(document.getElementById('form_p19'),['P19_1', 'P19_2', 'P19_3', 'P19_4', 'P19_5', 'P19_6', 'P19_7'],'views/P20.php', numero_pregunta)"> -->
-        <!-- SIGUIENTE -->
-        <!-- </button> -->
-        <!-- </form> -->
     </div>
 </div>
 <script>
@@ -81,63 +44,11 @@
         "El diseño de stands",
         // "Opcion escrita"
     ];
-    
+
     $(document).ready(function() {
 
-        var down = document.getElementById("GFG_DOWN");
+        var down = document.getElementById("formulario");
 
-        // function crear_form_dinamico() {
-
-        //     var form = document.createElement("form");
-        //     form.setAttribute("method", "post");
-        //     form.setAttribute("id", "form_p2");
-        //     form.setAttribute("onsubmit", "return false;");
-        //     var button = document.createElement("button");
-        //     button.setAttribute("type", "post");
-        //     button.setAttribute("class", "btn btn-primary btn-lg btn-block mt-5 mb-3");
-        //     button.setAttribute("onclick", "submit_multiple_escala(document.getElementById('form_p19'),['P19_1', 'P19_2', 'P19_3', 'P19_4', 'P19_5', 'P19_6', 'P19_7'],'views/p3crear_form_dinamico.php', numero_pregunta)");
-        //     button.textContent = "SIGUENTE";
-        //     for (let i = 0; i < preg.length; i++) {
-
-        //         // Create a form synamically 
-
-        //         var div1 = document.createElement("div");
-        //         div1.setAttribute("class", "form-group mt-5");
-
-        //         var labelP = document.createElement("label");
-        //         labelP.textContent = preg[i];
-
-        //         var div2 = document.createElement("div");
-        //         div2.setAttribute("class", "container");
-
-        //         var div3 = document.createElement("div");
-        //         div3.setAttribute("class", "form-check form-check-inline col-1");
-        //         for (let j = 1; j < 11; j++) {
-
-        //             var input = document.createElement("input");
-        //             input.setAttribute("class", "form-check-input");
-        //             input.setAttribute("type", "radio");
-        //             input.setAttribute("name", `P2_${i}`);
-        //             input.setAttribute("id", `P2_${i}_${j}`);
-        //             input.setAttribute("value", "100001");
-
-        //             var labelIn = document.createElement("label");
-        //             labelIn.setAttribute("class", "form-check-label escala");
-        //             labelIn.textContent = j;
-
-        //             div3.append(input);
-        //             div3.append(labelIn);
-        //         }
-        //         div2.append(div3);
-        //         div1.append(labelP);
-        //         div1.append(div2);
-        //         form.append(div1);
-        //     }
-        //     form.append(button);
-
-        //     document.getElementById("aqui")
-        //         .appendChild(form);
-        // }
         crear_form_dinamico(preg);
     });
 </script>
