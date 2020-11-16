@@ -3,7 +3,7 @@
 </script>
 <div class="mt-5" id="p4">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' onsubmit="getTextArea('P12_textArea', 'views/p13.php', numero_pregunta); return false;">
+        <form method='POST' class="was-validated" onsubmit="getTextArea('P12_textArea', 'views/p13.php', numero_pregunta); return false;">
             <div class="form-group">
                 <div class="jumbotron">
                     <div class="container">

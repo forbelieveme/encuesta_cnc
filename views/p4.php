@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="p4">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' onsubmit="submit_decision(false, 1, 'textarea', numero_pregunta, 
+        <form method='POST' class="was-validated" onsubmit="submit_decision(false, 1, 'textarea', numero_pregunta, 
         document.getElementById('P4_textArea').value,siguiente);
          return false;">
             <div class="jumbotron">

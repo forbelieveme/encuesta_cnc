@@ -8,7 +8,7 @@
                 <label for="form_p9">9. ¿Encontraste todo lo que querías comprar?
                 </label>
         </div>
-        <form method="post" id="form_p9" onsubmit="
+        <form method="post" class="was-validated" id="form_p9" onsubmit="
                 submit_decision(false, 1,'radio', numero_pregunta,
                 getRadioVal(document.getElementById('form_p9'),'P9'), 
                 Obtener_siguiente(numero_pregunta, 

@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="p3">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p3" onsubmit="submit_decision(false, 1, 'escala', numero_pregunta,
+        <form method="post" class="was-validated" id="form_p3" onsubmit="submit_decision(false, 1, 'escala', numero_pregunta,
         getRadioVal(document.getElementById('form_p3'),'P3'), siguiente, true);
         return false;">
             <div class="form-group">
