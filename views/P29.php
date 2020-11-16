@@ -13,19 +13,19 @@
             </div>
         </div>
 
-        <form method='POST' id="form_P29" onsubmit="return false;">
+        <form method='POST' id="form_P29" class="was-validated" onsubmit="return false;">
             <div class="form-group mt-5">
                 <label class="mb-4">Tiempo de atención en la plazoleta de comidas</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala p29'>";
-                        echo "<input class='custom-control-input' type='radio' name='P29_1' id='P29_1_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P29_1' id='P29_1_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P29_1_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
                     echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala p29'>";
-                    echo "<input class='custom-control-input' type='radio' name='P29_1' id='P29_1_12' value='99'>";
+                    echo "<input class='custom-control-input' type='radio' name='P29_1' id='P29_1_12' value='99' required>";
                     echo "<label class='custom-control-label escala' for='P29_1_12'>NA</label>";
                     echo "</div>";
                     ?>
@@ -38,12 +38,12 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala p29'>";
-                        echo "<input class='custom-control-input' type='radio' name='P29_2' id='P29_2_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P29_2' id='P29_2_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P29_2_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
                     echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala p29'>";
-                    echo "<input class='custom-control-input' type='radio' name='P29_2' id='P29_2_12' value='99'>";
+                    echo "<input class='custom-control-input' type='radio' name='P29_2' id='P29_2_12' value='99' required>";
                     echo "<label class='custom-control-label escala' for='P29_2_12'>NA</label>";
                     echo "</div>";
                     ?>
@@ -56,12 +56,12 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala p29'>";
-                        echo "<input class='custom-control-input' type='radio' name='P29_3' id='P29_3_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P29_3' id='P29_3_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P29_3_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
                     echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala p29'>";
-                    echo "<input class='custom-control-input' type='radio' name='P29_3' id='P29_3_12' value='99'>";
+                    echo "<input class='custom-control-input' type='radio' name='P29_3' id='P29_3_12' value='99' required>";
                     echo "<label class='custom-control-label escala' for='P29_3_12'>NA</label>";
                     echo "</div>";
                     ?>

@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="D4">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_d4" onsubmit="
+        <form method='POST' id="form_d4" class="was-validated" onsubmit="
             submit_decision(false, 1, 'radio', 'd4', 
             getRadioVal_text('d4_textArea',document.getElementById('form_d4'),'d4'), 
             Obtener_siguiente('d4', 

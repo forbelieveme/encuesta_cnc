@@ -14,7 +14,7 @@
             </div>
             <div class="form-group mt-5">
                 <div class="container">
-                    <textarea id="P4_textArea" name="razon_calificacion" class="md-textarea form-control" rows="3"></textarea>
+                    <textarea id="P4_textArea" name="razon_calificacion" class="md-textarea form-control" rows="3" required></textarea>
                 </div>
             </div>
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5">

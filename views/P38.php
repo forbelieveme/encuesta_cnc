@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="P38">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' onsubmit="
+        <form method='POST' class="was-validated" onsubmit="
         submit_decision(false, 1, 'textarea', numero_pregunta,
         document.getElementById('taP38').value, siguiente, true);       
          return false;">
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <div class="container">
-                    <textarea id="taP38" name="razon_calificacion" class="md-textarea form-control" rows="5"></textarea>
+                    <textarea id="taP38" name="razon_calificacion" class="md-textarea form-control" rows="5" required></textarea>
                 </div>
             </div>
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block  mt-5"> SIGUIENTE </button>

@@ -5,7 +5,7 @@
 <div class="mt-5" id="P22">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method='POST' id="form_p22" 
-        onsubmit="
+        class="was-validated" onsubmit="
         submit_decision(false, 1, 'otrocual', numero_pregunta, 
         getRadioVal_text('P22_textArea',document.getElementById('form_p22'),'P22'),
         siguiente);
@@ -24,29 +24,29 @@
 
                 <div class="col-sm-12">
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_1' value='1' checked>
+                        <input class='radio-check' type='radio' name='P22' id='P22_1' value='1' required>
                         <label class="radioboton-label" for='P22_1'> No me llegó el código QR </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_2' value='2'>
+                        <input class='radio-check' type='radio' name='P22' id='P22_2' value='2' required>
                         <label class="radioboton-label" for='P22_2'> El proceso de compra fue lento</label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_3' value='3'>
+                        <input class='radio-check' type='radio' name='P22' id='P22_3' value='3' required>
                         <label class="radioboton-label" for='P22_3'> Inconvenientes con
                             la plataforma de pago</label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_4' value='4'>
+                        <input class='radio-check' type='radio' name='P22' id='P22_4' value='4' required>
                         <label class="radioboton-label" for='P22_4'> Problemas con la lectura del
                             código al ingresar </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_5' value='5'>
+                        <input class='radio-check' type='radio' name='P22' id='P22_5' value='5' required>
                         <label class="radioboton-label" for='P22_5'> Filas muy largas </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P22' id='P22_6' value='6'>
+                        <input class='radio-check' type='radio' name='P22' id='P22_6' value='6' required>
                         <label class="radioboton-label" for='P22_6'> Otro, ¿Cuál? </label>
                     </div>
                     <div class="">

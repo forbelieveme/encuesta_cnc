@@ -17,14 +17,14 @@
             </div>
         </div>
 
-        <form method='POST' id="form_P26" onsubmit="return false;">
+        <form method='POST' id="form_P26" class="was-validated" onsubmit="return false;">
             <div class="form-group mt-5" id="P26_1">
                 <label class="mb-4">Señalización de la feria fuera de los pabellones - taquillas y áreas exteriores dentro de Corferias.</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_1' id='P26_1_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_1' id='P26_1_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_1_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -38,7 +38,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_2' id='P26_2_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_2' id='P26_2_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_2_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -52,7 +52,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_3' id='P26_3_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_3' id='P26_3_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_3_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -65,7 +65,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_4' id='P26_4_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_4' id='P26_4_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_4_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -79,7 +79,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_5' id='P26_5_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_5' id='P26_5_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_5_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }

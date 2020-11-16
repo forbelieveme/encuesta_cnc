@@ -15,7 +15,7 @@
                 </div>
                 <div class="md-form">
                     <i class="fas fa-pencil-alt prefix"></i>
-                    <textarea id="P10_textArea" class="md-textarea form-control" rows="3"></textarea>
+                    <textarea id="P10_textArea" class="md-textarea form-control" rows="3" required></textarea>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block ">

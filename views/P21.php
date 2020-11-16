@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="p21">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_p21" onsubmit="
+        <form method='POST' id="form_p21" class="was-validated" onsubmit="
         submit_decision(false, 1, 'radio', numero_pregunta,
         getRadioVal(document.getElementById('form_p21'),'P21'),
         Obtener_siguiente('p21', 
@@ -21,7 +21,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P21' id='P21_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P21' id='P21_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P21_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }

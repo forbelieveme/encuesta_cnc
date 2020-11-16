@@ -16,11 +16,11 @@
                 return false;">
             <div class="container text-center">
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="P9_1" value="1" name="P9" class="custom-control-input">
+                    <input type="radio" id="P9_1" value="1" name="P9" class="custom-control-input" required>
                     <label class="custom-control-label" for="P9_1">Sí</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="P9_2" value="2" name="P9" class="custom-control-input">
+                    <input type="radio" id="P9_2" value="2" name="P9" class="custom-control-input" required>
                     <label class="custom-control-label" for="P9_2">No</label>
                 </div>
             </div>

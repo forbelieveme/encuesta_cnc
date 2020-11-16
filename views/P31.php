@@ -17,7 +17,7 @@
             del Hogar 2020?
             </label>
         </div>
-        <form method="post" id="form_p1" onsubmit="
+        <form method="post" id="form_p1" class="was-validated" onsubmit="
         var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]);        
         elementos.push(document.getElementById('form10').value);
         submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),

@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="P34">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_p34" onsubmit="submit_decision(false, 1, 'radio', numero_pregunta, 
+        <form method='POST' id="form_p34" class="was-validated" onsubmit="submit_decision(false, 1, 'radio', numero_pregunta, 
          getRadioVal(document.getElementById('form_p34'),'P34'), 
          Obtener_siguiente(numero_pregunta, getRadioVal(document.getElementById('form_p34'),'P34'),siguiente) );
           return false;">
@@ -15,11 +15,11 @@
                 </div>
                 <div class="container text-center">
                     <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                        <input type="radio" id="P34_1" value='1' name="P34" class="custom-control-input">
+                        <input type="radio" id="P34_1" value='1' name="P34" class="custom-control-input" required>
                         <label class="custom-control-label" for="P34_1">Sí</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                        <input type="radio" id="P34_2" value='2' name="P34" class="custom-control-input">
+                        <input type="radio" id="P34_2" value='2' name="P34" class="custom-control-input" required>
                         <label class="custom-control-label" for="P34_2">No</label>
                     </div>
                 </div>

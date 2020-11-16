@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <form method='POST' id="form_p23" onsubmit="
+        <form method='POST' id="form_p23" class="was-validated" onsubmit="
         submit_decision(false, 1, 'escala', numero_pregunta,
         getRadioVal(document.getElementById('form_p23'),'P23'), siguiente, true);
         return false;">
@@ -25,7 +25,7 @@
                 <?php
                 for ($counter = 1; $counter < 11; $counter++) {
                     echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                    echo "<input class='custom-control-input' type='radio' name='P23' id='P23_" . $counter . "' value='" . $counter . "'>";
+                    echo "<input class='custom-control-input' type='radio' name='P23' id='P23_" . $counter . "' value='" . $counter . "' required>";
                     echo "<label class='custom-control-label escala' for='P23_" . $counter . "'>" . $counter . "</label>";
                     echo "</div>";
                 }

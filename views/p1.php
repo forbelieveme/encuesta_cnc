@@ -25,7 +25,7 @@
         siguiente);
         return false;" class="">
             <div class="form-group">
-                <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2" require>
+                <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
                     <option value="1">Encontrar productos nuevos (lanzamientos)</option>
                     <option value="2">Buscar promociones y descuentos</option>
                     <option value="3">Por curiosidad</option>
@@ -36,7 +36,7 @@
                     <option value="8">Asistir a la agenda de actividades programadas por la feria</option>
                     <option value="9">Es un plan diferente a ir a un Centro Comercial</option>
                 </select>
-                <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?" required></textarea>
+                <textarea id="form10" class="md-textarea form-control" rows="1" placeholder="Otro ¿Cuál?"></textarea>
             </div>
             <button type="submit" id="btn_p1" class="btn btn-primary btn-lg btn-block" onclick="">
                 SIGUIENTE

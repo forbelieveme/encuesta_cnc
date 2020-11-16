@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="p13">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method="post" id="form_p13" onsubmit="
+        <form method="post" id="form_p13" class="was-validated" onsubmit="
          submit_decision(false, 1,'escala', numero_pregunta, 
          getRadioVal(document.getElementById('form_p13'),'P13'), siguiente); 
          return false;">
@@ -19,7 +19,7 @@
                     <?php
                     for ($counter = 0; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P13' id='P13_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P13' id='P13_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P13_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }

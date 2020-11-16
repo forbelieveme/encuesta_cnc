@@ -15,7 +15,7 @@
                 return false;">
             <div class="form-group mt-5">
                 <div class="container">
-                    <textarea id="P7_textArea" class="md-textarea form-control" rows="3"></textarea>
+                    <textarea id="P7_textArea" class="md-textarea form-control" rows="3" required></textarea>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block ">
