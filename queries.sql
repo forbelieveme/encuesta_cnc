@@ -1,5 +1,8 @@
 /*Creación de la encuesta*/
-INSERT INTO encuesta (f1, f3, cid) VALUES ('45sad45sa4da5s');
+INSERT INTO encuesta
+    (f1, f3, cid)
+VALUES
+    ('45sad45sa4da5s');
 /**/
 UPDATE encuesta SET f1 = 2, f3 = 2,f4 = 0 ,f5 =2 WHERE (cid = '45sad45sa4da5s');
 
@@ -161,4 +164,53 @@ UPDATE encuesta SET d3 = 3 WHERE (cid = '45sad45sa4da5s');
 /*Insercion de d4*/
 UPDATE encuesta SET d4 = "otro" WHERE (cid = '45sad45sa4da5s');
 
-
+/*Corrige el tamaño de las variables char */
+ALTER TABLE
+    encuesta MODIFY COLUMN nombres VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN apellidos VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN correo VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p1 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p4 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p7 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p8 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p10 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p12 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p16 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p18 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p20 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p22 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p24 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p27 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p31 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p33 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p35 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p38 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p39 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p40 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p41 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN p42 VARCHAR(255);
+ALTER TABLE
+    encuesta MODIFY COLUMN d4 VARCHAR(255);
+        
