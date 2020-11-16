@@ -4,7 +4,7 @@
 </script>
 <div class="mt-5" id="D4">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_d3" onsubmit="
+        <form method='POST' id="form_d3" class="was-validated" onsubmit="
                 submit_decision(false, 1, 'radio', numero_pregunta,
                 getRadioVal(document.getElementById('form_d3'),('d3')), 
                 Obtener_siguiente(numero_pregunta,
@@ -17,15 +17,15 @@
 
                 <div class="col-sm-12 ">
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='d3' id='D3_1' value='1'>
+                        <input class='radio-check' type='radio' name='d3' id='D3_1' value='1' required>
                         <label class="radioboton-label" for='D3_1'> Bogotá</label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='d3' id='D3_2' value='2'>
+                        <input class='radio-check' type='radio' name='d3' id='D3_2' value='2' required>
                         <label class="radioboton-label" for='D3_2'> Municipios aledaños de Bogotá </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='d3' id='D3_3' value='3'>
+                        <input class='radio-check' type='radio' name='d3' id='D3_3' value='3' required>
                         <label class="radioboton-label" for='D3_3'> En otras ciudades</label>
                     </div>
 

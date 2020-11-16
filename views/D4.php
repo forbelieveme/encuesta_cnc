@@ -1,16 +1,28 @@
 <script>
+    function validar (elemento, textarea){
+        if ((typeof(elemento) == "undefined") && (textarea.value == "")){
+            alert('Por favor selecciona al menos una opción');
+            return false;
+        }
+        return true;        
+    }
+
     var numero_pregunta = 'd4';
     var siguiente = 'views/D567.php';
 </script>
 <div class="mt-5" id="D4">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method='POST' id="form_d4" onsubmit="
+        <form method='POST' id="form_d4" class="was-validated" onsubmit="
+        if(validar(getRadioVal_text('d4_textArea',document.getElementById('form_d4'),'d4'), document.getElementById('d4_textArea'))){
             submit_decision(false, 1, 'radio', 'd4', 
             getRadioVal_text('d4_textArea',document.getElementById('form_d4'),'d4'), 
             Obtener_siguiente('d4', 
             getRadioVal_text('d4_textArea',document.getElementById('form_d4'),'d4'), siguiente)
             );
-            return false;">
+            return false; 
+        }
+            return false;
+        ">
             <div class="jumbotron">
                 <div class="col-12 col-sm-12 ">
                     <hlabel>¿Viniste a la feria con tu…? </hlabel>

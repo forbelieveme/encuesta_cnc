@@ -1,4 +1,11 @@
 <script>
+    function validar(arreglodeselect, valor_ta){
+        if ((arreglodeselect.length == 0) && (valor_ta == "")){            
+            alert('Por favor selecciona al menos una opción');
+            return false;
+        }
+        return true;
+    }
     $(".js-example-placeholder-multiple").select2({
         theme: "classic",
         placeholder: "Seleccione...",
@@ -23,10 +30,15 @@
         <form method='POST' id="form_p22"         
         onsubmit="
         var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]);                  
-        elementos.push(document.getElementById('form22').value);
-        submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),
-        siguiente);
-        return false;">
+        var valortexto = document.getElementById('form22').value;
+        if(validar(elementos, valortexto)){
+            elementos.push(valortexto);
+            submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),
+            siguiente);
+            return false;
+        }
+        return false;
+        ">
 
             <div class="form-group">
                 <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">

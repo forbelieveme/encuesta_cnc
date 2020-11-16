@@ -1,4 +1,12 @@
 <script>
+    function validar(arreglodeselect, valor_ta){
+        if ((arreglodeselect.length == 0) && (valor_ta == "")){            
+            alert('Por favor selecciona al menos una opción');
+            return false;
+        }
+        return true;
+
+    }
     $(".js-example-placeholder-multiple").select2({
         theme: "classic",
         placeholder: "Seleccione...",
@@ -12,10 +20,16 @@
 <div class="mt-5" id="p1">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method="post" id="form_p16" onsubmit="
-    var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]); 
-    elementos.push(document.getElementById('form10').value);
-    submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','), siguiente);
-    return false;">
+
+            var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]); 
+            var textovalor = document.getElementById('form10').value;
+            if(validar(elementos, textovalor)){
+                elementos.push(textovalor);
+                submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','), siguiente);
+                return false;
+            }
+            return false;"
+        >
             <!-- <h2 class="text-center black">P1</h2> -->
             <div class="form-group">
                 <label>Ahora te vamos a hacer unas preguntas sobre la muestra comercial, es decir los expositores y stands de la feria.</label>

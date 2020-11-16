@@ -9,13 +9,13 @@
             <label for="P7_textArea">7. ¿Por qué no realizaste compras?
             </label>
         </div>
-        <form method="post" onsubmit="
+        <form method="post" class="was-validated" onsubmit="
                 submit_decision(false, 1, 'textarea', numero_pregunta,
                 document.getElementById('P7_textArea').value,  siguiente);
                 return false;">
             <div class="form-group mt-5">
                 <div class="container">
-                    <textarea id="P7_textArea" class="md-textarea form-control" rows="3"></textarea>
+                    <textarea id="P7_textArea" class="md-textarea form-control" rows="3" required></textarea>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block ">

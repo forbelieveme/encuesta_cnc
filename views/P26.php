@@ -1,4 +1,20 @@
 <script>
+    function vme(){    
+        var checkopt_arr = document.getElementsByTagName('input');
+        var num_preg = checkopt_arr.length/10;
+        var total_respondidas = 0;
+        for (let i = 0; i < checkopt_arr.length; i++){
+            if (checkopt_arr[i].checked){
+                total_respondidas = total_respondidas + 1;
+            }
+        }
+        if(total_respondidas == num_preg){
+            return true;
+        }
+        alert("Por favor responder todas las preguntas.")
+        return false;
+    }
+
     var numero_pregunta = 'p26';
     var siguiente = 'views/P27.php';
 </script>
@@ -17,14 +33,14 @@
             </div>
         </div>
 
-        <form method='POST' id="form_P26" onsubmit="return false;">
+        <form method='POST' id="form_P26" class="was-validated" onsubmit="return false;">
             <div class="form-group mt-5" id="P26_1">
                 <label class="mb-4">Señalización de la feria fuera de los pabellones - taquillas y áreas exteriores dentro de Corferias.</label>
                 <div class="container text-center">
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_1' id='P26_1_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_1' id='P26_1_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_1_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -38,7 +54,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_2' id='P26_2_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_2' id='P26_2_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_2_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -52,7 +68,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_3' id='P26_3_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_3' id='P26_3_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_3_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -65,7 +81,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_4' id='P26_4_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_4' id='P26_4_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_4_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -79,7 +95,7 @@
                     <?php
                     for ($counter = 1; $counter < 11; $counter++) {
                         echo "<div class='custom-control custom-radio custom-control-inline form-check-inline escala'>";
-                        echo "<input class='custom-control-input' type='radio' name='P26_5' id='P26_5_" . $counter . "' value='" . $counter . "'>";
+                        echo "<input class='custom-control-input' type='radio' name='P26_5' id='P26_5_" . $counter . "' value='" . $counter . "' required>";
                         echo "<label class='custom-control-label escala' for='P26_5_" . $counter . "'>" . $counter . "</label>";
                         echo "</div>";
                     }
@@ -87,8 +103,11 @@
                 </div>
             </div>
             <div class="form-group mt-5">
-                <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block" onclick="submit_decision(true, 5, 'escala', 'p26',
-            document.getElementById('form_P26'),siguiente );"> SIGUIENTE </button>
+                <button style="margin-top: 10px;" type='submit' class="btn btn-primary btn-block" 
+                onclick="
+                if(vme()){
+                submit_decision(true, 5, 'escala', 'p26',
+                document.getElementById('form_P26'),siguiente );}"> SIGUIENTE </button>
             </div>
         </form>
     </div>

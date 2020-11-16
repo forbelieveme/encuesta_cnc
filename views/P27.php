@@ -1,4 +1,12 @@
 <script>
+    function validar(cb_status, elementos){
+        arr = ObtenerChecked(elementos);
+        if((cb_status == false) && (arr.length == 0)){
+            alert('Por favor selecciona al menos una opción');
+            return false;
+        }
+        return true;
+    }
     $(".js-example-placeholder-multiple").select2({
         theme: "classic",
         placeholder: "Seleccione...",
@@ -12,12 +20,14 @@
 <div class = "mt-5" id="P27">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
         <form method = 'POST' onsubmit = "
-            submit_parametro(
-            document.getElementById('ninguno').checked,
-            document.getElementsByTagName('select')[0],'p27',            
-            siguiente            
-            );
-            return false;">
+            if(validar(document.getElementById('ninguno').checked,document.getElementsByTagName('select')[0] )){
+                submit_parametro(
+                document.getElementById('ninguno').checked,
+                document.getElementsByTagName('select')[0],'p27',            
+                siguiente            
+                );
+                return false;
+            }return false;">
             <div class = "jumbotron">
                 <div class = "container">
                     <div class = "row row-header">                

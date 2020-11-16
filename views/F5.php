@@ -11,7 +11,7 @@
                 <label>¿En qué rango de edad te encuentras?</label>
             </div>
         </div>
-        <form method='POST' id="form_f5" onsubmit="
+        <form method='POST' class="was-validated" id="form_f5" onsubmit="
                 submit_decision(false, 1, 'radio', numero_pregunta,
                 getRadioVal(document.getElementById('form_f5'),('F5')), 
                 Obtener_siguiente(numero_pregunta,
@@ -20,31 +20,31 @@
 
             <div class="container">
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F5_1" value='0' name="F5" class="custom-control-input">
+                    <input type="radio" id="F5_1" value='0' name="F5" class="custom-control-input" required>
                     <label class="custom-control-label" for="F5_1">Menos de 18 años</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F5_2" value='1' name="F5" class="custom-control-input">
+                    <input type="radio" id="F5_2" value='1' name="F5" class="custom-control-input" required>
                     <label class="custom-control-label" for="F5_2">De 18 -24 años</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F5_3" value='2' name="F5" class="custom-control-input">
+                    <input type="radio" id="F5_3" value='2' name="F5" class="custom-control-input" required>
                     <label class="custom-control-label" for="F5_3">25-34 años</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F5_4" value='3' name="F5" class="custom-control-input">
+                    <input type="radio" id="F5_4" value='3' name="F5" class="custom-control-input" required>
                     <label class="custom-control-label" for="F5_4">35-44 años</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F5_5" value='4' name="F5" class="custom-control-input">
+                    <input type="radio" id="F5_5" value='4' name="F5" class="custom-control-input" required>
                     <label class="custom-control-label" for="F5_5">45-54 años</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F5_6" value='5' name="F5" class="custom-control-input">
+                    <input type="radio" id="F5_6" value='5' name="F5" class="custom-control-input" required>
                     <label class="custom-control-label" for="F5_6">55-64 años</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline form-check-inline">
-                    <input type="radio" id="F5_7" value='6' name="F5" class="custom-control-input">
+                    <input type="radio" id="F5_7" value='6' name="F5" class="custom-control-input" required>
                     <label class="custom-control-label" for="F5_7">65-74 años </label>
                 </div>
                 <!-- <div class="custom-control custom-radio custom-control-inline form-check-inline">

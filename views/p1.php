@@ -1,4 +1,12 @@
 <script>
+    function validar(arreglodeselect, valor_ta){
+        if ((arreglodeselect.length == 0) && (valor_ta == "")){            
+            alert('Por favor selecciona al menos una opción');
+            return false;
+        }
+        return true;
+
+    }
     $(".js-example-placeholder-multiple").select2({
         theme: "classic",
         placeholder: "Seleccione...",
@@ -20,10 +28,14 @@
         </div>
         <form method="post" id="form_p1" onsubmit="
         var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]);        
-        elementos.push(document.getElementById('form10').value);
-        submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),
-        siguiente);
-        return false;" class="">
+        var textovalor = document.getElementById('form10').value;
+        if (validar(elementos, textovalor)){           
+            elementos.push(textovalor);
+            submit_decision(false, 1, 'otrocual', numero_pregunta, elementos.join(','),
+            siguiente);
+            return false;
+        }
+        return false;">
             <div class="form-group">
                 <select multiple class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">
                     <option value="1">Encontrar productos nuevos (lanzamientos)</option>

@@ -1,16 +1,25 @@
 <script>
+    function validar(t1,t2,t3){
+        if ((t1 == "") || (t2 == "")|| (t3 == "")){
+            alert('Por favor llenar todos los campos.');
+            return false;
+        }
+        return true;
+
+    }
     var numero_pregunta = 'D567';
     var siguiente = 'views/P43.php';
 </script>
 <div class = "mt-5" id = "P42">
     <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
-        <form method = 'POST' onsubmit="
-        submit_personales(
-        document.getElementById('nombre').value, 
-        document.getElementById('correo').value, 
-        document.getElementById('numero').value,
-        siguiente);
-        return false;
+        <form method = 'POST' class="was-validated" onsubmit="
+        t1 = document.getElementById('nombre').value;
+        t2 = document.getElementById('correo').value; 
+        t3 = document.getElementById('numero').value;
+        if (validar(t1,t2,t3)){
+            submit_personales(t1,t2,t3,siguiente);
+            return false;
+        }return false;
         ">
             <div class = "jumbotron">
                 <div class = "container">

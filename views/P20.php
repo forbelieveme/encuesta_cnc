@@ -11,7 +11,7 @@
                 20. ¿Por qué medio adquiriste tu boleta de ingreso a la Feria del Hogar 2020?
             </label>
         </div>
-        <form method='POST' id="form_p20" onsubmit="
+        <form method='POST' id="form_p20" class="was-validated" onsubmit="
             submit_decision(false, 1, 'radio', 'p20', 
             getRadioVal_text('P20_textArea',document.getElementById('form_p20'),'P20'), 
             Obtener_siguiente('p20', getRadioVal_text('P20_textArea',document.getElementById('form_p20'),'P20'), siguiente)
@@ -20,24 +20,24 @@
             <div class="container">
                 <div class="col-12">
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P20' id='P20_1' value='1' checked>
+                        <input class='radio-check' type='radio' name='P20' id='P20_1' value='1' required>
                         <label class="radioboton-label" for='P20_1'> Taquilla de la feria </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P20' id='P20_2' value='2'>
+                        <input class='radio-check' type='radio' name='P20' id='P20_2' value='2' required>
                         <label class="radioboton-label" for='P20_2'> Boletería Online (página web)</label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P20' id='P20_3' value='3'>
+                        <input class='radio-check' type='radio' name='P20' id='P20_3' value='3' required>
                         <label class="radioboton-label" for='P20_3'> Convenio </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P20' id='P20_4' value='4'>
+                        <input class='radio-check' type='radio' name='P20' id='P20_4' value='4' required>
                         <label class="radioboton-label" for='P20_4'> Invitación de los organizadores y/o
                             expositores </label>
                     </div>
                     <div class="radioboton">
-                        <input class='radio-check' type='radio' name='P20' id='P20_5' value='5'>
+                        <input class='radio-check' type='radio' name='P20' id='P20_5' value='5' required>
                         <label class="radioboton-label" for='P20_5'> Otro, ¿Cuál? </label>
                     </div>
                     <div class="">

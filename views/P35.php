@@ -1,4 +1,13 @@
 <script>
+    function validar(cb_status, elementos){
+        arr = ObtenerChecked(elementos);
+        if((cb_status == false) && (arr.length == 0)){
+            alert('Por favor selecciona al menos una opción');
+            return false;
+        }
+        return true;
+    }
+
     $(".js-example-placeholder-multiple").select2({
         theme: "classic",
         placeholder: "Seleccione...",
@@ -16,13 +25,16 @@
                 35. Del listado de actividades de Feria del Hogar 2020 ¿En cuáles actividades participaste?
             </label>
         </div>
-        <form method="post" onsubmit="        
+        <form method="post" onsubmit="      
+        if(validar((document.getElementById('ninguno').checked),document.getElementsByTagName('select')[0])){  
             submit_parametro(
             document.getElementById('ninguno').checked,
             document.getElementsByTagName('select')[0],'p35',            
             siguiente            
             );
-            return false;">
+            return false;
+        }return false;
+        ">
 
 
             <select multiple id="select_p35" class="form-control js-example-basic-multiple js-example-placeholder-multiple" id="exampleFormControlSelect2">

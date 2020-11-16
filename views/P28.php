@@ -1,4 +1,20 @@
 <script>
+    function vme(){    
+        var checkopt_arr = document.getElementsByTagName('input');
+        var num_preg = checkopt_arr.length/10;
+        var total_respondidas = 0;
+        for (let i = 0; i < checkopt_arr.length; i++){
+            if (checkopt_arr[i].checked){
+                total_respondidas = total_respondidas + 1;
+            }
+        }
+        if(total_respondidas == num_preg){
+            return true;
+        }
+        alert("Por favor responder todas las preguntas.")
+        return false;
+    }
+
     var numero_pregunta = 'p28';
     var siguiente = 'views/P29.php';
 </script>
