@@ -654,10 +654,10 @@ function peticionUpdate(informacion, num_pregunta) {
         },
         type: 'POST',
         success: function (datos) {
-            // console.log('Default', datos);
+            console.log('Default', datos);
         },
         error: function (error) {
-            // console.log(`error`, error);
+            console.log(`error`, error);
         }
     });
 
@@ -730,6 +730,7 @@ var preg = [
 function crear_form_dinamico(preg, id) {
     // console.log(' id: ', id);
     var form = document.createElement("form");
+    form.setAttribute("class", "was-validated");
     form.setAttribute("method", "post");
     form.setAttribute("id", `form_${id}`);
     form.setAttribute("onsubmit", "return false;");
@@ -763,6 +764,7 @@ function crear_form_dinamico(preg, id) {
             input.setAttribute("name", `${id}_${i}`);
             input.setAttribute("id", `${id}_${i}_${j}`);
             input.setAttribute("value", j);
+            input.setAttribute("required", "");
 
             var labelIn = document.createElement("label");
             labelIn.setAttribute("class", "custom-control-label escala");
@@ -829,3 +831,21 @@ function submit_personales(nombre, correo, numero, siguiente) {
 
     $("#pregunta").load(siguiente);
 }
+
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
