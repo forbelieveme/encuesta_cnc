@@ -40,11 +40,12 @@
                         <input class='radio-check' type='radio' name='P20' id='P20_5' value='5' required>
                         <label class="radioboton-label" for='P20_5'> Otro, ¿Cuál? </label>
                     </div>
-                    <div class="">
-                        <textarea id="P20_textArea" class="md-textarea form-control mb-5" rows="1"></textarea>
+                    <div class="md-form">
+                        <i class="fas fa-pencil-alt prefix"></i>
+                        <textarea id="P20_textArea" class="md-textarea form-control p20" rows="1"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block ">
+                <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">
                     SIGUIENTE
                 </button>
             </div>

@@ -23,7 +23,10 @@
                         </div>
                     </div>
                 </div>
-                <textarea id="P12_textArea" name="razon_calificacion" class="md-textarea form-control" rows="3" require></textarea>
+                <div class="md-form">
+                    <i class="fas fa-pencil-alt prefix"></i>
+                    <textarea id="P12_textArea" class="md-textarea form-control" rows="3" required></textarea>
+                </div>
             </div>
             <button type="submit" name="login" class="btn btn-primary btn-lg btn-block mt-5">
                 SIGUIENTE

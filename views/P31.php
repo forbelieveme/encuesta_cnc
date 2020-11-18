@@ -24,7 +24,7 @@
             del Hogar 2020?
             </label>
         </div>
-        <form method="post" id="form_p1" class="was-validated" onsubmit="
+        <form method="post" id="form_p1" onsubmit="
         var elementos = ObtenerChecked(document.getElementsByTagName('select')[0]);
         var texto = document.getElementById('form10').value;
         if(validar(elementos, texto)){                    
